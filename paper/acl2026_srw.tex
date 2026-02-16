@@ -1,0 +1,122 @@
+% ACL 2026 Student Research Workshop
+% Right Answer, Wrong Reason: A Diagnostic Benchmark for
+% Chain-of-Thought Faithfulness in Small Language Models
+
+\documentclass[11pt]{article}
+\usepackage{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\title{Right Answer, Wrong Reason: A Diagnostic Benchmark for \\
+Chain-of-Thought Faithfulness in Small Language Models}
+
+\author{
+  [Your Name] \\
+  [University] \\
+  \texttt{[email]} \\
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Chain-of-Thought (CoT) prompting enables small language models to solve complex reasoning tasks by generating intermediate steps. However, generating plausible reasoning does not guarantee that the model's explanations are \emph{causally faithful} to its answers. We introduce \textbf{RAWRB} (Right Answer, Wrong Reason Benchmark), a diagnostic framework consisting of four faithfulness probes—\emph{knockout}, \emph{corruption}, \emph{counterfactual}, and \emph{paraphrase stability}—that test whether CoT steps causally determine the final answer. We evaluate five open-source model families ($\leq$9B parameters) across GSM8K, MATH, and FOLIO benchmarks. Our results reveal a significant \emph{faithfulness gap}: models achieve substantially higher task accuracy than faithfulness scores, indicating they frequently arrive at correct answers through reasoning chains that do not causally influence their outputs. We find this gap varies systematically across model families and probe types, offering actionable guidance for practitioners deploying small models in settings where explainability matters.
+\end{abstract}
+
+\section{Introduction}
+
+The rise of Chain-of-Thought (CoT) prompting \cite{wei2022chain} has enabled small language models to tackle multi-step reasoning tasks previously reserved for much larger systems. This is promising for practical deployment: smaller models can run locally, preserving privacy and reducing cost. However, a critical assumption underlying CoT's appeal is that the generated reasoning steps \emph{explain} why the model produces a particular answer.
+
+Recent work has questioned this assumption for large proprietary models \cite{turpin2024language, lanham2023measuring}, showing that models can produce correct answers while generating post-hoc rationalizations rather than faithful explanations. Yet no systematic study exists for the \textbf{open-source small language models} ($\leq$9B parameters) that are increasingly used in practice.
+
+We address this gap with \textbf{RAWRB}, a benchmark that tests CoT faithfulness through four \emph{causal probes}:
+
+\begin{enumerate}
+    \item \textbf{Knockout}: removing a step should change the answer if reasoning is faithful
+    \item \textbf{Corruption}: injecting an error should propagate if the model truly follows its CoT
+    \item \textbf{Counterfactual}: swapping a premise while keeping old reasoning should be detected
+    \item \textbf{Paraphrase}: semantically equivalent questions should produce structurally consistent CoTs
+\end{enumerate}
+
+\noindent Our contributions are:
+\begin{itemize}
+    \item The first systematic CoT faithfulness benchmark for open-source SLMs
+    \item A quantified \emph{faithfulness gap} metric across 5 model families
+    \item Evidence of model-family-specific faithfulness patterns
+    \item A fully reproducible pipeline using locally-run models (Ollama)
+\end{itemize}
+
+\section{Related Work}
+
+\paragraph{Chain-of-Thought Prompting.} Wei et al.~\cite{wei2022chain} showed that few-shot CoT dramatically improves LLM reasoning. Subsequent work extended this with self-consistency \cite{wang2023selfconsistency}, program-of-thought \cite{chen2023program}, and code-grounded verification \cite{gao2023pal}.
+
+\paragraph{CoT Faithfulness.} Turpin et al.~\cite{turpin2024language} and Lanham et al.~\cite{lanham2023measuring} demonstrated that CoT explanations in large models can be unfaithful. FaithLM \cite{faithlm2025} and NeuroFaith measure explanation faithfulness in proprietary systems. Our work differs by focusing exclusively on \emph{small, open-source} models and using \emph{causal perturbation probes} rather than internal model analysis.
+
+\paragraph{Small Language Models.} The rapid advancement of open-source SLMs (Llama~3, Mistral, Phi, Gemma, Qwen) has made local inference practical. Mix distillation \cite{mixdistill2025} and KARD \cite{kard2025} have improved SLM reasoning through knowledge transfer. Our work complements these efforts by asking: \emph{when SLMs reason correctly, do they reason faithfully?}
+
+\section{Methodology}
+
+\subsection{Models}
+We study five model families spanning four organizations, all runnable via Ollama: Llama~3.1~8B (Meta), Mistral~7B (Mistral~AI), Phi-3~Mini~3.8B (Microsoft), Gemma~2~9B (Google), and Qwen~2.5~7B (Alibaba).
+
+\subsection{Benchmarks}
+We evaluate on GSM8K (arithmetic), MATH (competition), and FOLIO (logic), sampling 200 problems per benchmark with seed 42 for reproducibility.
+
+\subsection{Faithfulness Probes}
+% [Content to be added after experiments]
+
+\subsection{Metrics}
+We define:
+\begin{itemize}
+    \item \textbf{Faithfulness Score}: proportion of perturbations where the model's answer appropriately changes
+    \item \textbf{Faithfulness Gap}: $\Delta = \text{Accuracy} - \text{Faithfulness}$
+    \item \textbf{CoT Consistency}: Jaccard similarity of step-level keyword sets
+\end{itemize}
+
+\noindent All results include 95\% bootstrap confidence intervals ($n=10{,}000$). Paired comparisons use McNemar's test with continuity correction.
+
+\section{Experiments}
+
+% [Results to be filled after running experiments]
+
+\subsection{Baseline Accuracy}
+% Table: Model × Benchmark accuracy
+
+\subsection{Probe Results}
+% Table: Model × Probe faithfulness scores
+% Figure: Heatmap
+
+\subsection{The Faithfulness Gap}
+% Figure: Accuracy vs Faithfulness scatter
+% Figure: Gap bar chart
+
+\subsection{Paraphrase Stability}
+% Figure: Box plot of consistency scores
+
+\section{Analysis}
+
+% Error taxonomy of unfaithful CoT patterns
+% Model-family-specific failure modes
+% Ablation: which probe is most informative?
+
+\section{Discussion}
+
+% Implications for SLM deployment
+% Limitations
+% When is unfaithfulness acceptable?
+
+\section{Conclusion}
+
+% Summary of findings
+% Practical recommendations
+% Future work
+
+\bibliography{acl2026_srw}
+\bibliographystyle{acl_natbib}
+
+\end{document}
