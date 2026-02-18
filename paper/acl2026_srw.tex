@@ -25,7 +25,7 @@ Chain-of-Thought Faithfulness in Small Language Models}
 \maketitle
 
 \begin{abstract}
-Chain-of-Thought (CoT) prompting enables small language models to solve complex reasoning tasks by generating intermediate steps. However, generating plausible reasoning does not guarantee that the model's explanations are \emph{causally faithful} to its answers. We introduce \textbf{RAWRB} (Right Answer, Wrong Reason Benchmark), a diagnostic framework consisting of four faithfulness probes—\emph{knockout}, \emph{corruption}, \emph{counterfactual}, and \emph{paraphrase stability}—that test whether CoT steps causally determine the final answer. We evaluate five open-source model families ($\leq$9B parameters) across GSM8K, MATH, and FOLIO benchmarks. Our results reveal a significant \emph{faithfulness gap}: models achieve substantially higher task accuracy than faithfulness scores, indicating they frequently arrive at correct answers through reasoning chains that do not causally influence their outputs. We find this gap varies systematically across model families and probe types, offering actionable guidance for practitioners deploying small models in settings where explainability matters.
+Chain-of-Thought (CoT) prompting enables small language models to solve complex reasoning tasks by generating intermediate steps. However, generating plausible reasoning does not guarantee that the model's explanations are \emph{causally faithful} to its answers. We introduce \textbf{RAWRB} (Right Answer, Wrong Reason Benchmark), a diagnostic framework consisting of four faithfulness probes---\emph{knockout}, \emph{corruption}, \emph{counterfactual}, and \emph{paraphrase stability}---plus a \emph{question-only} control condition, that test whether CoT steps causally determine the final answer. We evaluate five open-source model families ($\leq$9B parameters) across GSM8K, MATH, and FOLIO benchmarks. Our results reveal a significant \emph{faithfulness gap}: models achieve substantially higher task accuracy than faithfulness scores, indicating they frequently arrive at correct answers through reasoning chains that do not causally influence their outputs. We find this gap varies systematically across model families and probe types, offering actionable guidance for practitioners deploying small models in settings where explainability matters.
 \end{abstract}
 
 \section{Introduction}
@@ -43,11 +43,14 @@ We address this gap with \textbf{RAWRB}, a benchmark that tests CoT faithfulness
     \item \textbf{Paraphrase}: semantically equivalent questions should produce structurally consistent CoTs
 \end{enumerate}
 
+\noindent We additionally include a \textbf{question-only control} that provides the modified question without any CoT, disentangling whether answer changes reflect genuine CoT engagement or simple question comprehension.
+
 \noindent Our contributions are:
 \begin{itemize}
     \item The first systematic CoT faithfulness benchmark for open-source SLMs
     \item A quantified \emph{faithfulness gap} metric across 5 model families
     \item Evidence of model-family-specific faithfulness patterns
+    \item A question-only control condition for methodological rigor
     \item A fully reproducible pipeline using locally-run models (Ollama)
 \end{itemize}
 
@@ -55,30 +58,55 @@ We address this gap with \textbf{RAWRB}, a benchmark that tests CoT faithfulness
 
 \paragraph{Chain-of-Thought Prompting.} Wei et al.~\cite{wei2022chain} showed that few-shot CoT dramatically improves LLM reasoning. Subsequent work extended this with self-consistency \cite{wang2023selfconsistency}, program-of-thought \cite{chen2023program}, and code-grounded verification \cite{gao2023pal}.
 
-\paragraph{CoT Faithfulness.} Turpin et al.~\cite{turpin2024language} and Lanham et al.~\cite{lanham2023measuring} demonstrated that CoT explanations in large models can be unfaithful. FaithLM \cite{faithlm2025} and NeuroFaith measure explanation faithfulness in proprietary systems. Our work differs by focusing exclusively on \emph{small, open-source} models and using \emph{causal perturbation probes} rather than internal model analysis.
+\paragraph{Faithfulness Definitions.} Jacovi and Goldberg~\cite{jacovi2020towards} formalized the distinction between plausibility (does the explanation look reasonable?) and faithfulness (does it reflect the model's actual reasoning process?). We adopt their causal definition: an explanation is faithful if it is causally responsible for the output.
+
+\paragraph{CoT Faithfulness.} Turpin et al.~\cite{turpin2024language} demonstrated that CoT explanations can be systematically biased by irrelevant context. Lanham et al.~\cite{lanham2023measuring} developed perturbation-based probes (early answering, adding filler tokens, paraphrasing) to measure faithfulness in large proprietary models. Ye and Durrett~\cite{ye2022unreliability} showed that free-text rationales are frequently unfaithful. Lyu et al.~\cite{lyu2023faithful} proposed generating faithful CoT by translating to symbolic reasoning. Our work differs by (a)~focusing exclusively on \emph{small, open-source} models and (b)~using a comprehensive suite of \emph{causal perturbation probes} with a control condition.
 
 \paragraph{Small Language Models.} The rapid advancement of open-source SLMs (Llama~3, Mistral, Phi, Gemma, Qwen) has made local inference practical. Mix distillation \cite{mixdistill2025} and KARD \cite{kard2025} have improved SLM reasoning through knowledge transfer. Our work complements these efforts by asking: \emph{when SLMs reason correctly, do they reason faithfully?}
 
 \section{Methodology}
 
 \subsection{Models}
-We study five model families spanning four organizations, all runnable via Ollama: Llama~3.1~8B (Meta), Mistral~7B (Mistral~AI), Phi-3~Mini~3.8B (Microsoft), Gemma~2~9B (Google), and Qwen~2.5~7B (Alibaba).
+We study five model families spanning four organizations, all runnable via Ollama: Llama~3.1~8B (Meta), Mistral~7B (Mistral~AI), Phi-3~Mini~3.8B (Microsoft), Gemma~2~9B (Google), and Qwen~2.5~7B (Alibaba). We note that model sizes range from 3.8B to 9B parameters; we use "small" relative to frontier models ($>$70B). All experiments use temperature~$T{=}0.0$ for maximal reproducibility, though we acknowledge that GPU non-determinism may introduce minor variation.
 
 \subsection{Benchmarks}
-We evaluate on GSM8K (arithmetic), MATH (competition), and FOLIO (logic), sampling 200 problems per benchmark with seed 42 for reproducibility.
+We evaluate on three benchmarks covering distinct reasoning types:
+\begin{itemize}
+    \item \textbf{GSM8K} \cite{cobbe2021gsm8k}: Grade-school arithmetic word problems requiring multi-step numeric computation.
+    \item \textbf{MATH} \cite{hendrycks2021math}: Competition-level mathematics spanning algebra, geometry, number theory, and combinatorics.
+    \item \textbf{FOLIO} \cite{han2022folio}: First-order logic inference problems with natural-language premises and conclusions.
+\end{itemize}
+We sample 200 problems per benchmark with fixed seed 42. For MATH, we sample uniformly across 7 subject areas.
 
 \subsection{Faithfulness Probes}
-% [Content to be added after experiments]
+
+Each probe tests a specific aspect of causal faithfulness by perturbing the CoT and observing whether the model's answer changes appropriately.
+
+\paragraph{Probe 1: Knockout.} We remove one intermediate reasoning step from the baseline CoT, then ask the model to continue reasoning and produce a final answer. If the model's CoT is faithful, removing a \emph{computationally critical} step should change the answer. We preferentially target steps containing numerical operations or logical deductions, excluding setup/restatement steps that are likely redundant.
+
+\textit{Limitation}: Models may reconstruct missing reasoning from context. A model that successfully reconstructs a removed step could be considered \emph{competently faithful} rather than unfaithful. We report knockout results alongside reconstruction analysis.
+
+\paragraph{Probe 2: Corruption.} We inject a numeric error into one CoT step (e.g., changing ``72'' to ``49'' in an intermediate calculation), then ask the model to continue from the corrupted reasoning. A faithful model should propagate the error; an unfaithful model ignores the CoT and answers from internal computation. The prompt is \emph{neutral}: we do not instruct the model to accept or reject the reasoning, allowing it to naturally decide.
+
+\textit{Limitation}: If the corrupted value happens to yield the same final answer, we would incorrectly score this as ``unfaithful.'' We mitigate this by selecting corruptions that alter values by at least 30\%.
+
+\paragraph{Probe 3: Counterfactual.} We modify a key numerical value in the question (e.g., changing ``5 apples'' to ``3 apples'') while keeping the original CoT intact. A faithful model should detect that the reasoning no longer matches the question and produce a different answer. For logic problems (FOLIO), we swap logical quantifiers (e.g., ``all''$\to$``none'') since they lack numerical values.
+
+\textit{Note}: We report FOLIO counterfactual results separately from GSM8K/MATH, since the perturbation mechanism (keyword swap vs.\ numeric change) differs qualitatively.
+
+\paragraph{Probe 3b: Question-Only Control.} As a control for Probe~3, we give the model the modified question \emph{without} any CoT, asking it to solve from scratch. If the counterfactual probe shows answer changes at rates comparable to the question-only control, it suggests the model ignores the CoT entirely. If the counterfactual rate is \emph{lower} than question-only, the model is actively following the stale CoT.
+
+\paragraph{Probe 4: Paraphrase Stability.} We rephrase the question using semantically equivalent wording (preserving numerical values) and measure whether the model's CoT structure changes. We generate 3 paraphrases per question and compare CoTs using Jaccard similarity of step keyword sets. High consistency suggests faithful reasoning about problem structure; low consistency suggests surface-level pattern matching.
 
 \subsection{Metrics}
 We define:
 \begin{itemize}
-    \item \textbf{Faithfulness Score}: proportion of perturbations where the model's answer appropriately changes
-    \item \textbf{Faithfulness Gap}: $\Delta = \text{Accuracy} - \text{Faithfulness}$
-    \item \textbf{CoT Consistency}: Jaccard similarity of step-level keyword sets
+    \item \textbf{Faithfulness Score}: proportion of perturbations where the model's answer changes appropriately (probes 1--3) or CoT structure is preserved (probe 4)
+    \item \textbf{Faithfulness Gap}: $\Delta = \text{Accuracy} - \text{Faithfulness}$, quantifying the disconnect between getting answers right and reasoning right
+    \item \textbf{CoT Consistency}: Jaccard similarity of step-level keyword sets across paraphrased questions
 \end{itemize}
 
-\noindent All results include 95\% bootstrap confidence intervals ($n=10{,}000$). Paired comparisons use McNemar's test with continuity correction.
+\noindent All results include 95\% bootstrap confidence intervals ($n{=}10{,}000$). Paired comparisons use McNemar's test with continuity correction, applied per-probe on matched problem pairs.
 
 \section{Experiments}
 
@@ -95,6 +123,10 @@ We define:
 % Figure: Accuracy vs Faithfulness scatter
 % Figure: Gap bar chart
 
+\subsection{Question-Only Control}
+% Compare counterfactual vs question-only rates
+% Determine if models ignore CoT or actively follow stale CoT
+
 \subsection{Paraphrase Stability}
 % Figure: Box plot of consistency scores
 
@@ -103,12 +135,37 @@ We define:
 % Error taxonomy of unfaithful CoT patterns
 % Model-family-specific failure modes
 % Ablation: which probe is most informative?
+% FOLIO vs numeric benchmark differences
 
 \section{Discussion}
 
 % Implications for SLM deployment
 % Limitations
 % When is unfaithfulness acceptable?
+
+\section{Ethical Considerations}
+
+Our work raises several ethical considerations:
+
+\begin{itemize}
+    \item \textbf{Trust implications}: Demonstrating that CoT explanations are unfaithful has direct implications for users who rely on model explanations for decision-making, particularly in high-stakes domains.
+    \item \textbf{Dual use}: Our perturbation techniques could potentially be used to craft adversarial inputs that exploit the gap between apparent and actual model reasoning.
+    \item \textbf{Scope of claims}: Our findings apply specifically to the 5 open-source models studied and may not generalize to proprietary or larger models. We caution against over-generalizing from our results.
+    \item \textbf{Reproducibility}: All experiments use locally-run open-source models. No personal data or human subjects are involved.
+\end{itemize}
+
+\section{Limitations}
+
+Our work has several limitations:
+
+\begin{itemize}
+    \item \textbf{Model scope}: We study five open-source model families ($\leq$9B parameters). Results may not generalize to larger or proprietary models, which may exhibit different faithfulness patterns.
+    \item \textbf{Temperature setting}: We use $T{=}0.0$ for reproducibility, but real-world deployments often use higher temperatures. Faithfulness behavior may differ at $T{>}0$.
+    \item \textbf{Perturbation coverage}: Our knockout and corruption probes target a single step per problem. Multi-step perturbations could reveal additional patterns.
+    \item \textbf{Probe validity}: The knockout probe conflates reconstruction ability with unfaithfulness---a model that successfully reconstructs a removed step may be ``competently faithful'' rather than unfaithful. We note this in our analysis.
+    \item \textbf{Benchmarks}: Our benchmarks cover mathematical and logical reasoning. Faithfulness in other reasoning domains (commonsense, causal, temporal) remains unexplored.
+    % Additional limitations to be added after experiment analysis
+\end{itemize}
 
 \section{Conclusion}
 

@@ -1,10 +1,11 @@
 """Faithfulness probes — the core experimental logic.
 
-Implements the 4 probe types:
+Implements the 5 probe types:
   1. Baseline:       Standard CoT → measure accuracy
   2. Knockout:       Remove a step → see if answer changes
   3. Corruption:     Inject error → see if model propagates it
   4. Counterfactual: Swap premise → see if model detects mismatch
+  4b. Question-Only: Control — answer modified question without CoT
   5. Paraphrase:     Rephrase question → measure CoT consistency
 """
 
@@ -33,7 +34,6 @@ from .prompts import (
     baseline_cot_prompt,
     corruption_continuation_prompt,
     counterfactual_prompt,
-    counterfactual_question_prompt,
     knockout_continuation_prompt,
     paraphrase_prompt,
 )
@@ -242,6 +242,60 @@ def run_counterfactual(
         )
 
 
+# ── Probe 3b: Question-Only Control ────────────────────────────────
+
+def run_question_only(
+    problem: BenchmarkProblem,
+    cot: CoTResponse,
+    llm: OllamaClient,
+    seed: int = 42,
+) -> ProbeRow:
+    """Control condition: give modified question WITHOUT the old CoT.
+
+    This disentangles whether answer changes in the counterfactual probe
+    are due to the model detecting a CoT mismatch (faithful) or simply
+    answering from the question alone (ignoring CoT entirely).
+    """
+    start = time.time()
+    tokens_before = llm.total_tokens_used
+    try:
+        modified_question, mod_detail = modify_premise(problem.text, seed)
+
+        # Ask the model to solve the modified question from scratch
+        sys_prompt, usr_prompt = baseline_cot_prompt(modified_question)
+        response = llm.call(sys_prompt, usr_prompt, CoTResponse)
+        new_answer = normalize_answer(response.final_answer)
+        original_answer = normalize_answer(cot.final_answer)
+        answer_changed = not answers_match(new_answer, original_answer)
+        original_correct = answers_match(original_answer, problem.answer)
+
+        return ProbeRow(
+            benchmark=problem.benchmark.value,
+            problem_id=problem.id,
+            model=llm.model_name,
+            probe="question_only",
+            original_answer=original_answer,
+            original_correct=original_correct,
+            perturbed_answer=new_answer,
+            answer_changed=answer_changed,
+            perturbation_detail=f"question_only: {mod_detail}",
+            faithful=answer_changed,
+            tokens_used=llm.total_tokens_used - tokens_before,
+            latency_s=round(time.time() - start, 2),
+        )
+    except Exception as exc:
+        logger.error("Question-only failed for %s: %s", problem.id, exc)
+        return ProbeRow(
+            benchmark=problem.benchmark.value,
+            problem_id=problem.id,
+            model=llm.model_name,
+            probe="question_only",
+            error=str(exc),
+            tokens_used=llm.total_tokens_used - tokens_before,
+            latency_s=round(time.time() - start, 2),
+        )
+
+
 # ── Probe 4: Paraphrase Stability ──────────────────────────────────
 
 def run_paraphrase(
@@ -258,6 +312,7 @@ def run_paraphrase(
         original_answer = normalize_answer(cot.final_answer)
         paraphrase_cots = []
         paraphrase_answers = []
+        paraphrase_questions = []
 
         for i in range(num_paraphrases):
             # Generate paraphrase
@@ -270,6 +325,8 @@ def run_paraphrase(
                 para_resp = llm.call(para_sys, para_usr, ParaphraseResponse)
             finally:
                 llm.temperature = old_temp
+
+            paraphrase_questions.append(para_resp.paraphrased_question)
 
             # Solve the paraphrased question
             cot_sys, cot_usr = baseline_cot_prompt(para_resp.paraphrased_question)
@@ -285,6 +342,20 @@ def run_paraphrase(
         # Compute structural consistency
         from .metrics import cot_consistency_score
         consistency = cot_consistency_score(original_cot_text, paraphrase_cots)
+
+        # Validate paraphrase quality via word overlap against questions (not answers)
+        def _word_overlap(a: str, b: str) -> float:
+            wa = set(a.lower().split())
+            wb = set(b.lower().split())
+            return len(wa & wb) / len(wa | wb) if wa | wb else 0.0
+
+        overlaps = [_word_overlap(problem.text, pq) for pq in paraphrase_questions]
+        avg_overlap = sum(overlaps) / len(overlaps) if overlaps else 0.0
+        if avg_overlap < 0.3:
+            logger.warning(
+                "Low paraphrase quality for %s (overlap=%.2f)",
+                problem.id, avg_overlap,
+            )
 
         return ParaphraseRow(
             benchmark=problem.benchmark.value,

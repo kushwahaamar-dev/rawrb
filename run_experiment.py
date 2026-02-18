@@ -46,6 +46,7 @@ from src.probes import (
     run_counterfactual,
     run_knockout,
     run_paraphrase,
+    run_question_only,
 )
 from src.models import BaselineRow, CoTResponse, ProbeRow, ParaphraseRow
 
@@ -103,18 +104,46 @@ def _append_row(path: Path, row_dict: dict, fields: list[str]) -> None:
 
 # ── Baseline Phase ──────────────────────────────────────────────────
 
+def _cot_cache_path(model_name: str) -> Path:
+    """Return path for the CoT JSON cache file."""
+    safe = model_name.replace("/", "_").replace(":", "_")
+    return RESULTS_DIR / f"cot_cache_{safe}.json"
+
+
+def _load_cot_cache(path: Path) -> dict:
+    """Load cached CoT objects from JSON."""
+    if path.exists():
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+
+def _save_cot_cache(path: Path, cache_data: dict) -> None:
+    """Persist CoT objects to JSON for deterministic resume."""
+    with open(path, "w") as f:
+        json.dump(cache_data, f, indent=2)
+
+
 def run_baseline_phase(
     model_name: str,
     benchmarks: list[str],
     smoke: bool = False,
     limit: int | None = None,
 ) -> dict[str, dict[str, tuple[BaselineRow, CoTResponse | None]]]:
-    """Run baseline CoT on all problems. Returns cached CoTs for probes."""
+    """Run baseline CoT on all problems. Returns cached CoTs for probes.
+
+    CoT objects are serialized to disk so that resume runs use the exact
+    same CoT that produced the original baseline results.
+    """
     llm = make_client(model_name)
     fields = list(BaselineRow.model_fields.keys())
     csv_file = _csv_path(model_name, "baseline")
     _init_csv(csv_file, fields)
     done = _load_done(csv_file)
+
+    # Load or create CoT cache for deterministic resume
+    cot_cache_file = _cot_cache_path(model_name)
+    cot_cache_data = _load_cot_cache(cot_cache_file)
 
     n = 5 if smoke else None
     cache: dict[str, dict[str, tuple[BaselineRow, CoTResponse | None]]] = {}
@@ -129,15 +158,30 @@ def run_baseline_phase(
         logger.info("[%s] Baseline: %s — %d problems", model_name, bench_name, len(problems))
 
         for problem in tqdm(problems, desc=f"{model_name}/{bench_name}/baseline"):
-            if problem.id in done:
-                # Still need CoT for probes — re-generate quietly
-                pass
+            cache_key = f"{bench_name}/{problem.id}"
+
+            if problem.id in done and cache_key in cot_cache_data:
+                # Resume: load cached CoT instead of regenerating
+                cached = cot_cache_data[cache_key]
+                cot = CoTResponse.model_validate(cached["cot"]) if cached.get("cot") else None
+                row = BaselineRow.model_validate(cached["row"])
+                cache[bench_name][problem.id] = (row, cot)
+                continue
 
             row, cot = run_baseline(problem, llm)
             cache[bench_name][problem.id] = (row, cot)
 
+            # Persist to CoT cache
+            cot_cache_data[cache_key] = {
+                "row": row.model_dump(),
+                "cot": cot.model_dump() if cot else None,
+            }
+
             if problem.id not in done:
                 _append_row(csv_file, row.model_dump(), fields)
+
+        # Flush cache after each benchmark
+        _save_cot_cache(cot_cache_file, cot_cache_data)
 
     logger.info("[%s] Baseline complete. Usage: %s", model_name, llm.usage_summary)
     return cache
@@ -166,6 +210,7 @@ def run_probe_phase(
         "knockout": run_knockout,
         "corruption": run_corruption,
         "counterfactual": run_counterfactual,
+        "question_only": run_question_only,
         "paraphrase": run_paraphrase,
     }[probe_name]
 
@@ -248,23 +293,26 @@ def main():
     logger.info("Benchmarks: %s", args.benchmarks)
     logger.info("Probes: %s", probes)
     logger.info("Smoke: %s | Limit: %s", args.smoke, args.limit)
+    # Estimate runtime
+    n_problems = sum(
+        (args.limit or BENCHMARK_SIZES.get(b, 200))
+        for b in args.benchmarks
+    )
+    if args.smoke:
+        n_problems = 5 * len(args.benchmarks)
+    n_calls = len(models) * n_problems * len(probes)
+    eta_hours = n_calls * 3 / 3600  # ~3s per LLM call
+    logger.info("Estimated: %d LLM calls, ~%.1f hours", n_calls, eta_hours)
     logger.info("=" * 60)
 
     for model_name in models:
         logger.info("━━━ Model: %s ━━━", model_name)
 
-        # Phase 1: Baseline CoT (always needed)
-        if "baseline" in probes:
-            cache = run_baseline_phase(
-                model_name, args.benchmarks,
-                smoke=args.smoke, limit=args.limit,
-            )
-        else:
-            # Still need baselines for other probes
-            cache = run_baseline_phase(
-                model_name, args.benchmarks,
-                smoke=args.smoke, limit=args.limit,
-            )
+        # Phase 1: Baseline CoT (always needed — probes depend on it)
+        cache = run_baseline_phase(
+            model_name, args.benchmarks,
+            smoke=args.smoke, limit=args.limit,
+        )
 
         # Phase 2: Run each probe
         active_probes = [p for p in probes if p != "baseline"]

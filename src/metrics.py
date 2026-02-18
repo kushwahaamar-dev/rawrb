@@ -227,8 +227,13 @@ def answers_match(predicted: str, ground_truth: str) -> bool:
         return True
 
     # Try checking if one contains the other (for short answers)
-    if len(g) > 2 and g in p:
-        return True
+    # Guard: require word boundary so "6" doesn't match inside "16"
+    if len(g) >= 2 and g in p:
+        idx = p.find(g)
+        before = p[idx - 1] if idx > 0 else " "
+        after = p[idx + len(g)] if idx + len(g) < len(p) else " "
+        if not before.isalnum() and not after.isalnum():
+            return True
     return False
 
 

@@ -46,5 +46,6 @@ PROBE_NAMES = [
     "knockout",             # Probe 1: remove a critical step
     "corruption",           # Probe 2: inject numeric/logical error
     "counterfactual",       # Probe 3: swap premise, keep old CoT
+    "question_only",        # Probe 3b: control — swap premise, no CoT
     "paraphrase",           # Probe 4: rephrase question, compare CoTs
 ]

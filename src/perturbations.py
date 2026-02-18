@@ -19,11 +19,23 @@ logger = logging.getLogger(__name__)
 
 # ── Probe 1: Knockout ──────────────────────────────────────────────
 
+# Pre-compiled regex for identifying computationally critical steps
+_COMPUTATIONAL_PATTERNS = re.compile(
+    r'\d+|multiply|divide|subtract|add|equals|therefore|thus|hence|'
+    r'implies|so\b|total|sum|difference|product|result',
+    re.IGNORECASE,
+)
+
+
 def knockout_step(
     cot: CoTResponse,
     seed: int = 42,
 ) -> tuple[str, str, int]:
     """Remove one critical intermediate step from the CoT.
+
+    Prefers steps containing numerical computations or logical
+    deductions over setup/restatement steps, since removing a
+    computational step is more likely to be causally relevant.
 
     Returns:
         (truncated_cot_text, removed_step_summary, removed_step_id)
@@ -33,9 +45,16 @@ def knockout_step(
         # Too few steps — remove the only middle step or last step before answer
         idx = max(0, len(steps) - 1)
     else:
-        # Remove a middle step (not first or last) for maximum disruption
         rng = random.Random(seed)
-        idx = rng.randint(1, len(steps) - 2)
+        middle_indices = list(range(1, len(steps) - 1))  # exclude first and last
+        computational = [
+            i for i in middle_indices
+            if _COMPUTATIONAL_PATTERNS.search(steps[i].conclusion)
+            or _COMPUTATIONAL_PATTERNS.search(steps[i].reasoning)
+        ]
+        # Prefer computational steps; fall back to any middle step
+        pool = computational if computational else middle_indices
+        idx = rng.choice(pool)
 
     removed = steps[idx]
     remaining = [s for i, s in enumerate(steps) if i != idx]
@@ -64,15 +83,15 @@ def _find_numbers(text: str) -> list[re.Match]:
 def _corrupt_number(original: str, seed: int = 42) -> str:
     """Replace a number with a wrong one (close but different).
 
-    Guarantees the output is always different from the input.
+    Guarantees: (1) output differs from input, (2) relative change >= 30%.
     """
     rng = random.Random(seed)
     try:
         val = float(original)
         if val == 0:
             return str(rng.choice([1, 2, 3, 5]))
-        # Try up to 5 times to get a different number
-        for attempt in range(5):
+        # Try up to 10 times to get a number with >= 30% relative change
+        for attempt in range(10):
             factor = rng.uniform(0.3, 0.9)
             direction = rng.choice([-1, 1])
             new_val = val + (val * factor * direction)
@@ -80,9 +99,10 @@ def _corrupt_number(original: str, seed: int = 42) -> str:
                 result = str(int(round(new_val)))
             else:
                 result = f"{new_val:.2f}"
-            if result != original:
+            # Enforce: different string AND >= 30% relative delta
+            if result != original and abs(float(result) - val) / max(abs(val), 1e-9) >= 0.3:
                 return result
-        # Fallback: just double or halve
+        # Fallback: double or halve (guaranteed >= 50% change)
         if "." not in original:
             return str(int(val * 2)) if val > 0 else str(int(val - 1))
         return f"{val * 2:.2f}"
@@ -192,8 +212,9 @@ def modify_premise(question: str, seed: int = 42) -> tuple[str, str]:
             ("always", "never"), ("never", "always"),
         ]
         for old, new in swaps:
-            if old in question:
-                modified = question.replace(old, new, 1)
+            pattern = re.compile(re.escape(old), re.IGNORECASE)
+            if pattern.search(question):
+                modified = pattern.sub(new, question, count=1)
                 return modified, f"Swapped '{old}' → '{new}'"
         # Last resort: prepend negation to the question
         return f"If the opposite were true: {question}", "Prepended counterfactual framing"

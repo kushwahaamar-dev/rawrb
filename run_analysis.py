@@ -48,12 +48,34 @@ logging.basicConfig(level=logging.INFO)
 
 def load_all_results() -> dict[str, pd.DataFrame]:
     """Load all CSV results into a dict of DataFrames keyed by probe type."""
+    # Match against known probe names to handle multi-word names (e.g. question_only)
+    KNOWN_PROBES = {
+        "baseline", "knockout", "corruption",
+        "counterfactual", "question_only", "paraphrase",
+    }
     dfs = {}
     for csv_file in RESULTS_DIR.glob("results_*.csv"):
-        parts = csv_file.stem.split("_")
-        # Format: results_{model}_{probe}.csv
-        probe = parts[-1]
+        stem = csv_file.stem  # e.g. "results_qwen2_5_7b_question_only"
+        # Find which known probe name the stem ends with (longest match first)
+        probe = None
+        for p in sorted(KNOWN_PROBES, key=len, reverse=True):
+            if stem.endswith(f"_{p}"):
+                probe = p
+                break
+        if probe is None:
+            logger.warning("Unknown probe in filename: %s — skipping", csv_file.name)
+            continue
         df = pd.read_csv(csv_file)
+        # Exclude error rows to prevent biasing faithfulness scores
+        if "error" in df.columns:
+            errors = df["error"].notna() & (df["error"] != "")
+            n_errors = errors.sum()
+            if n_errors > 0:
+                logger.warning(
+                    "Excluding %d error rows from %s (%s)",
+                    n_errors, probe, csv_file.name,
+                )
+                df = df[~errors].copy()
         if probe in dfs:
             dfs[probe] = pd.concat([dfs[probe], df], ignore_index=True)
         else:
@@ -140,7 +162,7 @@ def plot_accuracy_vs_faithfulness(dfs: dict[str, pd.DataFrame]) -> None:
 
 def plot_probe_heatmap(dfs: dict[str, pd.DataFrame]) -> None:
     """Heatmap: faithfulness by model × probe type."""
-    probe_types = ["knockout", "corruption", "counterfactual"]
+    probe_types = ["knockout", "corruption", "counterfactual", "question_only"]
     models = set()
     for probe in probe_types:
         if probe in dfs:
@@ -280,7 +302,7 @@ def generate_stats_table(dfs: dict[str, pd.DataFrame]) -> None:
     if baseline is None:
         return
 
-    probe_types = ["knockout", "corruption", "counterfactual"]
+    probe_types = ["knockout", "corruption", "counterfactual"]  # question_only is a control, shown separately
     models = baseline["model"].unique()
     rows = []
 
@@ -315,13 +337,39 @@ def generate_stats_table(dfs: dict[str, pd.DataFrame]) -> None:
             gap = np.mean(correct_vals) - np.mean(faith_all)
             row["Gap"] = f"{gap:+.1%}"
 
-            # McNemar's test
-            if len(correct_vals) == len(faith_all):
-                chi2, p = mcnemar_test(
-                    [bool(c) for c in correct_vals],
-                    [bool(f) for f in faith_all],
-                )
-                row["McNemar p"] = f"{p:.4f}"
+            # McNemar's test — per-probe on matched items
+            # Pick the probe with the most data for the primary test
+            best_probe = None
+            best_count = 0
+            for probe in probe_types:
+                df = dfs.get(probe)
+                if df is None:
+                    continue
+                pmask = df["model"] == model
+                if pmask.sum() > best_count:
+                    best_count = pmask.sum()
+                    best_probe = probe
+
+            if best_probe and best_count > 0:
+                df_p = dfs[best_probe]
+                pmask = df_p["model"] == model
+                probe_items = df_p.loc[pmask]
+                # Build paired arrays: accuracy vs faithfulness for same problems
+                paired_acc = []
+                paired_faith = []
+                for _, prow in probe_items.iterrows():
+                    pid = prow["problem_id"]
+                    bmask = (baseline["model"] == model) & (baseline["problem_id"] == pid)
+                    if bmask.sum() > 0:
+                        paired_acc.append(bool(baseline.loc[bmask, "correct"].iloc[0]))
+                        paired_faith.append(bool(prow["faithful"]))
+                if len(paired_acc) > 0:
+                    chi2, p = mcnemar_test(paired_acc, paired_faith)
+                    row["McNemar p"] = f"{p:.4f}"
+                else:
+                    row["McNemar p"] = "—"
+            else:
+                row["McNemar p"] = "—"
         else:
             row["Gap"] = "—"
             row["McNemar p"] = "—"
@@ -345,6 +393,40 @@ def generate_stats_table(dfs: dict[str, pd.DataFrame]) -> None:
     logger.info("Saved stats_summary.csv and stats_table.tex")
 
 
+# ── Counterfactual vs Question-Only Comparison ─────────────────────
+
+def compare_counterfactual_vs_question_only(dfs: dict[str, pd.DataFrame]) -> None:
+    """Compare answer-change rates: counterfactual vs question-only control."""
+    cf = dfs.get("counterfactual")
+    qo = dfs.get("question_only")
+    if cf is None or qo is None:
+        logger.info("Skipping counterfactual vs question_only (missing data)")
+        return
+
+    print("\n" + "=" * 60)
+    print("COUNTERFACTUAL vs QUESTION-ONLY CONTROL")
+    print("=" * 60)
+
+    models = set(cf["model"].unique()) & set(qo["model"].unique())
+    for model in sorted(models):
+        cf_mask = cf["model"] == model
+        qo_mask = qo["model"] == model
+        cf_rate = cf.loc[cf_mask, "answer_changed"].mean() if cf_mask.sum() > 0 else 0
+        qo_rate = qo.loc[qo_mask, "answer_changed"].mean() if qo_mask.sum() > 0 else 0
+        delta = cf_rate - qo_rate
+        interp = (
+            "stale CoT anchors answer (unfaithful)" if delta < -0.05
+            else "CoT helps detection (faithful)" if delta > 0.05
+            else "inconclusive"
+        )
+        print(
+            f"  {safe_model_name(model):>15s}  "
+            f"CF={cf_rate:.1%}  QO={qo_rate:.1%}  "
+            f"Δ={delta:+.1%}  → {interp}"
+        )
+    print()
+
+
 # ── Main ────────────────────────────────────────────────────────────
 
 def main():
@@ -365,6 +447,7 @@ def main():
     plot_faithfulness_gap(dfs)
     plot_paraphrase_consistency(dfs)
     generate_stats_table(dfs)
+    compare_counterfactual_vs_question_only(dfs)
 
     logger.info("All analysis complete. Figures in %s", FIGURES_DIR)
 

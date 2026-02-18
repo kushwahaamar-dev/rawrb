@@ -52,8 +52,8 @@ def load_gsm8k(n: int | None = None) -> list[BenchmarkProblem]:
     logger.info("Loading GSM8K (n=%d) …", n)
     ds = load_dataset("openai/gsm8k", "main", split="test")
     items = list(ds)
-    random.seed(SEED)
-    sampled = random.sample(items, min(n, len(items)))
+    rng = random.Random(SEED)
+    sampled = rng.sample(items, min(n, len(items)))
     problems = []
     for i, row in enumerate(sampled):
         answer = _extract_gsm8k_answer(row["answer"])
@@ -90,8 +90,8 @@ def load_math(n: int | None = None) -> list[BenchmarkProblem]:
     if not items:
         raise RuntimeError("Could not load any MATH dataset subjects")
     logger.info("MATH total pool: %d problems", len(items))
-    random.seed(SEED)
-    sampled = random.sample(items, min(n, len(items)))
+    rng = random.Random(SEED)
+    sampled = rng.sample(items, min(n, len(items)))
     problems = []
     for i, row in enumerate(sampled):
         answer = _extract_math_answer(row["solution"])
@@ -118,8 +118,8 @@ def load_folio(n: int | None = None) -> list[BenchmarkProblem]:
     logger.info("Loading FOLIO (n=%d) …", n)
     ds = load_dataset("tasksource/folio", split="validation")
     items = list(ds)
-    random.seed(SEED)
-    sampled = random.sample(items, min(n, len(items)))
+    rng = random.Random(SEED)
+    sampled = rng.sample(items, min(n, len(items)))
     problems = []
     for i, row in enumerate(sampled):
         premises = row.get("premises", "")

@@ -21,6 +21,7 @@ class ProbeName(str, Enum):
     KNOCKOUT = "knockout"
     CORRUPTION = "corruption"
     COUNTERFACTUAL = "counterfactual"
+    QUESTION_ONLY = "question_only"
     PARAPHRASE = "paraphrase"
 
 
