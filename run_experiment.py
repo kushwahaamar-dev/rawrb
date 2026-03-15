@@ -28,6 +28,7 @@ from pathlib import Path
 
 from tqdm import tqdm
 
+import src.config as _cfg
 from src.config import (
     BENCHMARK_SIZES,
     DEFAULT_MODEL,
@@ -36,7 +37,6 @@ from src.config import (
     NUM_PARAPHRASES,
     PROBE_NAMES,
     RESULTS_DIR,
-    SEED,
 )
 from src.benchmarks import LOADERS
 from src.llm_client import make_client
@@ -44,11 +44,13 @@ from src.probes import (
     run_baseline,
     run_corruption,
     run_counterfactual,
+    run_counterfactual_unbiased,
     run_knockout,
     run_paraphrase,
     run_question_only,
 )
-from src.models import BaselineRow, CoTResponse, ProbeRow, ParaphraseRow
+from src.models import BaselineRow, BenchmarkName, BenchmarkProblem, CoTResponse, ProbeRow, ParaphraseRow
+from src.perturbations import cot_to_text
 
 # ── Logging ─────────────────────────────────────────────────────────
 
@@ -71,6 +73,59 @@ fh.setFormatter(logging.Formatter(
 root_logger.addHandler(fh)
 
 logger = logging.getLogger("rawrb")
+
+
+# ── Qualitative Exemplar Capture ───────────────────────────────────
+
+_EXEMPLAR_FILE = RESULTS_DIR / "qualitative_exemplars.json"
+
+def _load_exemplars() -> list[dict]:
+    if _EXEMPLAR_FILE.exists():
+        with open(_EXEMPLAR_FILE) as f:
+            return json.load(f)
+    return []
+
+
+def _save_exemplars(exemplars: list[dict]) -> None:
+    with open(_EXEMPLAR_FILE, "w") as f:
+        json.dump(exemplars, f, indent=2)
+
+
+def _maybe_capture_exemplar(
+    probe_name: str,
+    problem: "BenchmarkProblem",
+    cot: "CoTResponse",
+    result: "ProbeRow",
+    perturbation_detail: str = "",
+) -> None:
+    """Auto-capture interesting faithful/unfaithful examples for the paper.
+
+    Captures up to 5 per probe type, preferring diversity across benchmarks.
+    """
+    exemplars = _load_exemplars()
+    # Count existing for this probe
+    existing = [e for e in exemplars if e["probe"] == probe_name]
+    if len(existing) >= 10:  # generous cap, prune later for paper
+        return
+    # Only capture cases with clear signal
+    if result.error:
+        return
+
+    exemplar = {
+        "probe": probe_name,
+        "model": result.model,
+        "benchmark": result.benchmark,
+        "problem_id": result.problem_id,
+        "question": problem.text[:500],
+        "original_answer": result.original_answer,
+        "perturbed_answer": result.perturbed_answer,
+        "answer_changed": result.answer_changed,
+        "faithful": result.faithful,
+        "perturbation_detail": perturbation_detail or result.perturbation_detail,
+        "cot_snippet": cot_to_text(cot)[:800] if cot else "",
+    }
+    exemplars.append(exemplar)
+    _save_exemplars(exemplars)
 
 
 # ── CSV Helpers ─────────────────────────────────────────────────────
@@ -210,6 +265,7 @@ def run_probe_phase(
         "knockout": run_knockout,
         "corruption": run_corruption,
         "counterfactual": run_counterfactual,
+        "counterfactual_unbiased": run_counterfactual_unbiased,
         "question_only": run_question_only,
         "paraphrase": run_paraphrase,
     }[probe_name]
@@ -228,7 +284,6 @@ def run_probe_phase(
                 continue
 
             # Reconstruct problem from baseline row
-            from src.models import BenchmarkProblem, BenchmarkName
             problem = BenchmarkProblem(
                 id=problem_id,
                 benchmark=BenchmarkName(baseline_row.benchmark),
@@ -239,7 +294,14 @@ def run_probe_phase(
             if probe_name == "paraphrase":
                 result = probe_fn(problem, cot, llm, num_paraphrases=NUM_PARAPHRASES)
             else:
-                result = probe_fn(problem, cot, llm, seed=SEED)
+                # Use a problem-specific seed for perturbation diversity
+                # while remaining deterministic per problem
+                problem_seed = _cfg.SEED + hash(problem_id) % 100000
+                result = probe_fn(problem, cot, llm, seed=problem_seed)
+
+            # Capture qualitative exemplars for non-paraphrase probes
+            if probe_name != "paraphrase" and isinstance(result, ProbeRow):
+                _maybe_capture_exemplar(probe_name, problem, cot, result)
 
             row_dict = result.model_dump()
             # Convert lists to JSON strings for CSV
@@ -282,7 +344,16 @@ def main():
         "--limit", type=int, default=None,
         help="Max problems per benchmark",
     )
+    parser.add_argument(
+        "--seed", type=int, default=None,
+        help="Override global seed (default: 42). Use for multi-seed stability checks.",
+    )
     args = parser.parse_args()
+
+    # Override global seed if specified (for multi-seed robustness)
+    if args.seed is not None:
+        _cfg.SEED = args.seed
+        logger.info("Seed overridden to %d", args.seed)
 
     models = args.models or ([DEFAULT_MODEL] if args.smoke else MODELS)
     probes = args.probes or PROBE_NAMES

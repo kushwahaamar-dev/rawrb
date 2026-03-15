@@ -34,6 +34,7 @@ from .prompts import (
     baseline_cot_prompt,
     corruption_continuation_prompt,
     counterfactual_prompt,
+    counterfactual_unbiased_prompt,
     knockout_continuation_prompt,
     paraphrase_prompt,
 )
@@ -236,6 +237,62 @@ def run_counterfactual(
             problem_id=problem.id,
             model=llm.model_name,
             probe="counterfactual",
+            error=str(exc),
+            tokens_used=llm.total_tokens_used - tokens_before,
+            latency_s=round(time.time() - start, 2),
+        )
+
+
+# ── Probe 3a: Counterfactual Unbiased (no consistency hint) ────────
+
+def run_counterfactual_unbiased(
+    problem: BenchmarkProblem,
+    cot: CoTResponse,
+    llm: OllamaClient,
+    seed: int = 42,
+) -> ProbeRow:
+    """Like counterfactual, but WITHOUT the consistency-checking instruction.
+
+    This ablation tests prompt sensitivity: does the model detect mismatches
+    independently, or only when told to look? Comparing this with the standard
+    counterfactual probe isolates the effect of the consistency hint.
+    """
+    start = time.time()
+    tokens_before = llm.total_tokens_used
+    try:
+        modified_question, mod_detail = modify_premise(problem.text, seed)
+        original_cot_text = cot_to_text(cot)
+
+        sys_prompt, usr_prompt = counterfactual_unbiased_prompt(
+            modified_question, original_cot_text,
+        )
+        response = llm.call(sys_prompt, usr_prompt, ContinuationResponse)
+        new_answer = normalize_answer(response.final_answer)
+        original_answer = normalize_answer(cot.final_answer)
+        answer_changed = not answers_match(new_answer, original_answer)
+        original_correct = answers_match(original_answer, problem.answer)
+
+        return ProbeRow(
+            benchmark=problem.benchmark.value,
+            problem_id=problem.id,
+            model=llm.model_name,
+            probe="counterfactual_unbiased",
+            original_answer=original_answer,
+            original_correct=original_correct,
+            perturbed_answer=new_answer,
+            answer_changed=answer_changed,
+            perturbation_detail=mod_detail,
+            faithful=answer_changed,
+            tokens_used=llm.total_tokens_used - tokens_before,
+            latency_s=round(time.time() - start, 2),
+        )
+    except Exception as exc:
+        logger.error("Counterfactual-unbiased failed for %s: %s", problem.id, exc)
+        return ProbeRow(
+            benchmark=problem.benchmark.value,
+            problem_id=problem.id,
+            model=llm.model_name,
+            probe="counterfactual_unbiased",
             error=str(exc),
             tokens_used=llm.total_tokens_used - tokens_before,
             latency_s=round(time.time() - start, 2),

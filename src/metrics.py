@@ -231,7 +231,16 @@ def answers_match(predicted: str, ground_truth: str) -> bool:
     if len(g) >= 2 and g in p:
         idx = p.find(g)
         before = p[idx - 1] if idx > 0 else " "
-        after = p[idx + len(g)] if idx + len(g) < len(p) else " "
+        end_idx = idx + len(g)
+        after = p[end_idx] if end_idx < len(p) else " "
+        if not before.isalnum() and not after.isalnum():
+            return True
+    # Reverse check: short prediction inside longer ground truth
+    if len(p) >= 2 and p in g:
+        idx = g.find(p)
+        before = g[idx - 1] if idx > 0 else " "
+        end_idx = idx + len(p)
+        after = g[end_idx] if end_idx < len(g) else " "
         if not before.isalnum() and not after.isalnum():
             return True
     return False
@@ -262,32 +271,46 @@ def _extract_step_keywords(cot_text: str) -> set[str]:
     return {w for w in words if w not in stopwords and len(w) > 1}
 
 
+def _count_steps(cot_text: str) -> int:
+    """Count the number of reasoning steps in a CoT text."""
+    return len(re.findall(r"Step\s+\d+:", cot_text))
+
+
 def cot_consistency_score(
     original_cot: str,
     paraphrase_cots: list[str],
 ) -> float:
     """Compute structural consistency between original and paraphrased CoTs.
 
-    Uses Jaccard similarity of step keyword sets, averaged across paraphrases.
+    Combines Jaccard similarity of step keyword sets (weight=0.7) with
+    step-count similarity (weight=0.3) for a more robust structural measure.
     Returns a score in [0, 1] where 1 = perfectly consistent.
     """
     if not paraphrase_cots:
         return 0.0
 
     orig_keywords = _extract_step_keywords(original_cot)
+    orig_steps = _count_steps(original_cot)
     if not orig_keywords:
         return 0.0
 
     similarities = []
     for para_cot in paraphrase_cots:
         para_keywords = _extract_step_keywords(para_cot)
+        para_steps = _count_steps(para_cot)
         if not para_keywords:
             similarities.append(0.0)
             continue
+        # Jaccard keyword similarity
         intersection = orig_keywords & para_keywords
         union = orig_keywords | para_keywords
         jaccard = len(intersection) / len(union) if union else 0.0
-        similarities.append(jaccard)
+        # Step-count similarity: 1 - normalized difference
+        max_steps = max(orig_steps, para_steps, 1)
+        step_sim = 1.0 - abs(orig_steps - para_steps) / max_steps
+        # Weighted combination
+        combined = 0.7 * jaccard + 0.3 * step_sim
+        similarities.append(combined)
 
     return float(np.mean(similarities))
 
@@ -312,12 +335,15 @@ def bootstrap_ci(
     values: list[float | bool],
     n_bootstrap: int = 10000,
     alpha: float = 0.05,
-    seed: int = 42,
+    seed: int = 7919,
 ) -> tuple[float, float, float]:
     """Compute mean and bootstrap confidence interval.
 
     Returns:
         (mean, lower_bound, upper_bound) at (1-alpha) confidence level.
+
+    Note: seed defaults to 7919 (distinct from experiment SEED=42) to
+    avoid correlation between bootstrap resampling and data sampling.
     """
     rng = np.random.RandomState(seed)
     arr = np.array(values, dtype=float)
@@ -334,6 +360,44 @@ def bootstrap_ci(
     lower = float(np.percentile(boot_means, 100 * alpha / 2))
     upper = float(np.percentile(boot_means, 100 * (1 - alpha / 2)))
     return mean, lower, upper
+
+
+def bootstrap_gap_test(
+    paired_a: list[bool],
+    paired_b: list[bool],
+    n_bootstrap: int = 10000,
+    seed: int = 7919,
+) -> tuple[float, float]:
+    """Bootstrap test for the difference between two paired binary outcomes.
+
+    More appropriate than McNemar's for testing the faithfulness gap
+    (accuracy vs faithfulness on the same items), as it directly tests
+    whether the gap differs from zero.
+
+    Returns:
+        (observed_gap, p_value) where gap = mean(a) - mean(b).
+    """
+    assert len(paired_a) == len(paired_b), "Lists must be same length"
+    rng = np.random.RandomState(seed)
+    a = np.array(paired_a, dtype=float)
+    b = np.array(paired_b, dtype=float)
+    n = len(a)
+    if n == 0:
+        return 0.0, 1.0
+
+    observed_gap = float(a.mean() - b.mean())
+
+    # Bootstrap under H0: no difference (permutation-style)
+    combined = a - b
+    centered = combined - combined.mean()  # center under H0
+    boot_gaps = np.array([
+        rng.choice(centered, size=n, replace=True).mean()
+        for _ in range(n_bootstrap)
+    ])
+
+    # Two-sided p-value
+    p_value = float(np.mean(np.abs(boot_gaps) >= abs(observed_gap)))
+    return observed_gap, p_value
 
 
 def mcnemar_test(

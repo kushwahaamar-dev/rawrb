@@ -75,9 +75,12 @@ def knockout_step(
 
 # ── Probe 2: Corruption ────────────────────────────────────────────
 
-def _find_numbers(text: str) -> list[re.Match]:
-    """Find all numbers in text."""
-    return list(re.finditer(r"-?\d+(?:\.\d+)?", text))
+def _find_numbers(text: str, skip_step_labels: bool = False) -> list[re.Match]:
+    """Find all numbers in text, optionally skipping step labels like 'Step 1:'."""
+    matches = list(re.finditer(r"-?\d+(?:\.\d+)?", text))
+    if skip_step_labels:
+        matches = [m for m in matches if not re.match(r"Step\s+$", text[:m.start()])]
+    return matches
 
 
 def _corrupt_number(original: str, seed: int = 42) -> str:
@@ -125,14 +128,14 @@ def corrupt_step(
     # Find steps that contain numbers (those are corruptible)
     candidates = []
     for i, step in enumerate(steps):
-        nums = _find_numbers(step.conclusion)
+        nums = _find_numbers(step.conclusion, skip_step_labels=True)
         if nums:
             candidates.append((i, step, nums))
 
     if not candidates:
         # Fallback: try corrupting reasoning text instead
         for i, step in enumerate(steps):
-            nums = _find_numbers(step.reasoning)
+            nums = _find_numbers(step.reasoning, skip_step_labels=True)
             if nums:
                 candidates.append((i, step, nums))
 
@@ -164,7 +167,8 @@ def corrupt_step(
     idx, step, nums = rng.choice(candidates)
     target_match = rng.choice(nums)
     original_num = target_match.group()
-    corrupted_num = _corrupt_number(original_num, seed)
+    # Use a problem-specific sub-seed to ensure diverse corruptions across problems
+    corrupted_num = _corrupt_number(original_num, seed + hash(original_num) % 10000)
 
     # Apply corruption to the conclusion
     corrupted_conclusion = (
@@ -205,17 +209,32 @@ def modify_premise(question: str, seed: int = 42) -> tuple[str, str]:
 
     if not nums:
         # No numbers — flip a logical keyword as fallback
+        # For FOLIO-style problems, only modify premise content, not the
+        # question template ("Is the conclusion True, False, or Unknown?")
         swaps = [
-            ("True", "False"), ("False", "True"),
             ("all", "none"), ("none", "all"),
             ("every", "no"), ("no", "every"),
             ("always", "never"), ("never", "always"),
         ]
+        # Identify premise region (before the question suffix) to avoid
+        # corrupting the question format
+        question_suffix_pattern = re.compile(
+            r"Is the conclusion True, False, or Unknown.*$",
+            re.IGNORECASE | re.DOTALL,
+        )
+        suffix_match = question_suffix_pattern.search(question)
+        if suffix_match:
+            premise_region = question[:suffix_match.start()]
+            question_tail = question[suffix_match.start():]
+        else:
+            premise_region = question
+            question_tail = ""
+
         for old, new in swaps:
             pattern = re.compile(re.escape(old), re.IGNORECASE)
-            if pattern.search(question):
-                modified = pattern.sub(new, question, count=1)
-                return modified, f"Swapped '{old}' → '{new}'"
+            if pattern.search(premise_region):
+                modified_premise = pattern.sub(new, premise_region, count=1)
+                return modified_premise + question_tail, f"Swapped '{old}' → '{new}' in premises"
         # Last resort: prepend negation to the question
         return f"If the opposite were true: {question}", "Prepended counterfactual framing"
 

@@ -11,7 +11,8 @@ import re
 
 from datasets import load_dataset
 
-from .config import BENCHMARK_SIZES, SEED
+from . import config as _cfg
+from .config import BENCHMARK_SIZES
 from .models import BenchmarkName, BenchmarkProblem
 
 logger = logging.getLogger(__name__)
@@ -52,7 +53,7 @@ def load_gsm8k(n: int | None = None) -> list[BenchmarkProblem]:
     logger.info("Loading GSM8K (n=%d) …", n)
     ds = load_dataset("openai/gsm8k", "main", split="test")
     items = list(ds)
-    rng = random.Random(SEED)
+    rng = random.Random(_cfg.SEED)
     sampled = rng.sample(items, min(n, len(items)))
     problems = []
     for i, row in enumerate(sampled):
@@ -90,7 +91,7 @@ def load_math(n: int | None = None) -> list[BenchmarkProblem]:
     if not items:
         raise RuntimeError("Could not load any MATH dataset subjects")
     logger.info("MATH total pool: %d problems", len(items))
-    rng = random.Random(SEED)
+    rng = random.Random(_cfg.SEED)
     sampled = rng.sample(items, min(n, len(items)))
     problems = []
     for i, row in enumerate(sampled):
@@ -118,7 +119,7 @@ def load_folio(n: int | None = None) -> list[BenchmarkProblem]:
     logger.info("Loading FOLIO (n=%d) …", n)
     ds = load_dataset("tasksource/folio", split="validation")
     items = list(ds)
-    rng = random.Random(SEED)
+    rng = random.Random(_cfg.SEED)
     sampled = rng.sample(items, min(n, len(items)))
     problems = []
     for i, row in enumerate(sampled):
