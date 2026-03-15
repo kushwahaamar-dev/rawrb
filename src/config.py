@@ -13,13 +13,22 @@ FIGURES_DIR.mkdir(exist_ok=True)
 
 # ── Models (Ollama) ─────────────────────────────────────────────────
 # We study faithfulness across 5 model families
-MODELS = [
-    "llama3.1:8b",
-    "mistral:7b",
-    "phi3:mini",
-    "gemma2:9b",
-    "qwen2.5:7b",
+# NOTE: Ollama uses quantized models (typically Q4_K_M). The exact
+# quantization depends on the Ollama model tag. Pin Ollama version
+# and model digests for exact reproducibility.
+# Two tiers for scale analysis:
+#   Small tier (1.5-3.8B): tests whether faithfulness emerges with scale
+#   Medium tier (7-9B): primary evaluation targets
+MODELS_SMALL = [
+    "qwen2.5:1.5b",       # 1.5B Q4_K_M
+    "llama3.2:latest",     # 3.2B Q4_K_M
+    "phi3:mini",           # 3.8B Q4_K_M
 ]
+MODELS_MEDIUM = [
+    "llama3.1:8b",         # 8.0B Q4_K_M
+    "qwen2.5:7b",          # 7.6B Q4_K_M
+]
+MODELS = MODELS_SMALL + MODELS_MEDIUM
 DEFAULT_MODEL = "qwen2.5:7b"
 OLLAMA_BASE_URL = "http://localhost:11434"
 
@@ -46,6 +55,7 @@ PROBE_NAMES = [
     "knockout",             # Probe 1: remove a critical step
     "corruption",           # Probe 2: inject numeric/logical error
     "counterfactual",       # Probe 3: swap premise, keep old CoT
+    "counterfactual_unbiased",  # Probe 3a: same as 3 but no consistency hint
     "question_only",        # Probe 3b: control — swap premise, no CoT
     "paraphrase",           # Probe 4: rephrase question, compare CoTs
 ]
