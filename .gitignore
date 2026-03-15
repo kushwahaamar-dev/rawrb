@@ -1,9 +1,27 @@
 __pycache__/
 *.pyc
 .DS_Store
-results/*.csv
-figures/*.png
-figures/*.pdf
 experiment.log
+experiment_stdout.log
 *.egg-info/
 .venv/
+
+# Backup directories (not needed in repo)
+results_backup/
+results_smoke_backup/
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# ACL style files (downloadable separately)
+paper/acl-style-files-master/
+
+# Colab notebooks (optional)
+colab/
