@@ -66,7 +66,6 @@ MODEL_DISPLAY = {
     "phi3:mini": "Phi-3-Mini",
     "llama3.1:8b": "Llama-3.1-8B",
     "qwen2.5:7b": "Qwen-2.5-7B",
-    "mistral:7b": "Mistral-7B",
 }
 BENCHMARKS = ["gsm8k", "math", "folio"]
 PROBE_TYPES = ["knockout", "corruption", "counterfactual",
