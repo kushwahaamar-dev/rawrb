@@ -76,7 +76,7 @@ This operationalization admits three outcomes for perturbation probes: (1)~\text
 
 \subsection{Models}
 
-We study five models across two size tiers (\autoref{tab:models}) to test whether faithfulness scales with capability.\footnote{We initially planned to include Mistral-7B and Gemma-2-9B; both were excluded due to high JSON parse error rates and incomplete probe runs. Mistral baseline results are included in our code release.} All models run locally via Ollama at $T{=}0.0$ (Q4\_K\_M quantization). Qwen-2.5 appears in both tiers, enabling a within-family comparison that controls for architecture and training recipe.
+We study five models across two size tiers (\autoref{tab:models}) to test whether faithfulness scales with capability.\footnote{We initially planned to include Mistral-7B and Gemma-2-9B; Mistral was excluded due to high JSON parse error rates (baseline only completed), and Gemma-2 was excluded due to infrastructure constraints.} All models run locally via Ollama at $T{=}0.0$ (Q4\_K\_M quantization). Qwen-2.5 appears in both tiers, enabling a within-family comparison that controls for architecture and training recipe.
 
 \begin{table}[t]
 \centering\small
@@ -404,7 +404,7 @@ Q-2.5-7B & 0.5 & 9.5 & 5.5 \\
 \label{sec:limitations}
 
 \begin{itemize}
-    \item \textbf{Model scope}: Five models at Q4\_K\_M quantization ($\leq$9B), with only two medium-tier models. Additional medium-tier models (Mistral-7B, Gemma-2-9B) were dropped due to high error rates.
+    \item \textbf{Model scope}: Five models at Q4\_K\_M quantization ($\leq$9B), with only two medium-tier models. Mistral-7B was excluded due to high JSON parse error rates (baseline only completed); Gemma-2-9B was excluded due to infrastructure constraints.
     \item \textbf{Knockout validity}: Conflates reconstruction with unfaithfulness; the conditional faithfulness analysis (\S\ref{sec:stratified}) partially mitigates but cannot fully resolve this without human annotation of model outputs.
     \item \textbf{Counterfactual prompt bias}: The consistency-checking instruction inflates scores (\S\ref{sec:controls}); the unbiased ablation quantifies but does not eliminate this confound.
     \item \textbf{Paraphrase metric}: Jaccard keyword similarity is a coarse structural proxy. The model generates its own paraphrases, risking circularity.
