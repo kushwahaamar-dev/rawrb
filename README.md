@@ -2,64 +2,62 @@
 
 **A Diagnostic Framework for Chain-of-Thought Faithfulness in Small Language Models**
 
-> 🎯 Target: ACL 2026 Student Research Workshop — Submission Deadline March 18, 2026  
-> 🏷️ Theme: *Explainability of NLP Models* (ACL 2026 Special Theme)
+> ACL 2026 Student Research Workshop (Long Paper, 8 pages)
+
+---
+
+## Key Findings
+
+| Finding | Evidence |
+|---------|----------|
+| **Faithfulness--capability tradeoff** | Medium-tier models: +20pp accuracy but -11 to -18pp faithfulness (Spearman rho = -0.90, p = 0.037; permutation test p < 0.0001, non-overlapping CIs) |
+| **CoT anchoring effect** | Stale CoT suppresses answer-change rates by 50--70pp vs question-only baseline |
+| **Prompt sensitivity confound** | Consistency-checking instruction inflates counterfactual scores by 42--67pp (Cohen's h up to 1.85) |
+| **Right answer, wrong reason** | Only 4--14% of problems are simultaneously correct AND faithful |
+| **Harder = more faithful** | MATH Level 5 (hardest): 42% faithful vs Level 1 (easiest): 34% |
 
 ---
 
 ## Overview
 
-Small language models (≤9B parameters) increasingly use Chain-of-Thought (CoT) prompting to solve multi-step reasoning tasks. But **how faithful are their explanations?** When a model produces a correct answer alongside a well-structured CoT, is the CoT *causally responsible* for the answer — or is the model just generating a plausible post-hoc rationalization?
+Small language models (<=9B parameters) increasingly use Chain-of-Thought (CoT) prompting to solve multi-step reasoning tasks. But **how faithful are their explanations?** When a model produces a correct answer alongside a well-structured CoT, is the CoT *causally responsible* for the answer -- or is the model generating a plausible post-hoc rationalization?
 
-RAWRB answers this by introducing **4 causal faithfulness probes** plus a **question-only control** that systematically perturb CoT reasoning and measure whether models respond appropriately.
-
-### The Faithfulness Gap
-
-```
-Faithfulness Gap = Task Accuracy − Mean Faithfulness Score
-```
-
-A large gap means the model *gets the right answer for the wrong reason* — it produces correct outputs while its explanations bear little causal relationship to those outputs. RAWRB quantifies this gap across models, benchmarks, and probe types.
+RAWRB answers this with **4 causal faithfulness probes**, a **question-only control**, and an **unbiased prompt ablation** that systematically perturb CoT reasoning and measure whether models respond appropriately.
 
 ---
 
 ## Faithfulness Probes
 
-| # | Probe | What It Tests | Faithful Model Should… |
-|---|-------|---------------|------------------------|
-| 1 | **Knockout** | Remove a computationally critical step | …change its answer |
-| 2 | **Corruption** | Inject a numeric error (≥30% change) | …propagate the error |
-| 3 | **Counterfactual** | Swap a premise, keep old CoT | …detect the mismatch |
-| 3b | **Question-Only** | Modified question without CoT (control) | — (control condition) |
-| 4 | **Paraphrase** | Rephrase the question | …produce consistent CoTs |
-
-### Probe Design Details
-
-- **Knockout** preferentially targets steps containing numerical operations or logical deductions (not setup/restatement steps), maximizing causal relevance.
-- **Corruption** guarantees a minimum 30% relative change in the corrupted value, ensuring the perturbation is non-trivial. The continuation prompt is *neutral* — no bias toward accepting or rejecting the reasoning.
-- **Counterfactual** modifies numeric values in math problems and swaps logical quantifiers (all↔none, every↔no) for logic problems (FOLIO), with case-insensitive matching.
-- **Question-Only** serves as a control for the counterfactual probe: it provides the modified question *without* any CoT. Comparing counterfactual vs. question-only rates reveals whether answer changes stem from genuine CoT engagement or simple question comprehension.
-- **Paraphrase** generates 3 semantically equivalent rephrasings per question and measures CoT structural consistency via Jaccard similarity of step-level keyword sets.
+| # | Probe | What It Tests | Faithful Model Should... |
+|---|-------|---------------|--------------------------|
+| 1 | **Knockout** | Remove a computationally critical step | ...change its answer |
+| 2 | **Corruption** | Inject a numeric error (>=30% change) | ...propagate the error |
+| 3 | **Counterfactual** | Swap a premise, keep old CoT (with consistency hint) | ...detect the mismatch |
+| 3a | **Counterfactual (Unbiased)** | Same but WITHOUT consistency hint | ...detect independently |
+| 3b | **Question-Only** | Modified question without CoT (control) | -- (baseline control) |
+| 4 | **Paraphrase** | Rephrase the question | ...produce consistent CoTs |
 
 ---
 
-## Models Under Study
+## Models
 
-Five open-source model families spanning four organizations, all runnable locally via [Ollama](https://ollama.com):
+Five open-source models across two size tiers, all run locally via [Ollama](https://ollama.com):
 
-| Model | Organization | Parameters |
-|-------|-------------|------------|
-| Llama 3.1 8B | Meta | 8B |
-| Mistral 7B | Mistral AI | 7B |
-| Phi-3 Mini | Microsoft | 3.8B |
-| Gemma 2 9B | Google | 9B |
-| Qwen 2.5 7B | Alibaba | 7B |
+| Tier | Model | Parameters | Organization |
+|------|-------|------------|--------------|
+| Small | Qwen-2.5 | 1.5B | Alibaba |
+| Small | Llama-3.2 | 3.2B | Meta |
+| Small | Phi-3 Mini | 3.8B | Microsoft |
+| Medium | Llama-3.1 | 8.0B | Meta |
+| Medium | Qwen-2.5 | 7.6B | Alibaba |
+
+Qwen-2.5 appears in both tiers, enabling a controlled within-family comparison (all 6 benchmark x probe deltas are negative -- scaling consistently reduces faithfulness).
 
 ```bash
-ollama pull llama3.1:8b
-ollama pull mistral:7b
+ollama pull qwen2.5:1.5b
+ollama pull llama3.2:latest
 ollama pull phi3:mini
-ollama pull gemma2:9b
+ollama pull llama3.1:8b
 ollama pull qwen2.5:7b
 ```
 
@@ -67,13 +65,13 @@ ollama pull qwen2.5:7b
 
 ## Benchmarks
 
-| Benchmark | Domain | Sample Size | Answer Type | Source |
-|-----------|--------|-------------|-------------|--------|
-| **GSM8K** | Grade-school arithmetic | 200 | Numeric | [Cobbe et al., 2021](https://arxiv.org/abs/2110.14168) |
-| **MATH** | Competition mathematics | 200 | Symbolic/LaTeX | [Hendrycks et al., 2021](https://arxiv.org/abs/2103.03874) |
-| **FOLIO** | First-order logic | 200 | True/False/Unknown | [Han et al., 2022](https://arxiv.org/abs/2209.00840) |
+| Benchmark | Domain | Sample Size | Contamination Risk | Source |
+|-----------|--------|-------------|-------------------|--------|
+| **GSM8K** | Grade-school arithmetic | 200 | High | [Cobbe et al., 2021](https://arxiv.org/abs/2110.14168) |
+| **MATH** | Competition mathematics (7 subjects, Levels 1-5) | 200 | Moderate | [Hendrycks et al., 2021](https://arxiv.org/abs/2103.03874) |
+| **FOLIO** | First-order logic | 200 | Low | [Han et al., 2022](https://arxiv.org/abs/2209.00840) |
 
-All samples drawn with fixed seed (`SEED=42`) using instance-level `random.Random(SEED)` for full reproducibility.
+The three-benchmark design enables contamination-sensitivity analysis. All samples drawn with `random.Random(42)`.
 
 ---
 
@@ -96,31 +94,27 @@ pip install -r requirements.txt
 ### Running Experiments
 
 ```bash
-# Smoke test — 5 problems, 1 model, all probes (~5 min)
+# Smoke test -- 5 problems, 1 model, all probes (~5 min)
 python run_experiment.py --smoke
 
 # Single model, all probes
 python run_experiment.py --models qwen2.5:7b
 
-# Specific benchmark and probes
-python run_experiment.py --benchmarks gsm8k --probes baseline knockout corruption
-
-# Full run — all 5 models × 3 benchmarks × 6 probes (~15 hours)
+# Full run -- all 5 models x 3 benchmarks x 7 probes (~15 hours)
 python run_experiment.py
-
-# Generate figures, statistical tables, and analysis
-python run_analysis.py
 ```
 
-### CLI Options
+### Running Analysis
 
-| Flag | Description | Default |
-|------|-------------|---------|
-| `--models` | Space-separated model names | All 5 models (or 1 for `--smoke`) |
-| `--benchmarks` | `gsm8k`, `math`, `folio` | All 3 |
-| `--probes` | `baseline`, `knockout`, `corruption`, `counterfactual`, `question_only`, `paraphrase` | All 6 |
-| `--smoke` | Quick test: 5 problems, 1 model | Off |
-| `--limit N` | Max problems per benchmark | None (uses config) |
+```bash
+# Full pipeline: tables + figures + stats + derived metrics
+python run_analysis.py
+
+# Individual components
+python run_analysis.py --tables     # textual tables to stdout
+python run_analysis.py --figures    # generate 4 PDF/PNG figures
+python run_analysis.py --metrics    # Spearman, concordance, permutation test, etc.
+```
 
 ---
 
@@ -128,147 +122,120 @@ python run_analysis.py
 
 ```
 rawrb/
-├── run_experiment.py          # Main experiment orchestrator
-│                              #   - Baseline CoT generation with JSON caching
-│                              #   - Probe dispatch for all 5 non-baseline probes
-│                              #   - Resumable (skips completed problem_ids)
-│                              #   - ETA logging for runtime estimates
-│
-├── run_analysis.py            # Analysis and visualization pipeline
-│                              #   - Accuracy vs faithfulness scatter plots
-│                              #   - Probe × model heatmaps
-│                              #   - Faithfulness gap bar charts
-│                              #   - Paraphrase consistency box plots
-│                              #   - LaTeX-ready stats tables with bootstrap CIs
-│                              #   - Counterfactual vs question-only comparison
-│
+├── run_experiment.py          # Experiment orchestrator (baseline + 6 probes)
+├── run_analysis.py            # Unified analysis: tables, figures, stats, derived metrics
 ├── requirements.txt           # Python dependencies
-├── SMOKE_TEST_REPORT.md       # Proof-of-concept report from initial testing
 │
 ├── src/
-│   ├── __init__.py
-│   ├── config.py              # Global config: models, paths, seeds, probe names
-│   ├── models.py              # Pydantic schemas: BenchmarkProblem, CoTResponse,
-│   │                          #   BaselineRow, ProbeRow, ParaphraseRow, enums
-│   ├── llm_client.py          # Ollama REST API wrapper with structured JSON output,
-│   │                          #   retry logic (tenacity), and usage tracking
-│   ├── benchmarks.py          # Dataset loaders for GSM8K, MATH, FOLIO
-│   │                          #   - Deterministic sampling: random.Random(SEED)
-│   │                          #   - Answer extraction: #### for GSM8K, \boxed{} for MATH
-│   ├── prompts.py             # All 5 prompt templates (system + user pairs)
-│   │                          #   - Neutral framing (no bias in corruption prompt)
-│   ├── perturbations.py       # Perturbation engine:
-│   │                          #   - knockout_step: remove computational step
-│   │                          #   - corrupt_step: inject ≥30% numeric error
-│   │                          #   - modify_premise: numeric or keyword swap
-│   ├── probes.py              # 6 probe implementations:
-│   │                          #   - run_baseline, run_knockout, run_corruption,
-│   │                          #   - run_counterfactual, run_question_only, run_paraphrase
-│   │                          #   - Paraphrase validates overlap against questions
-│   └── metrics.py             # Scoring and statistics:
-│                              #   - normalize_answer: whitespace, prefix, LaTeX
-│                              #   - answers_match: numeric, LaTeX, word-boundary
-│                              #   - faithfulness_score, faithfulness_gap
-│                              #   - bootstrap_ci (n=10,000), McNemar's test
-│                              #   - cohen's h effect size
+│   ├── config.py              # Models, paths, seeds, probe names
+│   ├── models.py              # Pydantic schemas (CoTResponse, ProbeRow, etc.)
+│   ├── llm_client.py          # Ollama API client with retry + JSON parsing
+│   ├── benchmarks.py          # GSM8K, MATH, FOLIO dataset loaders
+│   ├── prompts.py             # Prompt templates for all probe types
+│   ├── perturbations.py       # Knockout, corruption, counterfactual logic
+│   ├── probes.py              # 7 probe implementations
+│   └── metrics.py             # Answer matching, bootstrap CI, McNemar, Cohen's h
 │
 ├── paper/
-│   ├── acl2026_srw.tex        # ACL SRW LaTeX source (9 sections)
-│   └── acl2026_srw.bib        # Bibliography (12 entries)
+│   ├── acl2026_srw.tex        # 8-page ACL-SRW LaTeX source
+│   ├── acl2026_srw.bib        # Bibliography (17 entries)
+│   ├── acl2026_srw.pdf        # Compiled PDF
+│   ├── acl.sty                # ACL style file
+│   └── acl_natbib.bst         # ACL bibliography style
 │
-├── results/                   # CSV outputs (auto-created)
-│   └── cot_cache_*.json       # CoT cache for deterministic resume
+├── results/                   # Experiment outputs
+│   ├── results_{model}_{probe}.csv   # Per-problem results (36 files)
+│   ├── cot_cache_{model}.json        # CoT cache for deterministic resume
+│   ├── stats_summary.csv             # BH-corrected statistical summary
+│   ├── prompt_sensitivity.csv        # CF vs CF_U paired comparison
+│   └── qualitative_exemplars.json    # Auto-captured interesting examples
 │
-└── figures/                   # Generated plots (auto-created)
+└── figures/                   # Generated visualizations
     ├── accuracy_vs_faithfulness.{png,pdf}
     ├── probe_heatmap.{png,pdf}
     ├── faithfulness_gap.{png,pdf}
     ├── paraphrase_consistency.{png,pdf}
-    ├── stats_table.tex
-    └── stats_summary.csv
+    └── stats_table.tex
 ```
+
+---
+
+## Results Summary
+
+### Aggregate Faithfulness (%)
+
+| Model | KO | COR | CF | CF_U | QO | PAR |
+|-------|-----|------|-----|-------|-----|------|
+| Qwen-2.5-1.5B | 35.9 | 29.6 | 5.0 | 2.6 | 71.2 | 58.8 |
+| Llama-3.2 | 26.2 | 20.9 | 79.8 | 16.6 | 73.9 | 47.2 |
+| Phi-3 Mini | 41.1 | 28.8 | 65.8 | 15.0 | 71.3 | 54.4 |
+| Llama-3.1 | 23.9 | 19.9 | 78.4 | 11.8 | 76.5 | 48.4 |
+| Qwen-2.5-7B | 9.7 | 11.5 | 57.7 | 15.6 | 68.4 | 59.8 |
+| *Small tier* | *34.4* | *26.5* | *50.2* | *11.4* | *72.2* | *53.5* |
+| *Medium tier* | *16.8* | *15.7* | *68.1* | *13.7* | *72.4* | *54.1* |
+
+KO=knockout, COR=corruption, CF=counterfactual (with hint), CF_U=unbiased, QO=question-only, PAR=paraphrase.
+
+### Derived Metrics
+
+| Metric | Value | Significance |
+|--------|-------|-------------|
+| Spearman rho (accuracy vs KO faithfulness) | -0.900 | p = 0.037 |
+| Spearman rho (accuracy vs COR faithfulness) | -1.000 | p < 0.001 |
+| Tier difference (knockout, permutation test) | 17.7pp | p < 0.0001, non-overlapping CIs |
+| Tier difference (corruption, permutation test) | 10.8pp | p < 0.0001, non-overlapping CIs |
+| Concordance rate (correct AND faithful) | 4--14% | Qwen-2.5-7B lowest at 4.4% |
+| Probe agreement (KO vs COR) | 68--89% | Cohen's kappa 0.29--0.39 |
 
 ---
 
 ## Statistical Methodology
 
-- **Bootstrap confidence intervals**: 95% CIs with 10,000 resamples for all reported metrics
-- **McNemar's test**: Paired comparison of accuracy vs. faithfulness on matched problem pairs, applied per-probe
-- **Cohen's h effect size**: Quantifies practical significance of faithfulness differences
-- **Error exclusion**: Rows with LLM errors are excluded from analysis to prevent biasing scores
+| Method | Purpose |
+|--------|---------|
+| Bootstrap CIs (n=10,000) | 95% confidence intervals for all rates |
+| Bootstrap gap test (n=10,000) | Tests H0: accuracy - faithfulness = 0 |
+| Benjamini-Hochberg (FDR=0.05) | Multiple comparison correction across 15 tests |
+| Paired McNemar's test | CF vs QO and CF vs CF_U comparisons |
+| Cohen's h | Effect sizes for proportion comparisons |
+| Spearman rho | Accuracy-faithfulness correlation across models |
+| Permutation test (n=10,000) | Tier difference significance |
+| Stratified analysis | Faithfulness conditional on baseline correctness |
 
 ---
 
 ## Reproducibility
 
-RAWRB is designed for full reproducibility:
-
 | Feature | Implementation |
 |---------|---------------|
-| **Deterministic sampling** | Instance-level `random.Random(42)` in all benchmark loaders |
-| **Temperature** | `T=0.0` for all probes (except paraphrase generation: `T=0.7`) |
-| **CoT caching** | Baseline CoT responses serialized to JSON; resume runs use identical CoTs |
-| **Crash recovery** | CSV results flushed after every row; completed problem_ids are skipped |
-| **Local inference** | All models run via Ollama — no API keys, no cloud dependency |
+| Deterministic sampling | `random.Random(42)` in all loaders |
+| Temperature | T=0.0 for all probes (T=0.7 for paraphrase generation) |
+| CoT caching | Baseline CoTs serialized to JSON for deterministic resume |
+| Crash recovery | CSV flushed after every row; completed problem_ids skipped |
+| Local inference | All models via Ollama -- no API keys, no cloud |
+| Deduplication | Error-first, then dedup by (model, benchmark, problem_id) |
 
-> ⚠️ **Note**: GPU non-determinism may introduce minor variation even at `T=0.0`. We document this limitation in the paper.
-
----
-
-## Key Design Decisions
-
-1. **Causal faithfulness definition**: Following [Jacovi & Goldberg (2020)](https://aclanthology.org/2020.acl-main.386/), an explanation is faithful if it is *causally responsible* for the output — not merely plausible.
-
-2. **Question-only control**: The counterfactual probe alone cannot distinguish between "model detects CoT mismatch" and "model just answers the new question." The question-only control disentangles these.
-
-3. **Neutral corruption prompt**: The corruption continuation prompt does not instruct the model to accept or reject the reasoning — it simply asks "what is the final answer?" This avoids biasing toward artificial faithfulness.
-
-4. **Computational step targeting**: Knockout preferentially removes steps containing numeric operations or logical keywords, avoiding trivial setup steps that wouldn't change the answer regardless.
-
-5. **Minimum corruption delta**: Number corruptions enforce a ≥30% relative change, ensuring the perturbation is large enough that propagation (or lack thereof) is meaningful.
+> **Note**: GPU non-determinism may cause minor variation at T=0.0. Llama-3.1-8B was run twice (MATH/FOLIO); duplicate rows are handled by the deduplication pipeline.
 
 ---
 
 ## Paper
 
-The LaTeX source for the ACL 2026 SRW submission is in `paper/`:
+**"Right Answer, Wrong Reason: Diagnosing Chain-of-Thought Faithfulness in Small Language Models"**
 
-- **9 sections**: Introduction, Related Work, Methodology, Experiments, Analysis, Discussion, Ethical Considerations, Limitations, Conclusion
-- **Pre-registered methodology**: All probe designs, metrics, and statistical tests documented before experiment execution
-- **12 bibliography entries**: Wei et al. (CoT), Turpin et al. (unfaithfulness), Lanham et al. (measuring faithfulness), Jacovi & Goldberg (definitions), and benchmark citations
+8-page long paper for ACL 2026 Student Research Workshop.
 
----
+Contents:
+- 9 tables (accuracy, faithfulness, per-benchmark, conditional, prompt sensitivity, contamination, Qwen family, error rates)
+- 4 figures (heatmap, scatter, gap bar chart, paraphrase boxplot)
+- 3 qualitative examples (knockout, corruption, anchoring)
+- 17 bibliography entries
 
-## Output Files
+The paper PDF is at `paper/acl2026_srw.pdf`. To recompile:
 
-After running experiments and analysis:
-
-| File | Description |
-|------|-------------|
-| `results/results_{model}_{probe}.csv` | Raw per-problem results |
-| `results/cot_cache_{model}.json` | Cached CoT objects for resume |
-| `results/stats_summary.csv` | Aggregate statistics table |
-| `figures/accuracy_vs_faithfulness.png` | Accuracy vs faithfulness scatter |
-| `figures/probe_heatmap.png` | Model × probe faithfulness heatmap |
-| `figures/faithfulness_gap.png` | Gap bar chart with Δ annotations |
-| `figures/paraphrase_consistency.png` | CoT consistency box plots |
-| `figures/stats_table.tex` | LaTeX-ready statistics table |
-
----
-
-## Dependencies
-
-```
-requests>=2.31.0      # Ollama REST API
-pydantic>=2.0.0       # Structured schemas & validation
-tenacity>=8.0.0       # Retry with exponential backoff
-datasets>=2.14.0      # HuggingFace dataset loaders
-tqdm>=4.65.0          # Progress bars
-numpy>=1.24.0         # Numerical operations
-scipy>=1.11.0         # Statistical tests (McNemar)
-matplotlib>=3.7.0     # Publication-quality plots
-seaborn>=0.12.0       # Statistical visualizations
-pandas>=2.0.0         # Data manipulation
+```bash
+cd paper
+tectonic acl2026_srw.tex    # or pdflatex + bibtex
 ```
 
 ---
@@ -276,9 +243,9 @@ pandas>=2.0.0         # Data manipulation
 ## Citation
 
 ```bibtex
-@inproceedings{rawrb2026,
-  title={Right Answer, Wrong Reason: A Diagnostic Benchmark for
-         Chain-of-Thought Faithfulness in Small Language Models},
+@inproceedings{kushwaha2026rawrb,
+  title={Right Answer, Wrong Reason: Diagnosing Chain-of-Thought
+         Faithfulness in Small Language Models},
   author={Kushwaha, Amar},
   booktitle={Proceedings of the ACL 2026 Student Research Workshop},
   year={2026}
