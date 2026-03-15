@@ -1,0 +1,1244 @@
+benchmark,problem_id,model,probe,original_answer,original_correct,perturbed_answer,answer_changed,perturbation_detail,faithful,tokens_used,latency_s,error
+gsm8k,gsm8k_0000,llama3.1:8b,question_only,2180,False,1938,True,question_only: Changed '300' to '179' in question,True,498,12.42,
+gsm8k,gsm8k_0001,llama3.1:8b,question_only,1,True,1.6,True,question_only: Changed '360' to '576' in question,True,596,14.45,
+gsm8k,gsm8k_0002,llama3.1:8b,question_only,5,True,7.5,True,question_only: Changed '6' to '4' in question,True,504,12.44,
+gsm8k,gsm8k_0003,llama3.1:8b,question_only,6,False,6,False,question_only: Changed '5' to '1' in question,False,436,9.77,
+gsm8k,gsm8k_0004,llama3.1:8b,question_only,273,True,455,True,question_only: Changed '1' to '2' in question,True,885,22.9,
+gsm8k,gsm8k_0005,llama3.1:8b,question_only,45,True,24,True,question_only: Changed '30' to '51' in question,True,473,10.82,
+gsm8k,gsm8k_0006,llama3.1:8b,question_only,21,True,18,True,question_only: Changed '3' to '0' in question,True,352,8.03,
+gsm8k,gsm8k_0006,llama3.1:8b,question_only,21,True,20,True,question_only: Changed '3' to '2' in question,True,430,12.63,
+gsm8k,gsm8k_0007,llama3.1:8b,question_only,1450,False,1923,True,question_only: Changed '6000' to '7893' in question,True,442,14.87,
+gsm8k,gsm8k_0007,llama3.1:8b,question_only,1450,False,1423.33,True,question_only: Changed '1200' to '1840' in question,True,502,16.93,
+gsm8k,gsm8k_0008,llama3.1:8b,question_only,60,True,68.5,True,question_only: Changed '20' to '37' in question,True,456,17.16,
+gsm8k,gsm8k_0008,llama3.1:8b,question_only,60,True,104,True,question_only: Changed '50' to '87' in question,True,466,15.82,
+gsm8k,gsm8k_0009,llama3.1:8b,question_only,122,True,118,True,question_only: Changed '4' to '6' in question,True,495,17.03,
+gsm8k,gsm8k_0009,llama3.1:8b,question_only,122,True,126,True,question_only: Changed '4' to '2' in question,True,536,19.04,
+gsm8k,gsm8k_0010,llama3.1:8b,question_only,29,True,58,True,question_only: Changed '1' to '2' in question,True,845,26.34,
+gsm8k,gsm8k_0010,llama3.1:8b,question_only,29,True,26,True,question_only: Changed '1' to '0' in question,True,732,28.86,
+gsm8k,gsm8k_0011,llama3.1:8b,question_only,80,True,72,True,question_only: Changed '20' to '28' in question,True,655,25.89,
+gsm8k,gsm8k_0011,llama3.1:8b,question_only,80,True,71,True,question_only: Changed '20' to '29' in question,True,655,26.39,
+gsm8k,gsm8k_0012,llama3.1:8b,question_only,36,True,18,True,question_only: Changed '2' to '1' in question,True,434,19.99,
+gsm8k,gsm8k_0012,llama3.1:8b,question_only,36,True,48,True,question_only: Changed '3' to '4' in question,True,608,19.02,
+gsm8k,gsm8k_0013,llama3.1:8b,question_only,1430,True,1717.10,True,question_only: Changed '500' to '761' in question,True,477,20.09,
+gsm8k,gsm8k_0013,llama3.1:8b,question_only,1430,True,1482,True,question_only: Changed '10' to '14' in question,True,454,15.12,
+gsm8k,gsm8k_0014,llama3.1:8b,question_only,5,True,1.71,True,question_only: Changed '3.5' to '1.20' in question,True,395,13.2,
+gsm8k,gsm8k_0014,llama3.1:8b,question_only,5,True,2.83,True,question_only: Changed '3.5' to '1.98' in question,True,484,14.7,
+gsm8k,gsm8k_0015,llama3.1:8b,question_only,5,True,17,True,question_only: Changed '26' to '38' in question,True,418,15.18,
+gsm8k,gsm8k_0015,llama3.1:8b,question_only,5,True,98,True,question_only: Changed '214' to '307' in question,True,418,13.01,
+gsm8k,gsm8k_0016,llama3.1:8b,question_only,5,True,9,True,question_only: Changed '300' to '551' in question,True,541,16.76,
+gsm8k,gsm8k_0016,llama3.1:8b,question_only,5,True,6,True,question_only: Changed '300' to '402' in question,True,624,22.98,
+gsm8k,gsm8k_0017,llama3.1:8b,question_only,66,True,60,True,question_only: Changed '3' to '2' in question,True,435,20.03,
+gsm8k,gsm8k_0017,llama3.1:8b,question_only,66,True,78,True,question_only: Changed '3' to '5' in question,True,409,13.74,
+gsm8k,gsm8k_0018,llama3.1:8b,question_only,15,True,10,True,question_only: Changed '4' to '2' in question,True,565,17.24,
+gsm8k,gsm8k_0018,llama3.1:8b,question_only,15,True,10.5,True,question_only: Changed '20' to '14' in question,True,808,29.04,
+gsm8k,gsm8k_0019,llama3.1:8b,question_only,40,True,32,True,question_only: Changed '12' to '4' in question,True,609,29.45,
+gsm8k,gsm8k_0019,llama3.1:8b,question_only,40,True,33,True,question_only: Changed '12' to '5' in question,True,609,22.41,
+gsm8k,gsm8k_0020,llama3.1:8b,question_only,93,True,186,True,question_only: Changed '1' to '2' in question,True,429,18.33,
+gsm8k,gsm8k_0020,llama3.1:8b,question_only,93,True,186,True,question_only: Changed '3' to '6' in question,True,434,14.4,
+gsm8k,gsm8k_0021,llama3.1:8b,question_only,2000,True,1500,True,question_only: Changed '000' to '5' in question,True,589,17.72,
+gsm8k,gsm8k_0021,llama3.1:8b,question_only,2000,True,1005.25,True,question_only: Changed '000' to '5' in question,True,1403,45.85,
+gsm8k,gsm8k_0022,llama3.1:8b,question_only,1520,True,1480,True,question_only: Changed '10' to '15' in question,True,580,46.55,
+gsm8k,gsm8k_0022,llama3.1:8b,question_only,1520,True,1464,True,question_only: Changed '10' to '18' in question,True,475,19.05,
+gsm8k,gsm8k_0023,llama3.1:8b,question_only,11050,True,16150,True,question_only: Changed '20' to '12' in question,True,499,16.51,
+gsm8k,gsm8k_0023,llama3.1:8b,question_only,11050,True,9860,True,question_only: Changed '20' to '13' in question,True,522,17.89,
+gsm8k,gsm8k_0024,llama3.1:8b,question_only,90,True,171,True,question_only: Changed '30' to '57' in question,True,613,20.67,
+gsm8k,gsm8k_0024,llama3.1:8b,question_only,90,True,168,True,question_only: Changed '30' to '56' in question,True,592,22.12,
+gsm8k,gsm8k_0025,llama3.1:8b,question_only,40000,True,21000,True,question_only: Changed '60' to '79' in question,True,487,18.88,
+gsm8k,gsm8k_0025,llama3.1:8b,question_only,40000,True,40000,False,question_only: Changed '000' to '1' in question,False,494,16.4,
+gsm8k,gsm8k_0026,llama3.1:8b,question_only,21,True,81,True,question_only: Changed '21' to '36' in question,True,368,12.65,
+gsm8k,gsm8k_0026,llama3.1:8b,question_only,21,True,84,True,question_only: Changed '4' to '7' in question,True,368,8.68,
+gsm8k,gsm8k_0027,llama3.1:8b,question_only,18,True,6,True,question_only: Changed '5' to '2' in question,True,855,23.58,
+gsm8k,gsm8k_0027,llama3.1:8b,question_only,18,True,39/2,True,question_only: Changed '2' to '3' in question,True,1063,44.99,
+gsm8k,gsm8k_0028,llama3.1:8b,question_only,14,True,19,True,question_only: Changed '8' to '4' in question,True,826,43.9,
+gsm8k,gsm8k_0028,llama3.1:8b,question_only,14,True,-3,True,question_only: Changed '20' to '3' in question,True,820,36.31,
+gsm8k,gsm8k_0029,llama3.1:8b,question_only,23,True,53,True,question_only: Changed '75' to '105' in question,True,546,27.92,
+gsm8k,gsm8k_0029,llama3.1:8b,question_only,23,True,19,True,question_only: Changed '2' to '1' in question,True,692,23.94,
+gsm8k,gsm8k_0030,llama3.1:8b,question_only,145,True,-134,True,question_only: Changed '400' to '121' in question,True,724,28.19,
+gsm8k,gsm8k_0030,llama3.1:8b,question_only,145,True,190,True,question_only: Changed '30' to '12' in question,True,721,27.97,
+gsm8k,gsm8k_0031,llama3.1:8b,question_only,123,True,172.2,True,question_only: Changed '30' to '42' in question,True,758,30.57,
+gsm8k,gsm8k_0031,llama3.1:8b,question_only,123,True,130,True,question_only: Changed '10' to '3' in question,True,517,25.98,
+gsm8k,gsm8k_0032,llama3.1:8b,question_only,98,True,159,True,question_only: Changed '360' to '635' in question,True,491,18.25,
+gsm8k,gsm8k_0032,llama3.1:8b,question_only,98,True,246,True,question_only: Changed '3' to '1' in question,True,475,17.36,
+gsm8k,gsm8k_0033,llama3.1:8b,question_only,16.00,False,23.20,True,question_only: Changed '10' to '6' in question,True,668,22.59,
+gsm8k,gsm8k_0033,llama3.1:8b,question_only,16.00,False,18.80,True,question_only: Changed '3.20' to '1.48' in question,True,675,28.56,
+gsm8k,gsm8k_0034,llama3.1:8b,question_only,34,True,45.33,True,question_only: Changed '33' to '50' in question,True,565,24.8,
+gsm8k,gsm8k_0034,llama3.1:8b,question_only,34,True,40.13,True,question_only: Changed '20.25' to '29.44' in question,True,690,24.62,
+gsm8k,gsm8k_0035,llama3.1:8b,question_only,38.00,True,44.00,True,question_only: Changed '8' to '14' in question,True,553,23.78,
+gsm8k,gsm8k_0035,llama3.1:8b,question_only,38.00,True,34.00,True,question_only: Changed '8' to '4' in question,True,594,20.26,
+gsm8k,gsm8k_0036,llama3.1:8b,question_only,320,True,356,True,question_only: Changed '20' to '8' in question,True,658,23.66,
+gsm8k,gsm8k_0036,llama3.1:8b,question_only,320,True,305,True,question_only: Changed '20' to '31' in question,True,667,26.3,
+gsm8k,gsm8k_0037,llama3.1:8b,question_only,50,True,42,True,question_only: Changed '50' to '90' in question,True,492,21.73,
+gsm8k,gsm8k_0037,llama3.1:8b,question_only,50,True,42.8,True,question_only: Changed '50' to '86' in question,True,502,17.12,
+gsm8k,gsm8k_0038,llama3.1:8b,question_only,290,False,41,True,question_only: Changed '10' to '19' in question,True,443,16.32,
+gsm8k,gsm8k_0038,llama3.1:8b,question_only,290,False,61.45,True,question_only: Changed '3' to '5' in question,True,568,18.92,
+gsm8k,gsm8k_0039,llama3.1:8b,question_only,90,False,120,True,question_only: Changed '4' to '7' in question,True,620,23.36,
+gsm8k,gsm8k_0039,llama3.1:8b,question_only,90,False,72,True,question_only: Changed '5' to '3' in question,True,680,25.92,
+gsm8k,gsm8k_0040,llama3.1:8b,question_only,50,True,94.48,True,question_only: Changed '1125' to '2126' in question,True,959,36.43,
+gsm8k,gsm8k_0040,llama3.1:8b,question_only,50,True,72.44,True,question_only: Changed '1125' to '1634' in question,True,914,43.74,
+gsm8k,gsm8k_0041,llama3.1:8b,question_only,8000,True,11363,True,question_only: Changed '88' to '125' in question,True,598,33.36,
+gsm8k,gsm8k_0041,llama3.1:8b,question_only,8000,True,4400,True,question_only: Changed '10' to '19' in question,True,576,23.69,
+gsm8k,gsm8k_0042,llama3.1:8b,question_only,280,True,420,True,question_only: Changed '8' to '12' in question,True,546,21.59,
+gsm8k,gsm8k_0042,llama3.1:8b,question_only,280,True,56,True,question_only: Changed '5' to '1' in question,True,502,18.79,
+gsm8k,gsm8k_0043,llama3.1:8b,question_only,30,True,14,True,question_only: Changed '24' to '8' in question,True,400,14.65,
+gsm8k,gsm8k_0043,llama3.1:8b,question_only,30,True,21,True,question_only: Changed '10' to '1' in question,True,396,11.76,
+gsm8k,gsm8k_0044,llama3.1:8b,question_only,96,False,208,True,question_only: Changed '40' to '60' in question,True,582,17.13,
+gsm8k,gsm8k_0044,llama3.1:8b,question_only,96,False,24,True,question_only: Changed '40' to '75' in question,True,727,27.04,
+gsm8k,gsm8k_0045,llama3.1:8b,question_only,276,True,348,True,question_only: Changed '57' to '39' in question,True,524,24.99,
+gsm8k,gsm8k_0045,llama3.1:8b,question_only,276,True,336,True,question_only: Changed '73' to '43' in question,True,516,18.25,
+gsm8k,gsm8k_0046,llama3.1:8b,question_only,32,True,36,True,question_only: Changed '6' to '8' in question,True,649,21.72,
+gsm8k,gsm8k_0046,llama3.1:8b,question_only,32,True,40,True,question_only: Changed '6' to '10' in question,True,640,25.12,
+gsm8k,gsm8k_0047,llama3.1:8b,question_only,25,True,39.6875,True,question_only: Changed '200' to '315' in question,True,827,30.33,
+gsm8k,gsm8k_0047,llama3.1:8b,question_only,25,True,37.5,True,question_only: Changed '1' to '2' in question,True,668,31.12,
+gsm8k,gsm8k_0048,llama3.1:8b,question_only,10,True,11.92,True,question_only: Changed '50' to '74' in question,True,548,23.17,
+gsm8k,gsm8k_0048,llama3.1:8b,question_only,10,True,7.76,True,question_only: Changed '50' to '22' in question,True,546,19.89,
+gsm8k,gsm8k_0049,llama3.1:8b,question_only,84,True,100,True,question_only: Changed '3' to '4' in question,True,487,18.11,
+gsm8k,gsm8k_0049,llama3.1:8b,question_only,84,True,116,True,question_only: Changed '3' to '5' in question,True,532,17.78,
+gsm8k,gsm8k_0050,llama3.1:8b,question_only,147,True,126,True,question_only: Changed '2' to '1' in question,True,649,22.74,
+gsm8k,gsm8k_0050,llama3.1:8b,question_only,147,True,105,True,question_only: Changed '5' to '3' in question,True,735,29.03,
+gsm8k,gsm8k_0051,llama3.1:8b,question_only,13,False,1,True,question_only: Changed '10' to '14' in question,True,877,35.89,
+gsm8k,gsm8k_0052,llama3.1:8b,question_only,18,False,18,False,question_only: Changed '100' to '12' in question,False,376,68.83,
+gsm8k,gsm8k_0053,llama3.1:8b,question_only,20,True,50,True,question_only: Changed '4' to '1' in question,True,592,75.38,
+gsm8k,gsm8k_0054,llama3.1:8b,question_only,140,True,266,True,question_only: Changed '10' to '19' in question,True,512,72.7,
+gsm8k,gsm8k_0051,llama3.1:8b,question_only,,False,,False,,False,9092,300.3,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 100 column 282 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...o play video games is 2', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+gsm8k,gsm8k_0055,llama3.1:8b,question_only,36,True,52.1,True,question_only: Changed '400' to '522' in question,True,1087,89.5,
+gsm8k,gsm8k_0052,llama3.1:8b,question_only,18,False,54,True,question_only: Changed '3' to '1' in question,True,417,32.86,
+gsm8k,gsm8k_0056,llama3.1:8b,question_only,1,True,1.50,True,question_only: Changed '10' to '5' in question,True,648,20.17,
+gsm8k,gsm8k_0053,llama3.1:8b,question_only,20,True,50,True,question_only: Changed '4' to '1' in question,True,592,25.57,
+gsm8k,gsm8k_0057,llama3.1:8b,question_only,1,True,13,True,question_only: Changed '16' to '4' in question,True,473,19.71,
+gsm8k,gsm8k_0054,llama3.1:8b,question_only,140,True,70,True,question_only: Changed '2' to '1' in question,True,460,15.37,
+gsm8k,gsm8k_0058,llama3.1:8b,question_only,50,True,65,True,question_only: Changed '3' to '6' in question,True,624,20.15,
+gsm8k,gsm8k_0055,llama3.1:8b,question_only,36,True,12.79,True,question_only: Changed '400' to '669' in question,True,897,32.61,
+gsm8k,gsm8k_0059,llama3.1:8b,question_only,860,True,980,True,question_only: Changed '3' to '4' in question,True,631,32.3,
+gsm8k,gsm8k_0056,llama3.1:8b,question_only,1,True,7.3,True,question_only: Changed '20' to '34' in question,True,572,23.21,
+gsm8k,gsm8k_0060,llama3.1:8b,question_only,60,True,53.2,True,question_only: Changed '48' to '14' in question,True,765,27.34,
+gsm8k,gsm8k_0057,llama3.1:8b,question_only,1,True,10,True,question_only: Changed '13' to '22' in question,True,497,24.52,
+gsm8k,gsm8k_0061,llama3.1:8b,question_only,23,True,22,True,question_only: Changed '2' to '3' in question,True,698,22.38,
+gsm8k,gsm8k_0058,llama3.1:8b,question_only,50,True,74,True,question_only: Changed '5' to '9' in question,True,595,25.57,
+gsm8k,gsm8k_0062,llama3.1:8b,question_only,350,True,0.70,True,question_only: Changed '500' to '94' in question,True,553,21.71,
+gsm8k,gsm8k_0059,llama3.1:8b,question_only,860,True,1160,True,question_only: Changed '5' to '8' in question,True,655,22.97,
+gsm8k,gsm8k_0063,llama3.1:8b,question_only,100,True,1650,True,question_only: Changed '6' to '1' in question,True,518,21.5,
+gsm8k,gsm8k_0060,llama3.1:8b,question_only,60,True,63.8,True,question_only: Changed '57' to '76' in question,True,627,20.7,
+gsm8k,gsm8k_0064,llama3.1:8b,question_only,133,True,127.40,True,question_only: Changed '5' to '9' in question,True,495,21.3,
+gsm8k,gsm8k_0061,llama3.1:8b,question_only,23,True,27,True,question_only: Changed '9' to '13' in question,True,698,23.38,
+gsm8k,gsm8k_0065,llama3.1:8b,question_only,112,True,89.5,True,question_only: Changed '32' to '17' in question,True,700,28.14,
+gsm8k,gsm8k_0062,llama3.1:8b,question_only,350,True,606.9,True,question_only: Changed '500' to '867' in question,True,572,24.91,
+gsm8k,gsm8k_0066,llama3.1:8b,question_only,13,True,19,True,question_only: Changed '6' to '10' in question,True,517,20.34,
+gsm8k,gsm8k_0063,llama3.1:8b,question_only,100,True,1500,True,question_only: Changed '6' to '10' in question,True,721,24.39,
+gsm8k,gsm8k_0067,llama3.1:8b,question_only,130,True,65,True,question_only: Swapped 'every' → 'no' in premises,True,423,21.24,
+gsm8k,gsm8k_0064,llama3.1:8b,question_only,133,True,128.80,True,question_only: Changed '5' to '8' in question,True,398,12.72,
+gsm8k,gsm8k_0068,llama3.1:8b,question_only,2125,True,1125,True,question_only: Changed '3' to '1' in question,True,470,13.45,
+gsm8k,gsm8k_0065,llama3.1:8b,question_only,112,True,159,True,question_only: Changed '64' to '111' in question,True,653,19.79,
+gsm8k,gsm8k_0069,llama3.1:8b,question_only,7,True,8,True,question_only: Changed '3' to '4' in question,True,598,23.37,
+gsm8k,gsm8k_0066,llama3.1:8b,question_only,13,True,16,True,question_only: Changed '4' to '7' in question,True,536,20.73,
+gsm8k,gsm8k_0070,llama3.1:8b,question_only,120,True,80,True,question_only: Changed '3' to '2' in question,True,471,18.07,
+gsm8k,gsm8k_0067,llama3.1:8b,question_only,130,True,65,True,question_only: Swapped 'every' → 'no' in premises,True,423,14.41,
+gsm8k,gsm8k_0071,llama3.1:8b,question_only,8,True,8,False,question_only: Swapped 'all' → 'none' in premises,False,695,20.32,
+gsm8k,gsm8k_0068,llama3.1:8b,question_only,2125,True,2250,True,question_only: Changed '1' to '2' in question,True,475,21.14,
+gsm8k,gsm8k_0072,llama3.1:8b,question_only,144,True,240,True,question_only: Changed '20' to '12' in question,True,538,16.91,
+gsm8k,gsm8k_0069,llama3.1:8b,question_only,7,True,10,True,question_only: Changed '10' to '16' in question,True,553,18.99,
+gsm8k,gsm8k_0073,llama3.1:8b,question_only,6,True,5.25,True,question_only: Changed '5' to '2' in question,True,514,18.39,
+gsm8k,gsm8k_0070,llama3.1:8b,question_only,120,True,40,True,question_only: Changed '3' to '1' in question,True,490,17.67,
+gsm8k,gsm8k_0074,llama3.1:8b,question_only,450,True,483,True,question_only: Changed '40' to '7' in question,True,460,16.36,
+gsm8k,gsm8k_0071,llama3.1:8b,question_only,8,True,8,False,question_only: Swapped 'all' → 'none' in premises,False,695,21.71,
+gsm8k,gsm8k_0075,llama3.1:8b,question_only,4400,True,3920,True,question_only: Changed '5' to '2' in question,True,882,33.38,
+gsm8k,gsm8k_0072,llama3.1:8b,question_only,144,True,84,True,question_only: Changed '8' to '3' in question,True,537,29.13,
+gsm8k,gsm8k_0076,llama3.1:8b,question_only,450,True,900,True,question_only: Changed '1000' to '174' in question,True,604,21.41,
+gsm8k,gsm8k_0073,llama3.1:8b,question_only,6,True,6.25,True,question_only: Changed '1' to '2' in question,True,464,19.31,
+gsm8k,gsm8k_0077,llama3.1:8b,question_only,64,True,64,False,question_only: Changed '4' to '6' in question,False,847,26.4,
+gsm8k,gsm8k_0074,llama3.1:8b,question_only,450,True,419,True,question_only: Changed '40' to '71' in question,True,453,26.37,
+gsm8k,gsm8k_0078,llama3.1:8b,question_only,162,False,54,True,question_only: Changed '1' to '2' in question,True,634,20.46,
+gsm8k,gsm8k_0075,llama3.1:8b,question_only,4400,True,7747,True,question_only: Changed '600' to '1056' in question,True,897,32.69,
+gsm8k,gsm8k_0079,llama3.1:8b,question_only,112,True,112,False,question_only: Swapped 'all' → 'none' in premises,False,416,26.03,
+gsm8k,gsm8k_0076,llama3.1:8b,question_only,450,True,2890,True,question_only: Changed '10' to '6' in question,True,590,17.51,
+gsm8k,gsm8k_0080,llama3.1:8b,question_only,32,True,10 2/3,True,question_only: Changed '6' to '2' in question,True,719,26.64,
+gsm8k,gsm8k_0077,llama3.1:8b,question_only,64,True,12,True,question_only: Changed '16' to '6' in question,True,685,29.33,
+gsm8k,gsm8k_0081,llama3.1:8b,question_only,6,True,3,True,question_only: Changed '6' to '10' in question,True,857,32.91,
+gsm8k,gsm8k_0078,llama3.1:8b,question_only,162,False,54,True,question_only: Changed '1' to '2' in question,True,634,31.93,
+gsm8k,gsm8k_0082,llama3.1:8b,question_only,4,True,3,True,question_only: Changed '12' to '16' in question,True,489,21.26,
+gsm8k,gsm8k_0079,llama3.1:8b,question_only,112,True,112,False,question_only: Swapped 'all' → 'none' in premises,False,416,14.55,
+gsm8k,gsm8k_0083,llama3.1:8b,question_only,79,True,109.84,True,question_only: Changed '4.5' to '7.07' in question,True,895,27.27,
+gsm8k,gsm8k_0080,llama3.1:8b,question_only,32,True,53,True,question_only: Changed '6' to '10' in question,True,552,31.28,
+gsm8k,gsm8k_0084,llama3.1:8b,question_only,35,True,109,True,question_only: Changed '50' to '89' in question,True,603,21.52,
+gsm8k,gsm8k_0081,llama3.1:8b,question_only,6,True,17,True,question_only: Changed '50' to '18' in question,True,656,24.03,
+gsm8k,gsm8k_0085,llama3.1:8b,question_only,100,True,45,True,question_only: Changed '70' to '15' in question,True,412,19.41,
+gsm8k,gsm8k_0082,llama3.1:8b,question_only,4,True,8,True,question_only: Changed '12' to '6' in question,True,474,14.45,
+gsm8k,gsm8k_0086,llama3.1:8b,question_only,40,True,85,True,question_only: Changed '20' to '35' in question,True,529,17.82,
+gsm8k,gsm8k_0083,llama3.1:8b,question_only,79,True,115,True,question_only: Changed '12' to '20' in question,True,474,18.19,
+gsm8k,gsm8k_0087,llama3.1:8b,question_only,30,True,12,True,question_only: Changed '100' to '43' in question,True,588,18.61,
+gsm8k,gsm8k_0084,llama3.1:8b,question_only,35,True,93.33,True,question_only: Changed '2' to '1' in question,True,1106,36.97,
+gsm8k,gsm8k_0088,llama3.1:8b,question_only,2390,False,200,True,question_only: Changed '4' to '2' in question,True,783,43.46,
+gsm8k,gsm8k_0085,llama3.1:8b,question_only,100,True,132,True,question_only: Changed '70' to '102' in question,True,430,24.0,
+gsm8k,gsm8k_0089,llama3.1:8b,question_only,29,True,31,True,question_only: Changed '3' to '1' in question,True,438,14.0,
+gsm8k,gsm8k_0086,llama3.1:8b,question_only,40,True,-5,True,question_only: Changed '3' to '0' in question,True,523,16.52,
+gsm8k,gsm8k_0090,llama3.1:8b,question_only,5,True,5.5,True,question_only: Changed '5' to '3' in question,True,451,17.22,
+gsm8k,gsm8k_0087,llama3.1:8b,question_only,30,True,54,True,question_only: Changed '100' to '181' in question,True,472,14.4,
+gsm8k,gsm8k_0091,llama3.1:8b,question_only,12,True,22,True,question_only: Changed '120' to '218' in question,True,880,27.11,
+gsm8k,gsm8k_0088,llama3.1:8b,question_only,2390,False,191,True,question_only: Changed '50' to '71' in question,True,790,37.42,
+gsm8k,gsm8k_0092,llama3.1:8b,question_only,150,False,31,True,question_only: Changed '10' to '1' in question,True,682,31.19,
+gsm8k,gsm8k_0089,llama3.1:8b,question_only,29,True,28,True,question_only: Changed '4' to '2' in question,True,435,20.87,
+gsm8k,gsm8k_0093,llama3.1:8b,question_only,230,True,261.40,True,question_only: Changed '400' to '557' in question,True,734,22.22,
+gsm8k,gsm8k_0090,llama3.1:8b,question_only,5,True,0.5,True,question_only: Changed '25' to '7' in question,True,452,23.06,
+gsm8k,gsm8k_0094,llama3.1:8b,question_only,650,True,1100,True,question_only: Changed '20' to '35' in question,True,462,14.49,
+gsm8k,gsm8k_0091,llama3.1:8b,question_only,12,True,9/5,True,question_only: Changed '120' to '18' in question,True,873,26.9,
+gsm8k,gsm8k_0095,llama3.1:8b,question_only,75,True,705,True,question_only: Changed '8' to '11' in question,True,667,33.98,
+gsm8k,gsm8k_0092,llama3.1:8b,question_only,150,False,90,True,question_only: Changed '10' to '6' in question,True,639,26.68,
+gsm8k,gsm8k_0096,llama3.1:8b,question_only,7.00,True,9.28,True,question_only: Changed '0.75' to '0.37' in question,True,584,24.1,
+gsm8k,gsm8k_0093,llama3.1:8b,question_only,230,True,181.60,True,question_only: Changed '400' to '158' in question,True,741,26.89,
+gsm8k,gsm8k_0097,llama3.1:8b,question_only,1600,True,2400,True,question_only: Changed '6' to '4' in question,True,651,27.54,
+gsm8k,gsm8k_0094,llama3.1:8b,question_only,650,True,170,True,question_only: Changed '15' to '3' in question,True,544,21.32,
+gsm8k,gsm8k_0098,llama3.1:8b,question_only,90,True,60,True,question_only: Changed '6' to '4' in question,True,578,19.91,
+gsm8k,gsm8k_0095,llama3.1:8b,question_only,75,True,255,True,question_only: Changed '11' to '17' in question,True,511,19.68,
+gsm8k,gsm8k_0099,llama3.1:8b,question_only,18,True,29,True,question_only: Changed '15' to '4' in question,True,402,14.56,
+gsm8k,gsm8k_0096,llama3.1:8b,question_only,7.00,True,5.10,True,question_only: Changed '0.80' to '1.18' in question,True,584,16.68,
+gsm8k,gsm8k_0100,llama3.1:8b,question_only,2400,True,3580,True,question_only: Changed '600' to '895' in question,True,637,24.31,
+gsm8k,gsm8k_0097,llama3.1:8b,question_only,1600,True,3696,True,question_only: Changed '400' to '624' in question,True,1008,36.02,
+gsm8k,gsm8k_0101,llama3.1:8b,question_only,38.89,False,13000,True,question_only: Changed '3' to '5' in question,True,492,30.82,
+gsm8k,gsm8k_0098,llama3.1:8b,question_only,90,True,30,True,question_only: Changed '6' to '2' in question,True,602,19.15,
+gsm8k,gsm8k_0102,llama3.1:8b,question_only,320,True,320,False,question_only: Changed '00' to '5' in question,False,891,30.09,
+gsm8k,gsm8k_0099,llama3.1:8b,question_only,18,True,34,True,question_only: Changed '21' to '5' in question,True,400,24.22,
+gsm8k,gsm8k_0103,llama3.1:8b,question_only,15,True,20,True,question_only: Changed '8' to '3' in question,True,334,9.62,
+gsm8k,gsm8k_0100,llama3.1:8b,question_only,2400,True,2772,True,question_only: Changed '50' to '81' in question,True,672,18.37,
+gsm8k,gsm8k_0104,llama3.1:8b,question_only,28,True,32,True,question_only: Changed '1' to '0' in question,True,612,26.37,
+gsm8k,gsm8k_0101,llama3.1:8b,question_only,38.89,False,12580,True,question_only: Changed '50' to '81' in question,True,615,23.84,
+gsm8k,gsm8k_0105,llama3.1:8b,question_only,68,True,8,True,question_only: Changed '25' to '10' in question,True,568,21.28,
+gsm8k,gsm8k_0102,llama3.1:8b,question_only,320,True,320,False,question_only: Changed '10' to '5' in question,False,694,22.53,
+gsm8k,gsm8k_0106,llama3.1:8b,question_only,130000,True,78000,True,question_only: Changed '5' to '3' in question,True,411,19.01,
+gsm8k,gsm8k_0103,llama3.1:8b,question_only,15,True,8,True,question_only: Changed '8' to '15' in question,True,346,10.68,
+gsm8k,gsm8k_0107,llama3.1:8b,question_only,5,True,4,True,question_only: Changed '2' to '1' in question,True,531,13.96,
+gsm8k,gsm8k_0104,llama3.1:8b,question_only,28,True,29,True,question_only: Changed '3' to '1' in question,True,504,18.33,
+gsm8k,gsm8k_0108,llama3.1:8b,question_only,6,False,11,True,question_only: Changed '160' to '256' in question,True,790,24.73,
+gsm8k,gsm8k_0105,llama3.1:8b,question_only,68,True,24,True,question_only: Changed '25' to '14' in question,True,580,25.88,
+gsm8k,gsm8k_0109,llama3.1:8b,question_only,3,True,3,False,question_only: Changed '3' to '1' in question,False,449,17.86,
+gsm8k,gsm8k_0106,llama3.1:8b,question_only,130000,True,49870,True,question_only: Changed '1000' to '383' in question,True,554,18.32,
+gsm8k,gsm8k_0110,llama3.1:8b,question_only,180,True,234,True,question_only: Changed '5' to '8' in question,True,466,17.95,
+gsm8k,gsm8k_0107,llama3.1:8b,question_only,5,True,7,True,question_only: Changed '10' to '14' in question,True,581,18.38,
+gsm8k,gsm8k_0111,llama3.1:8b,question_only,156000,False,185800,True,question_only: Changed '3000' to '4645' in question,True,973,33.95,
+gsm8k,gsm8k_0108,llama3.1:8b,question_only,6,False,4,True,question_only: Changed '6' to '10' in question,True,843,40.58,
+gsm8k,gsm8k_0112,llama3.1:8b,question_only,1218,True,1367,True,question_only: Changed '360' to '509' in question,True,476,25.23,
+gsm8k,gsm8k_0109,llama3.1:8b,question_only,3,True,-3,True,question_only: Changed '2' to '4' in question,True,454,15.57,
+gsm8k,gsm8k_0113,llama3.1:8b,question_only,31,True,29,True,question_only: Changed '2' to '4' in question,True,592,18.73,
+gsm8k,gsm8k_0110,llama3.1:8b,question_only,180,True,138,True,question_only: Changed '30' to '16' in question,True,480,18.65,
+gsm8k,gsm8k_0114,llama3.1:8b,question_only,10,True,3.75,True,question_only: Changed '80' to '30' in question,True,502,16.1,
+gsm8k,gsm8k_0111,llama3.1:8b,question_only,156000,False,81200,True,question_only: Changed '3000' to '2030' in question,True,682,22.31,
+gsm8k,gsm8k_0115,llama3.1:8b,question_only,30,True,39,True,question_only: Changed '10' to '1' in question,True,472,21.9,
+gsm8k,gsm8k_0112,llama3.1:8b,question_only,1218,True,1175,True,question_only: Changed '64' to '107' in question,True,476,15.44,
+gsm8k,gsm8k_0116,llama3.1:8b,question_only,100,True,27.50,True,question_only: Changed '300' to '155' in question,True,599,19.43,
+gsm8k,gsm8k_0113,llama3.1:8b,question_only,31,True,32,True,question_only: Changed '2' to '1' in question,True,590,22.62,
+gsm8k,gsm8k_0117,llama3.1:8b,question_only,2,False,3,True,question_only: Changed '64' to '24' in question,True,518,20.45,
+gsm8k,gsm8k_0114,llama3.1:8b,question_only,10,True,4.875,True,question_only: Changed '80' to '39' in question,True,500,17.9,
+gsm8k,gsm8k_0118,llama3.1:8b,question_only,32,True,56.8,True,question_only: Changed '40' to '71' in question,True,613,20.66,
+gsm8k,gsm8k_0115,llama3.1:8b,question_only,30,True,23,True,question_only: Changed '10' to '17' in question,True,548,22.64,
+gsm8k,gsm8k_0119,llama3.1:8b,question_only,40,True,43.64,True,question_only: Changed '20' to '10' in question,True,616,22.32,
+gsm8k,gsm8k_0116,llama3.1:8b,question_only,100,True,11.50,True,question_only: Changed '300' to '123' in question,True,475,20.23,
+gsm8k,gsm8k_0120,llama3.1:8b,question_only,2.00,True,-$25.60,True,question_only: Changed '0.80' to '0.11' in question,True,567,18.69,
+gsm8k,gsm8k_0117,llama3.1:8b,question_only,2,False,21,True,question_only: Changed '30' to '11' in question,True,437,17.73,
+gsm8k,gsm8k_0121,llama3.1:8b,question_only,90000,True,57000,True,question_only: Changed '120' to '76' in question,True,643,20.87,
+gsm8k,gsm8k_0118,llama3.1:8b,question_only,32,True,21.6,True,question_only: Changed '40' to '27' in question,True,722,29.47,
+gsm8k,gsm8k_0122,llama3.1:8b,question_only,50,True,50,False,question_only: Changed '3' to '1' in question,False,638,27.68,
+gsm8k,gsm8k_0119,llama3.1:8b,question_only,40,True,43.64,True,question_only: Changed '20' to '10' in question,True,616,24.06,
+gsm8k,gsm8k_0123,llama3.1:8b,question_only,8,True,14,True,question_only: Changed '5' to '8' in question,True,425,19.0,
+gsm8k,gsm8k_0120,llama3.1:8b,question_only,2.00,True,14.00,True,question_only: Changed '4' to '2' in question,True,670,20.66,
+gsm8k,gsm8k_0124,llama3.1:8b,question_only,21,True,7,True,question_only: Changed '6' to '2' in question,True,548,24.07,
+gsm8k,gsm8k_0121,llama3.1:8b,question_only,90000,True,90225,True,question_only: Changed '000' to '3' in question,True,638,23.83,
+gsm8k,gsm8k_0125,llama3.1:8b,question_only,2,True,0.56,True,question_only: Changed '80' to '54' in question,True,603,25.01,
+gsm8k,gsm8k_0122,llama3.1:8b,question_only,50,True,50,False,question_only: Changed '3' to '2' in question,False,791,27.99,
+gsm8k,gsm8k_0126,llama3.1:8b,question_only,72,False,330,True,question_only: Changed '6' to '11' in question,True,436,23.43,
+gsm8k,gsm8k_0123,llama3.1:8b,question_only,8,True,8,False,question_only: Changed '00' to '1' in question,False,527,16.85,
+gsm8k,gsm8k_0127,llama3.1:8b,question_only,104,True,97,True,question_only: Changed '2' to '1' in question,True,822,27.12,
+gsm8k,gsm8k_0124,llama3.1:8b,question_only,21,True,63,True,question_only: Changed '3' to '1' in question,True,522,26.58,
+gsm8k,gsm8k_0128,llama3.1:8b,question_only,25,True,25.35,True,question_only: Changed '100' to '142' in question,True,818,28.1,
+gsm8k,gsm8k_0125,llama3.1:8b,question_only,2,True,1.9333,True,question_only: Changed '300' to '64' in question,True,666,32.03,
+gsm8k,gsm8k_0129,llama3.1:8b,question_only,75,True,120,True,question_only: Changed '12' to '21' in question,True,681,26.88,
+gsm8k,gsm8k_0126,llama3.1:8b,question_only,72,False,108,True,question_only: Changed '5' to '2' in question,True,421,19.96,
+gsm8k,gsm8k_0130,llama3.1:8b,question_only,60,True,-185,True,question_only: Changed '60' to '11' in question,True,441,13.73,
+gsm8k,gsm8k_0127,llama3.1:8b,question_only,104,True,116,True,question_only: Changed '2' to '3' in question,True,807,23.94,
+gsm8k,gsm8k_0131,llama3.1:8b,question_only,260,True,140,True,question_only: Changed '4' to '2' in question,True,583,28.22,
+gsm8k,gsm8k_0128,llama3.1:8b,question_only,25,True,25,False,question_only: Changed '100' to '26' in question,False,619,24.06,
+gsm8k,gsm8k_0132,llama3.1:8b,question_only,30,False,54,True,question_only: Changed '20' to '8' in question,True,500,21.77,
+gsm8k,gsm8k_0129,llama3.1:8b,question_only,75,True,63,True,question_only: Changed '13' to '17' in question,True,547,18.68,
+gsm8k,gsm8k_0133,llama3.1:8b,question_only,30,True,36,True,question_only: Changed '10' to '4' in question,True,564,20.5,
+gsm8k,gsm8k_0130,llama3.1:8b,question_only,60,True,180,True,question_only: Changed '5' to '7' in question,True,440,18.36,
+gsm8k,gsm8k_0134,llama3.1:8b,question_only,18,True,12,True,question_only: Changed '6' to '4' in question,True,419,14.23,
+gsm8k,gsm8k_0131,llama3.1:8b,question_only,260,True,440,True,question_only: Changed '4' to '7' in question,True,542,17.3,
+gsm8k,gsm8k_0135,llama3.1:8b,question_only,160,True,220,True,question_only: Changed '6' to '9' in question,True,618,22.51,
+gsm8k,gsm8k_0132,llama3.1:8b,question_only,30,False,65.50,True,question_only: Changed '20' to '31' in question,True,441,19.65,
+gsm8k,gsm8k_0136,llama3.1:8b,question_only,15,True,19,True,question_only: Changed '7' to '11' in question,True,574,19.03,
+gsm8k,gsm8k_0133,llama3.1:8b,question_only,30,True,90,True,question_only: Changed '30' to '50' in question,True,633,24.68,
+gsm8k,gsm8k_0137,llama3.1:8b,question_only,7,True,4,True,question_only: Changed '10' to '4' in question,True,417,19.52,
+gsm8k,gsm8k_0134,llama3.1:8b,question_only,18,True,3,True,question_only: Changed '6' to '1' in question,True,566,17.8,
+gsm8k,gsm8k_0138,llama3.1:8b,question_only,6850000,False,2740000,True,question_only: Changed '100' to '40' in question,True,731,26.71,
+gsm8k,gsm8k_0135,llama3.1:8b,question_only,160,True,60,True,question_only: Changed '6' to '1' in question,True,611,27.33,
+gsm8k,gsm8k_0139,llama3.1:8b,question_only,30,True,48,True,question_only: Changed '10' to '16' in question,True,515,21.82,
+gsm8k,gsm8k_0136,llama3.1:8b,question_only,15,True,19,True,question_only: Changed '7' to '11' in question,True,574,21.37,
+gsm8k,gsm8k_0140,llama3.1:8b,question_only,490,True,560,True,question_only: Changed '45' to '80' in question,True,585,23.67,
+gsm8k,gsm8k_0137,llama3.1:8b,question_only,7,True,10,True,question_only: Changed '10' to '16' in question,True,419,18.57,
+gsm8k,gsm8k_0141,llama3.1:8b,question_only,31,True,22,True,question_only: Changed '20' to '11' in question,True,581,17.03,
+gsm8k,gsm8k_0138,llama3.1:8b,question_only,6850000,False,10150000,True,question_only: Changed '5' to '7' in question,True,737,26.11,
+gsm8k,gsm8k_0142,llama3.1:8b,question_only,24,True,48,True,question_only: Changed '4' to '8' in question,True,377,21.27,
+gsm8k,gsm8k_0139,llama3.1:8b,question_only,30,True,45,True,question_only: Changed '10' to '15' in question,True,476,14.32,
+gsm8k,gsm8k_0143,llama3.1:8b,question_only,131250,True,32675,True,question_only: Changed '300' to '94' in question,True,889,27.43,
+gsm8k,gsm8k_0140,llama3.1:8b,question_only,490,True,777,True,question_only: Changed '200' to '317' in question,True,621,32.02,
+gsm8k,gsm8k_0144,llama3.1:8b,question_only,3,True,1.5,True,question_only: Changed '2' to '1' in question,True,519,23.23,
+gsm8k,gsm8k_0141,llama3.1:8b,question_only,31,True,59,True,question_only: Changed '20' to '5' in question,True,553,19.8,
+gsm8k,gsm8k_0145,llama3.1:8b,question_only,90,True,84.75,True,question_only: Changed '20' to '27' in question,True,622,21.84,
+gsm8k,gsm8k_0142,llama3.1:8b,question_only,24,True,36,True,question_only: Changed '4' to '6' in question,True,365,17.45,
+gsm8k,gsm8k_0146,llama3.1:8b,question_only,193,True,-118,True,question_only: Changed '600' to '289' in question,True,477,13.76,
+gsm8k,gsm8k_0143,llama3.1:8b,question_only,131250,True,98355,True,question_only: Changed '500' to '242' in question,True,938,28.72,
+gsm8k,gsm8k_0147,llama3.1:8b,question_only,2/3,False,-2/3,False,question_only: Changed '9' to '14' in question,False,926,41.22,
+gsm8k,gsm8k_0144,llama3.1:8b,question_only,3,True,1.5,True,question_only: Changed '2' to '1' in question,True,519,30.89,
+gsm8k,gsm8k_0148,llama3.1:8b,question_only,18,True,30,True,question_only: Changed '3' to '5' in question,True,654,22.82,
+gsm8k,gsm8k_0145,llama3.1:8b,question_only,90,True,80,True,question_only: Changed '3' to '2' in question,True,580,23.66,
+gsm8k,gsm8k_0149,llama3.1:8b,question_only,21,True,63,True,question_only: Changed '3' to '1' in question,True,548,20.15,
+gsm8k,gsm8k_0146,llama3.1:8b,question_only,193,True,356,True,question_only: Changed '209' to '46' in question,True,662,23.33,
+gsm8k,gsm8k_0150,llama3.1:8b,question_only,8,True,11,True,question_only: Changed '2' to '3' in question,True,515,22.84,
+gsm8k,gsm8k_0147,llama3.1:8b,question_only,2/3,False,2/3,False,question_only: Changed '9' to '15' in question,False,799,25.81,
+gsm8k,gsm8k_0151,llama3.1:8b,question_only,17500,True,29750,True,question_only: Changed '10' to '17' in question,True,527,26.4,
+gsm8k,gsm8k_0148,llama3.1:8b,question_only,18,True,36,True,question_only: Changed '3' to '6' in question,True,653,22.21,
+gsm8k,gsm8k_0152,llama3.1:8b,question_only,4,True,3,True,question_only: Changed '2' to '3' in question,True,464,20.51,
+gsm8k,gsm8k_0149,llama3.1:8b,question_only,21,True,34,True,question_only: Changed '120' to '194' in question,True,638,19.78,
+gsm8k,gsm8k_0153,llama3.1:8b,question_only,4,True,20,True,question_only: Changed '5' to '1' in question,True,523,20.94,
+gsm8k,gsm8k_0150,llama3.1:8b,question_only,8,True,9,True,question_only: Changed '2' to '1' in question,True,531,18.07,
+gsm8k,gsm8k_0154,llama3.1:8b,question_only,25,True,9.25,True,question_only: Changed '4.00' to '2.37' in question,True,599,20.54,
+gsm8k,gsm8k_0151,llama3.1:8b,question_only,17500,True,22000,True,question_only: Changed '30' to '12' in question,True,616,23.49,
+gsm8k,gsm8k_0155,llama3.1:8b,question_only,15,True,3.57,True,question_only: Changed '3' to '1' in question,True,641,24.97,
+gsm8k,gsm8k_0152,llama3.1:8b,question_only,4,True,5,True,question_only: Changed '4' to '2' in question,True,473,20.76,
+gsm8k,gsm8k_0156,llama3.1:8b,question_only,12,True,6,True,question_only: Changed '6' to '8' in question,True,423,14.74,
+gsm8k,gsm8k_0153,llama3.1:8b,question_only,4,True,10,True,question_only: Changed '5' to '2' in question,True,547,16.47,
+gsm8k,gsm8k_0157,llama3.1:8b,question_only,400,True,508,True,question_only: Changed '700' to '1018' in question,True,658,23.6,
+gsm8k,gsm8k_0154,llama3.1:8b,question_only,25,True,0,True,question_only: Changed '2' to '1' in question,True,748,29.76,
+gsm8k,gsm8k_0158,llama3.1:8b,question_only,72,True,74,True,question_only: Changed '5' to '3' in question,True,502,24.15,
+gsm8k,gsm8k_0155,llama3.1:8b,question_only,15,True,12.51,True,question_only: Changed '2' to '1' in question,True,666,21.8,
+gsm8k,gsm8k_0159,llama3.1:8b,question_only,5600,True,2800,True,question_only: Changed '200' to '103' in question,True,643,26.78,
+gsm8k,gsm8k_0156,llama3.1:8b,question_only,12,True,0,True,question_only: Changed '30' to '18' in question,True,423,20.03,
+gsm8k,gsm8k_0160,llama3.1:8b,question_only,270,True,85,True,question_only: Changed '50' to '13' in question,True,434,13.93,
+gsm8k,gsm8k_0157,llama3.1:8b,question_only,400,True,760,True,question_only: Changed '700' to '1329' in question,True,1179,37.05,
+gsm8k,gsm8k_0161,llama3.1:8b,question_only,79,True,82,True,question_only: Changed '4' to '7' in question,True,671,44.46,
+gsm8k,gsm8k_0158,llama3.1:8b,question_only,72,True,76,True,question_only: Changed '5' to '1' in question,True,502,22.95,
+gsm8k,gsm8k_0162,llama3.1:8b,question_only,90,True,30,True,question_only: Changed '30' to '10' in question,True,476,16.28,
+gsm8k,gsm8k_0159,llama3.1:8b,question_only,5600,True,2492,True,question_only: Changed '200' to '89' in question,True,527,17.71,
+gsm8k,gsm8k_0163,llama3.1:8b,question_only,60,True,58,True,question_only: Changed '10' to '13' in question,True,618,21.99,
+gsm8k,gsm8k_0160,llama3.1:8b,question_only,270,True,455,True,question_only: Changed '50' to '87' in question,True,437,19.47,
+gsm8k,gsm8k_0164,llama3.1:8b,question_only,72000,True,144000,True,question_only: Changed '4' to '8' in question,True,413,13.91,
+gsm8k,gsm8k_0161,llama3.1:8b,question_only,79,True,81,True,question_only: Changed '4' to '6' in question,True,671,21.29,
+gsm8k,gsm8k_0165,llama3.1:8b,question_only,20,True,0,True,question_only: Changed '3' to '5' in question,True,533,24.41,
+gsm8k,gsm8k_0162,llama3.1:8b,question_only,90,True,45,True,question_only: Changed '10' to '5' in question,True,476,17.75,
+gsm8k,gsm8k_0166,llama3.1:8b,question_only,24,False,41,True,question_only: Changed '25' to '5' in question,True,641,21.28,
+gsm8k,gsm8k_0163,llama3.1:8b,question_only,60,True,110,True,question_only: Changed '200' to '352' in question,True,556,23.9,
+gsm8k,gsm8k_0167,llama3.1:8b,question_only,6,True,12,True,question_only: Changed '1' to '2' in question,True,561,21.46,
+gsm8k,gsm8k_0164,llama3.1:8b,question_only,72000,True,43200,True,question_only: Changed '5' to '2' in question,True,507,20.38,
+gsm8k,gsm8k_0168,llama3.1:8b,question_only,1110,True,1467.60,True,question_only: Changed '400' to '549' in question,True,601,20.99,
+gsm8k,gsm8k_0165,llama3.1:8b,question_only,20,True,35,True,question_only: Changed '5' to '1' in question,True,548,21.65,
+gsm8k,gsm8k_0169,llama3.1:8b,question_only,12.00,True,14.85,True,question_only: Changed '3.30' to '5.00' in question,True,596,22.26,
+gsm8k,gsm8k_0166,llama3.1:8b,question_only,24,False,12.33,True,question_only: Changed '12' to '7' in question,True,690,26.71,
+gsm8k,gsm8k_0170,llama3.1:8b,question_only,14,True,16,True,question_only: Changed '5' to '7' in question,True,605,25.82,
+gsm8k,gsm8k_0167,llama3.1:8b,question_only,6,True,12,True,question_only: Changed '1' to '2' in question,True,561,22.11,
+gsm8k,gsm8k_0171,llama3.1:8b,question_only,1,True,0,True,question_only: Changed '3' to '1' in question,True,584,22.53,
+gsm8k,gsm8k_0168,llama3.1:8b,question_only,1110,True,988,True,question_only: Changed '150' to '28' in question,True,561,21.9,
+gsm8k,gsm8k_0172,llama3.1:8b,question_only,2,True,3.75,True,question_only: Changed '60' to '32' in question,True,450,18.03,
+gsm8k,gsm8k_0169,llama3.1:8b,question_only,12.00,True,8.10,True,question_only: Changed '5' to '2' in question,True,596,19.89,
+gsm8k,gsm8k_0173,llama3.1:8b,question_only,12,True,4.5,True,question_only: Changed '24' to '9' in question,True,818,29.23,
+gsm8k,gsm8k_0170,llama3.1:8b,question_only,14,True,11,True,question_only: Changed '1' to '0' in question,True,577,27.39,
+gsm8k,gsm8k_0174,llama3.1:8b,question_only,32,True,28.67,True,question_only: Changed '15' to '5' in question,True,473,17.7,
+gsm8k,gsm8k_0171,llama3.1:8b,question_only,1,True,-12,True,question_only: Changed '7' to '11' in question,True,726,23.26,
+gsm8k,gsm8k_0175,llama3.1:8b,question_only,2,True,14.00,True,question_only: Changed '20' to '36' in question,True,534,26.14,
+gsm8k,gsm8k_0172,llama3.1:8b,question_only,2,True,3.62,True,question_only: Changed '720' to '1308' in question,True,454,18.12,
+gsm8k,gsm8k_0176,llama3.1:8b,question_only,84,True,84,False,question_only: Prepended counterfactual framing,False,592,19.04,
+gsm8k,gsm8k_0173,llama3.1:8b,question_only,12,True,23,True,question_only: Changed '24' to '45' in question,True,616,22.17,
+gsm8k,gsm8k_0177,llama3.1:8b,question_only,940,True,1676,True,question_only: Changed '500' to '868' in question,True,341,15.52,
+gsm8k,gsm8k_0174,llama3.1:8b,question_only,32,True,36.33,True,question_only: Changed '15' to '28' in question,True,505,12.86,
+gsm8k,gsm8k_0178,llama3.1:8b,question_only,32,True,6.40,True,question_only: Changed '0.5' to '0.10' in question,True,711,22.42,
+gsm8k,gsm8k_0175,llama3.1:8b,question_only,2,True,9.00,True,question_only: Changed '20' to '31' in question,True,534,24.3,
+gsm8k,gsm8k_0179,llama3.1:8b,question_only,48,True,80,True,question_only: Changed '5' to '3' in question,True,639,23.13,
+gsm8k,gsm8k_0176,llama3.1:8b,question_only,84,True,84,False,question_only: Prepended counterfactual framing,False,592,24.04,
+gsm8k,gsm8k_0180,llama3.1:8b,question_only,168,True,32,True,question_only: Changed '700' to '133' in question,True,605,22.39,
+gsm8k,gsm8k_0177,llama3.1:8b,question_only,940,True,1402,True,question_only: Changed '500' to '731' in question,True,341,15.75,
+gsm8k,gsm8k_0181,llama3.1:8b,question_only,7,True,4,True,question_only: Changed '8' to '11' in question,True,440,11.56,
+gsm8k,gsm8k_0178,llama3.1:8b,question_only,32,True,28,True,question_only: Changed '12' to '4' in question,True,696,20.7,
+gsm8k,gsm8k_0182,llama3.1:8b,question_only,80,True,60,True,question_only: Changed '3' to '4' in question,True,577,24.46,
+gsm8k,gsm8k_0179,llama3.1:8b,question_only,48,True,26.67,True,question_only: Changed '5' to '9' in question,True,607,22.73,
+gsm8k,gsm8k_0183,llama3.1:8b,question_only,4,True,3,True,question_only: Changed '1' to '2' in question,True,509,20.51,
+gsm8k,gsm8k_0180,llama3.1:8b,question_only,168,True,0,True,question_only: Changed '60' to '100' in question,True,607,19.9,
+gsm8k,gsm8k_0184,llama3.1:8b,question_only,60,True,47.25,True,question_only: Changed '20' to '37' in question,True,590,22.85,
+gsm8k,gsm8k_0181,llama3.1:8b,question_only,7,True,13,True,question_only: Changed '8' to '2' in question,True,566,22.47,
+gsm8k,gsm8k_0185,llama3.1:8b,question_only,4000,True,800,True,question_only: Changed '10' to '2' in question,True,527,20.64,
+gsm8k,gsm8k_0182,llama3.1:8b,question_only,80,True,160,True,question_only: Changed '1' to '2' in question,True,722,24.91,
+gsm8k,gsm8k_0187,llama3.1:8b,question_only,240,True,120,True,question_only: Changed '30' to '15' in question,True,396,21.12,
+gsm8k,gsm8k_0183,llama3.1:8b,question_only,4,True,13,True,question_only: Changed '4' to '7' in question,True,690,20.07,
+gsm8k,gsm8k_0188,llama3.1:8b,question_only,120,True,193,True,question_only: Changed '180' to '107' in question,True,491,22.61,
+gsm8k,gsm8k_0184,llama3.1:8b,question_only,60,True,60,False,question_only: Changed '20' to '33' in question,False,587,19.9,
+gsm8k,gsm8k_0189,llama3.1:8b,question_only,105,True,125,True,question_only: Changed '6' to '2' in question,True,641,23.98,
+gsm8k,gsm8k_0185,llama3.1:8b,question_only,4000,True,6000,True,question_only: Changed '3' to '2' in question,True,529,22.35,
+gsm8k,gsm8k_0190,llama3.1:8b,question_only,300,True,600,True,question_only: Changed '4' to '2' in question,True,560,19.25,
+gsm8k,gsm8k_0187,llama3.1:8b,question_only,240,True,448,True,question_only: Changed '30' to '56' in question,True,384,14.99,
+gsm8k,gsm8k_0191,llama3.1:8b,question_only,240,True,133.33,True,question_only: Changed '5' to '1' in question,True,665,19.12,
+gsm8k,gsm8k_0188,llama3.1:8b,question_only,120,True,110,True,question_only: Changed '15' to '10' in question,True,498,22.24,
+gsm8k,gsm8k_0192,llama3.1:8b,question_only,110,True,71,True,question_only: Changed '80' to '119' in question,True,514,17.36,
+gsm8k,gsm8k_0189,llama3.1:8b,question_only,105,True,90,True,question_only: Changed '8' to '11' in question,True,573,19.21,
+gsm8k,gsm8k_0193,llama3.1:8b,question_only,16,False,6,True,question_only: Changed '50' to '33' in question,True,580,21.61,
+gsm8k,gsm8k_0190,llama3.1:8b,question_only,300,True,32,True,question_only: Changed '100' to '16' in question,True,771,27.05,
+gsm8k,gsm8k_0194,llama3.1:8b,question_only,29,False,4,True,question_only: Changed '70' to '10' in question,True,611,27.58,
+gsm8k,gsm8k_0191,llama3.1:8b,question_only,240,True,320,True,question_only: Changed '2' to '1' in question,True,498,20.14,
+gsm8k,gsm8k_0195,llama3.1:8b,question_only,2,True,3.1,True,question_only: Changed '20' to '31' in question,True,706,22.23,
+gsm8k,gsm8k_0192,llama3.1:8b,question_only,110,True,102,True,question_only: Changed '20' to '12' in question,True,495,21.85,
+gsm8k,gsm8k_0196,llama3.1:8b,question_only,2,True,2,False,question_only: Changed '2' to '3' in question,False,678,21.42,
+gsm8k,gsm8k_0193,llama3.1:8b,question_only,16,False,19,True,question_only: Changed '50' to '11' in question,True,605,25.22,
+gsm8k,gsm8k_0197,llama3.1:8b,question_only,762,True,768,True,question_only: Changed '12' to '18' in question,True,543,21.37,
+gsm8k,gsm8k_0194,llama3.1:8b,question_only,29,False,22,True,question_only: Changed '5' to '8' in question,True,778,26.2,
+gsm8k,gsm8k_0198,llama3.1:8b,question_only,2,True,-1,True,question_only: Changed '4' to '1' in question,True,798,34.56,
+gsm8k,gsm8k_0195,llama3.1:8b,question_only,2,True,0.8,True,question_only: Changed '20' to '8' in question,True,676,30.62,
+gsm8k,gsm8k_0199,llama3.1:8b,question_only,5600,True,3999.01,True,question_only: Changed '5' to '7' in question,True,561,22.56,
+gsm8k,gsm8k_0196,llama3.1:8b,question_only,2,True,2,False,question_only: Changed '2' to '3' in question,False,678,23.05,
+math,math_0000,llama3.1:8b,question_only,{'num': 8 'den': 3},False,34/9,True,question_only: Changed '27' to '42' in question,True,1521,53.37,
+gsm8k,gsm8k_0197,llama3.1:8b,question_only,762,True,112,True,question_only: Changed '300' to '40' in question,True,601,51.26,
+math,math_0001,llama3.1:8b,question_only,8,True,5,True,question_only: Changed '2' to '0' in question,True,488,20.03,
+gsm8k,gsm8k_0198,llama3.1:8b,question_only,2,True,14r/5,True,question_only: Changed '5' to '1' in question,True,1073,35.02,
+math,math_0002,llama3.1:8b,question_only,-256,True,-1944,True,question_only: Changed '-2' to '-3' in question,True,651,39.11,
+gsm8k,gsm8k_0199,llama3.1:8b,question_only,5600,True,2800,True,question_only: Changed '2' to '1' in question,True,557,22.55,
+math,math_0003,llama3.1:8b,question_only,12,False,{'num': 3 'den': 4},True,question_only: Changed '2' to '1' in question,True,1315,43.08,
+math,math_0000,llama3.1:8b,question_only,{'num': 8 'den': 3},False,{'numerator': 70 'denominator': 729},True,question_only: Changed '4' to '2' in question,True,1274,65.67,
+math,math_0001,llama3.1:8b,question_only,8,True,9,True,question_only: Changed '1' to '2' in question,True,493,71.61,
+math,math_0002,llama3.1:8b,question_only,-256,True,-2048,True,question_only: Changed '5' to '8' in question,True,654,75.34,
+math,math_0003,llama3.1:8b,question_only,12,False,{'num': 3 'den': 4},True,question_only: Changed '2' to '1' in question,True,1315,95.91,
+math,math_0004,llama3.1:8b,question_only,,False,,False,,False,8884,337.59,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 81 column 91 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...{2 \\tan 24^\\text{o}}$', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0004,llama3.1:8b,question_only,1/2,False,0.3597,True,question_only: Changed '30' to '47' in question,True,710,78.79,
+math,math_0005,llama3.1:8b,question_only,{'numerator': 49 'denominator': 64},False,{'numerator': 1 'denominator': '64b^6'},True,question_only: Changed '2' to '0' in question,True,654,30.34,
+math,math_0005,llama3.1:8b,question_only,{'numerator': 49 'denominator': 64},False,\frac{49}{64}b^3,True,question_only: Changed '2' to '1' in question,True,506,23.56,
+math,math_0006,llama3.1:8b,question_only,8,True,9,True,question_only: Prepended counterfactual framing,True,1697,54.44,
+math,math_0006,llama3.1:8b,question_only,8,True,9,True,question_only: Prepended counterfactual framing,True,1697,89.72,
+math,math_0007,llama3.1:8b,question_only,{'x': 2 'y': -1 'z': 2},False,(2 -1 2),True,question_only: Changed '4' to '6' in question,True,995,68.71,
+math,math_0007,llama3.1:8b,question_only,{'x': 2 'y': -1 'z': 2},False,(19/11 -15/11 21/11),True,question_only: Changed '2' to '3' in question,True,1283,56.66,
+math,math_0008,llama3.1:8b,question_only,0,True,2/9,True,question_only: Changed '0' to '2' in question,True,749,48.96,
+math,math_0008,llama3.1:8b,question_only,0,True,0,False,question_only: Changed '2' to '3' in question,False,611,28.15,
+math,math_0010,llama3.1:8b,question_only,16,False,8,True,question_only: Changed '3' to '5' in question,True,1062,37.91,
+math,math_0010,llama3.1:8b,question_only,16,False,24,True,question_only: Changed '28' to '49' in question,True,1003,50.21,
+math,math_0012,llama3.1:8b,question_only,23,False,6,True,question_only: Changed '1' to '0' in question,True,861,44.33,
+math,math_0012,llama3.1:8b,question_only,23,False,2,True,question_only: Changed '1' to '2' in question,True,743,36.57,
+math,math_0013,llama3.1:8b,question_only,6,True,-253,True,question_only: Changed '2' to '0' in question,True,636,30.15,
+math,math_0013,llama3.1:8b,question_only,6,True,4.7132,True,question_only: Changed '8' to '14' in question,True,586,25.77,
+math,math_0014,llama3.1:8b,question_only,48,False,21,True,question_only: Changed '18' to '30' in question,True,1181,40.12,
+math,math_0014,llama3.1:8b,question_only,48,False,21,True,question_only: Changed '18' to '30' in question,True,1181,55.77,
+math,math_0015,llama3.1:8b,question_only,216,True,64,True,question_only: Changed '3' to '2' in question,True,611,40.2,
+math,math_0015,llama3.1:8b,question_only,216,True,1000,True,question_only: Changed '3' to '5' in question,True,604,24.69,
+math,math_0016,llama3.1:8b,question_only,1/36,False,1/64,True,question_only: Changed '6' to '8' in question,True,512,21.79,
+math,math_0016,llama3.1:8b,question_only,1/36,False,1/36,False,question_only: Changed '2' to '3' in question,False,501,18.8,
+math,math_0017,llama3.1:8b,question_only,{'num': 3 'den': 2},False,27 rac{ ext{sqrt}(23)}{8},True,question_only: Changed '2' to '3' in question,True,1038,32.46,
+math,math_0017,llama3.1:8b,question_only,{'num': 3 'den': 2},False,{'num': '\x0crac{\text{sqrt}39}{8}' 'denom': 8},True,question_only: Changed '2' to '1' in question,True,1164,50.21,
+math,math_0018,llama3.1:8b,question_only,,False,,False,,False,8932,469.63,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 145 column 57 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... $2^{12}$ as $(2^2)^6$,', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0018,llama3.1:8b,question_only,,False,,False,,False,8932,505.9,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 145 column 57 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... $2^{12}$ as $(2^2)^6$,', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0019,llama3.1:8b,question_only,{'vector': {'x': 0 'y': 1 'z': -1}},False,{'v': {'x': 3 'y': 1 'z': 1}},True,question_only: Changed '1' to '2' in question,True,1328,95.98,
+math,math_0019,llama3.1:8b,question_only,{'vector': {'x': 0 'y': 1 'z': -1}},False,{'vector': {'x': 2 'y': 0 'z': 1}},True,question_only: Changed '-2' to '-1' in question,True,1522,71.47,
+math,math_0020,llama3.1:8b,question_only,{'numerator': 1 'denominator': 2},False,1/3,True,question_only: Changed '4' to '6' in question,True,591,50.89,
+math,math_0020,llama3.1:8b,question_only,{'numerator': 1 'denominator': 2},False,1/3,True,question_only: Changed '4' to '6' in question,True,591,24.15,
+math,math_0021,llama3.1:8b,question_only,(2 3 4),False,(7/3 3 4),True,question_only: Changed '0' to '1' in question,True,614,24.24,
+math,math_0021,llama3.1:8b,question_only,(2 3 4),False,(2 3 5),True,question_only: Changed '8' to '11' in question,True,690,26.73,
+math,math_0022,llama3.1:8b,question_only,tuesday,True,tuesday,False,question_only: Prepended counterfactual framing,False,620,27.55,
+math,math_0022,llama3.1:8b,question_only,tuesday,True,tuesday,False,question_only: Prepended counterfactual framing,False,620,26.04,
+math,math_0023,llama3.1:8b,question_only,8,True,8,False,question_only: Swapped 'all' → 'none' in premises,False,833,31.86,
+math,math_0023,llama3.1:8b,question_only,8,True,8,False,question_only: Swapped 'all' → 'none' in premises,False,833,37.64,
+math,math_0024,llama3.1:8b,question_only,36/121,False,36/25,True,question_only: Changed '22' to '10' in question,True,679,32.92,
+math,math_0024,llama3.1:8b,question_only,36/121,False,100/121,True,question_only: Changed '12' to '20' in question,True,679,28.35,
+math,math_0027,llama3.1:8b,question_only,{'numerator': 1 'denominator': 2},False,{'numerator': 1 'denominator': 4 'times': 2},True,question_only: Changed '2' to '4' in question,True,587,26.69,
+math,math_0027,llama3.1:8b,question_only,{'numerator': 1 'denominator': 6},False,undefined,True,question_only: Changed '2' to '0' in question,True,399,19.36,
+math,math_0028,llama3.1:8b,question_only,,False,,False,,False,9036,447.98,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 120 column 44 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...e can use the fact that', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0028,llama3.1:8b,question_only,,False,,False,,False,9036,504.08,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 86 column 117 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...om{10}{2})+(\\binom{9}{', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0029,llama3.1:8b,question_only,3,True,0,True,question_only: Changed '13' to '7' in question,True,1209,94.48,
+math,math_0030,llama3.1:8b,question_only,x^2 - 10x + 41,False,x^2 - 10x + 41,False,question_only: Changed '2' to '1' in question,False,507,72.68,
+math,math_0031,llama3.1:8b,question_only,(-1 0) u (7 ∞),False,(0 7],True,question_only: Changed '2' to '1' in question,True,758,79.95,
+math,math_0029,llama3.1:8b,question_only,,False,,False,,False,8916,373.12,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 91 column 48 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...13} \\bmod 13$ and $5^{', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0032,llama3.1:8b,question_only,7/12,False,7/12,False,question_only: Changed '30' to '54' in question,False,536,72.64,
+math,math_0030,llama3.1:8b,question_only,x^2 - 10x + 41,False,5x^2+6x+4,True,question_only: Changed '5' to '2' in question,True,824,28.91,
+math,math_0033,llama3.1:8b,question_only,10,False,2,True,question_only: Changed '20' to '6' in question,True,894,40.99,
+math,math_0031,llama3.1:8b,question_only,(-1 0) u (7 ∞),False,(0 12],True,question_only: Changed '7' to '12' in question,True,1101,49.37,
+math,math_0035,llama3.1:8b,question_only,2,False,6,True,question_only: Changed '3' to '1' in question,True,972,50.77,
+math,math_0032,llama3.1:8b,question_only,7/12,False,35/60,True,question_only: Changed '5' to '3' in question,True,643,35.87,
+math,math_0036,llama3.1:8b,question_only,4,True,2,True,question_only: Changed '4' to '1' in question,True,605,25.04,
+math,math_0033,llama3.1:8b,question_only,10,False,16,True,question_only: Changed '20' to '34' in question,True,2145,72.51,
+math,math_0037,llama3.1:8b,question_only,5555,False,4453,True,question_only: Changed '4' to '2' in question,True,1163,89.77,
+math,math_0035,llama3.1:8b,question_only,2,False,240,True,question_only: Changed '3' to '5' in question,True,859,49.03,
+math,math_0038,llama3.1:8b,question_only,3,False,7,True,question_only: Changed '2' to '1' in question,True,1087,39.13,
+math,math_0036,llama3.1:8b,question_only,4,True,4,False,question_only: Changed '2' to '1' in question,False,641,32.9,
+math,math_0040,llama3.1:8b,question_only,6,True,6,False,question_only: Changed '7' to '4' in question,False,724,28.2,
+math,math_0037,llama3.1:8b,question_only,5555,False,6556,True,question_only: Changed '1' to '2' in question,True,625,27.81,
+math,math_0041,llama3.1:8b,question_only,-1,True,57.3,True,question_only: Changed '135' to '91' in question,True,777,31.18,
+math,math_0038,llama3.1:8b,question_only,3,False,3,False,question_only: Changed '2' to '3' in question,False,1136,39.46,
+math,math_0042,llama3.1:8b,question_only,±1 ±2 ±4,False,±1 ±2 ±4,False,question_only: Changed '3' to '4' in question,False,512,30.18,
+math,math_0040,llama3.1:8b,question_only,6,True,51/6,True,question_only: Changed '36' to '51' in question,True,738,24.21,
+math,math_0043,llama3.1:8b,question_only,-2,False,0,True,question_only: Changed '2' to '3' in question,True,847,34.07,
+math,math_0044,llama3.1:8b,question_only,7.50,True,4.50,True,question_only: Changed '4' to '2' in question,True,472,69.94,
+math,math_0045,llama3.1:8b,question_only,6,True,(12 * sqrt(7)) / 7,True,question_only: Changed '49' to '79' in question,True,864,81.85,
+math,math_0041,llama3.1:8b,question_only,,False,,False,,False,8884,358.83,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 81 column 21 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n      ""conclusion"": ""', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0042,llama3.1:8b,question_only,±1 ±2 ±4,False,+4 +2 +1 -1 -2 -4,True,question_only: Changed '4' to '7' in question,True,513,71.85,
+math,math_0043,llama3.1:8b,question_only,-2,False,2,True,question_only: Changed '1' to '2' in question,True,635,75.18,
+math,math_0046,llama3.1:8b,question_only,,False,,False,,False,9048,397.92,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 80 column 193 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...t b\\bullet c\\bullet d', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0044,llama3.1:8b,question_only,7.50,True,5.625,True,question_only: Changed '3' to '4' in question,True,400,67.98,
+math,math_0048,llama3.1:8b,question_only,1,True,{'num': 1 'den': 2},True,question_only: Changed '-2' to '0' in question,True,666,18.76,
+math,math_0045,llama3.1:8b,question_only,6,True,4.33,True,question_only: Changed '49' to '67' in question,True,803,31.07,
+math,math_0051,llama3.1:8b,question_only,oxed{ oot 2 ext{ of $65$}},False,7 oot[2]{2},True,question_only: Changed '6' to '9' in question,True,781,35.67,
+math,math_0046,llama3.1:8b,question_only,3,False,1.5,True,question_only: Changed '5' to '7' in question,True,2261,80.68,
+math,math_0052,llama3.1:8b,question_only,17,False,5,True,question_only: Changed '14' to '2' in question,True,860,81.65,
+math,math_0048,llama3.1:8b,question_only,1,True,{'num': 3 'den': 2},True,question_only: Changed '-2' to '-4' in question,True,652,32.24,
+math,math_0053,llama3.1:8b,question_only,105,True,1365,True,question_only: Changed '13' to '4' in question,True,1050,39.4,
+math,math_0051,llama3.1:8b,question_only,oxed{ oot 2 ext{ of $65$}},False,{'distance': 7.62},True,question_only: Changed '2' to '3' in question,True,681,41.22,
+math,math_0054,llama3.1:8b,question_only,-4 4,True,-2 2,True,question_only: Changed '2' to '3' in question,True,710,30.78,
+math,math_0052,llama3.1:8b,question_only,17,False,16,True,question_only: Changed '3' to '2' in question,True,837,34.14,
+math,math_0055,llama3.1:8b,question_only,-3,True,-3,False,question_only: Changed '0.2' to '0.28' in question,False,1448,35.55,
+math,math_0053,llama3.1:8b,question_only,105,True,the problem statement is likely incorrect and the combination c(3 13) is not defined,True,question_only: Changed '15' to '3' in question,True,663,31.63,
+math,math_0056,llama3.1:8b,question_only,9,True,9,False,question_only: Changed '0' to '2' in question,False,1148,38.21,
+math,math_0054,llama3.1:8b,question_only,-4 4,True,2,True,question_only: Changed '2' to '1' in question,True,593,36.03,
+math,math_0055,llama3.1:8b,question_only,-3,True,-3,False,question_only: Changed '1' to '2' in question,False,1448,79.85,
+math,math_0056,llama3.1:8b,question_only,9,True,5,True,question_only: Changed '5' to '2' in question,True,1099,84.96,
+math,math_0057,llama3.1:8b,question_only,58,False,{'num': 173 'den': 7},True,question_only: Changed '7' to '4' in question,True,901,84.14,
+math,math_0057,llama3.1:8b,question_only,,False,,False,,False,9036,323.94,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 80 column 13 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...id"": 16,\n      ""reason', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0058,llama3.1:8b,question_only,150,True,103.5,True,question_only: Changed '600' to '414' in question,True,725,78.54,
+math,math_0058,llama3.1:8b,question_only,150,True,75,True,question_only: Changed '30' to '48' in question,True,730,31.74,
+math,math_0059,llama3.1:8b,question_only,3√3/4,False,0,True,question_only: Changed '1' to '0' in question,True,542,26.21,
+math,math_0059,llama3.1:8b,question_only,3√3/4,False,0,True,question_only: Changed '1' to '0' in question,True,542,20.38,
+math,math_0060,llama3.1:8b,question_only,1,True,-4,True,question_only: Changed '-8.8' to '-13.90' in question,True,541,20.92,
+math,math_0060,llama3.1:8b,question_only,1,True,6,True,question_only: Changed '-8.8' to '-3.81' in question,True,375,16.58,
+math,math_0061,llama3.1:8b,question_only,,False,,False,,False,8968,449.63,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 121 column 94 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...me numbers: 59, 61, and', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0061,llama3.1:8b,question_only,,False,,False,,False,8968,507.24,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 175 column 67 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ltiple of 7. We need to', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0062,llama3.1:8b,question_only,(29 + 20*sqrt(10))/25,False,6 + sqrt(35),True,question_only: Changed '54' to '80' in question,True,1080,88.97,
+math,math_0063,llama3.1:8b,question_only,11,False,12,True,question_only: Changed '5' to '3' in question,True,659,74.95,
+math,math_0064,llama3.1:8b,question_only,3/7,False,3/7,False,question_only: Changed '-3' to '-2' in question,False,890,84.22,
+math,math_0062,llama3.1:8b,question_only,,False,,False,,False,9160,374.84,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 121 column 50 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...uation becomes 4.5x^6 +', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0065,llama3.1:8b,question_only,35/36,False,35/36,False,question_only: Changed '5' to '2' in question,False,714,79.01,
+math,math_0063,llama3.1:8b,question_only,12,False,12,False,question_only: Changed '-10' to '-14' in question,False,659,27.37,
+math,math_0064,llama3.1:8b,question_only,3/7,False,1/5,True,question_only: Changed '-5' to '-2' in question,True,1036,88.65,
+math,math_0065,llama3.1:8b,question_only,35/36,False,11/36,True,question_only: Changed '5' to '8' in question,True,731,79.43,
+math,math_0066,llama3.1:8b,question_only,,False,,False,,False,9088,369.32,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 10 column 2505 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...3 - z^3 = (1+2i)z^3 - z', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0068,llama3.1:8b,question_only,150,False,30,True,question_only: Changed '10' to '15' in question,True,568,73.31,
+math,math_0070,llama3.1:8b,question_only,2.5,False,1,True,question_only: Changed '381' to '561' in question,True,600,76.16,
+math,math_0066,llama3.1:8b,question_only,,False,,False,,False,9088,402.1,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 65 column 120 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...a^2)$. Since $a \\neq 0', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0068,llama3.1:8b,question_only,150,False,150,False,question_only: Changed '5' to '7' in question,False,845,81.84,
+math,math_0070,llama3.1:8b,question_only,2.32192809488736234787049305125765,False,2,True,question_only: Changed '381' to '544' in question,True,478,72.88,
+math,math_0071,llama3.1:8b,question_only,72,False,9216,True,question_only: Changed '3' to '5' in question,True,2332,125.61,
+math,math_0071,llama3.1:8b,question_only,,False,,False,,False,9540,406.99,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 81 column 103 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...us $9x_1^2 - 2x_1y_1(x_', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0072,llama3.1:8b,question_only,2/3,False,2,True,question_only: Prepended counterfactual framing,True,1223,94.47,
+math,math_0072,llama3.1:8b,question_only,2/3,False,2,True,question_only: Prepended counterfactual framing,True,1223,61.57,
+math,math_0073,llama3.1:8b,question_only,9,True,6,True,question_only: Changed '315' to '102' in question,True,476,39.83,
+math,math_0073,llama3.1:8b,question_only,9,True,3,True,question_only: Changed '315' to '165' in question,True,693,24.9,
+math,math_0074,llama3.1:8b,question_only,3,True,3,False,question_only: Changed '2.5' to '3.92' in question,False,636,25.75,
+math,math_0074,llama3.1:8b,question_only,3,True,3,False,question_only: Changed '0' to '5' in question,False,589,18.43,
+math,math_0075,llama3.1:8b,question_only,36,False,84,True,question_only: Changed '0' to '2' in question,True,733,22.39,
+math,math_0075,llama3.1:8b,question_only,36,False,36,False,question_only: Changed '4' to '7' in question,False,968,35.02,
+math,math_0076,llama3.1:8b,question_only,1,True,{'numerator': 25 'denominator': 16},True,question_only: Changed '16' to '25' in question,True,782,81.04,
+math,math_0080,llama3.1:8b,question_only,1/8,False,1/2,True,question_only: Changed '1' to '2' in question,True,842,75.3,
+math,math_0081,llama3.1:8b,question_only,-10879 10879,True,- rac{156411876}{4652909},True,question_only: Changed '0' to '5' in question,True,1704,108.81,
+math,math_0076,llama3.1:8b,question_only,,False,,False,,False,8988,349.58,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 165 column 43 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...We can now simplify the', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0082,llama3.1:8b,question_only,1/3,False,2500/495,True,question_only: Changed '200' to '85' in question,True,716,79.04,
+math,math_0080,llama3.1:8b,question_only,1/8,False,1/2,True,question_only: Changed '1' to '0' in question,True,842,27.93,
+math,math_0083,llama3.1:8b,question_only,90,False,114,True,question_only: Changed '40' to '66' in question,True,781,23.62,
+math,math_0084,llama3.1:8b,question_only,5,True,5,False,question_only: Changed '5' to '7' in question,False,781,80.83,
+math,math_0081,llama3.1:8b,question_only,,False,,False,,False,9100,409.33,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 106 column 30 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...conclusion"": ""We have a', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0085,llama3.1:8b,question_only,,False,,False,,False,9068,480.26,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 30 column 1763 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...4(a^3b + 2a^2b^2 - 2ab^', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0082,llama3.1:8b,question_only,,False,,False,,False,5544,398.47,"1 validation error for CoTResponse
+steps.9.conclusion
+  Field required [type=missing, input_value={'step_id': 10, 'reasonin...975 / 25) = 100 / 399.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0083,llama3.1:8b,question_only,90,False,70,True,question_only: Changed '0' to '2' in question,True,734,73.06,
+math,math_0087,llama3.1:8b,question_only,,False,,False,,False,9000,371.87,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 139 column 5 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...""\n    },\n    {\n     ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0084,llama3.1:8b,question_only,5,True,5,False,question_only: Changed '2' to '0' in question,False,687,78.09,
+math,math_0089,llama3.1:8b,question_only,2,False,2,False,question_only: Changed '1' to '0' in question,False,1647,57.93,
+math,math_0090,llama3.1:8b,question_only,1,False,11,True,question_only: Changed '-7' to '-11' in question,True,995,85.64,
+math,math_0091,llama3.1:8b,question_only,18,True,18,False,question_only: Changed '2' to '1' in question,False,677,77.69,
+math,math_0092,llama3.1:8b,question_only,90,False,90,False,question_only: Changed '2' to '1' in question,False,949,82.87,
+math,math_0085,llama3.1:8b,question_only,,False,,False,,False,9068,352.75,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 91 column 69 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... \\times 2007^2 + 16 \\', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0093,llama3.1:8b,question_only,7/4,False,35/26,True,question_only: Changed '4' to '6' in question,True,611,75.93,
+math,math_0094,llama3.1:8b,question_only,2,False,3,True,question_only: Changed '11' to '21' in question,True,768,80.91,
+math,math_0095,llama3.1:8b,question_only,24,True,24,False,question_only: Changed '0' to '5' in question,False,867,76.32,
+math,math_0087,llama3.1:8b,question_only,,False,,False,,False,9000,360.13,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 139 column 5 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...""\n    },\n    {\n     ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0089,llama3.1:8b,question_only,2,False,1,True,question_only: Changed '1' to '2' in question,True,777,79.79,
+math,math_0096,llama3.1:8b,question_only,,False,,False,,False,9016,409.55,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 143 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...2x+126z-441.""\n    },\n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0090,llama3.1:8b,question_only,,False,,False,,False,1732,214.29,"2 validation errors for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning...sin(θ) & cos(θ) \\\\'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.2
+  Input should be an object [type=model_type, input_value='conclusion', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type"
+math,math_0091,llama3.1:8b,question_only,18,True,12,True,question_only: Changed '8' to '4' in question,True,622,77.19,
+math,math_0092,llama3.1:8b,question_only,90,False,{'ans': 'arctan(3/4) * 180/π' 'format': 'angle in degrees'},True,question_only: Changed '0.7' to '0.28' in question,True,1020,86.04,
+math,math_0097,llama3.1:8b,question_only,,False,,False,,False,9796,301.87,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 125 column 123 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...us 225x^2 + 4400x - 400', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0093,llama3.1:8b,question_only,7/4,False,17/20,True,question_only: Changed '3' to '1' in question,True,420,70.73,
+math,math_0099,llama3.1:8b,question_only,{'step_id': 5 'reasoning': 'the projection of $\x08old{v}$ onto $\x08old{w}$ is $\x08egin{pmatrix} \x0crac{2}{5} \\ -\x0crac{1}{5} \\ 0 \\\text{end{pmatrix}}$.' 'conclusion': 'the projection of $\x08old{v}$ onto $\x08old{w}$ is $\x08egin{pmatrix} \x0crac{2}{5} \\ -\x0crac{1}{5} \\ 0 \\\text{end{pmatrix}}$.'},False,{'step_id': 5 'reasoning': 'since any number multiplied by $0$ is $0$ we have $\text{proj}_{\x08old{w}} \x08old{v} = 0 \x08old{w} = \x08egin{pmatrix} 0 \\ 0 \\ 0 \rbrakk$.' 'conclusion': 'the projection of $\x08old{v}$ onto $\x08old{w}$ is the zero vector.'},True,question_only: Changed '0' to '1' in question,True,866,26.14,
+math,math_0100,llama3.1:8b,question_only,16,False,10,True,question_only: Changed '3' to '1' in question,True,660,75.54,
+math,math_0101,llama3.1:8b,question_only,2 - 7i 8 - 5i,False,14,True,question_only: Changed '4' to '7' in question,True,1030,85.72,
+math,math_0103,llama3.1:8b,question_only,104,False,896521,True,question_only: Changed '20' to '27' in question,True,1631,105.0,
+math,math_0094,llama3.1:8b,question_only,,False,,False,,False,8984,347.2,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 5 column 5418 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...text{ }\\text{ }\\text{', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0105,llama3.1:8b,question_only,7,True,√29,True,question_only: Changed '23' to '16' in question,True,981,85.69,
+math,math_0095,llama3.1:8b,question_only,24,True,24,False,question_only: Changed '0' to '2' in question,False,867,37.12,
+math,math_0106,llama3.1:8b,question_only,6,True,-2/3,True,question_only: Changed '-1' to '0' in question,True,608,25.95,
+math,math_0096,llama3.1:8b,question_only,- rac{11}{9},False,y=(-8x+25)/7,True,question_only: Changed '3' to '5' in question,True,1326,47.23,
+math,math_0107,llama3.1:8b,question_only,,False,,False,,False,9984,481.98,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 110 column 57 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...$4$, we get $4(a^2 + 3a', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0097,llama3.1:8b,question_only,,False,,False,,False,9796,511.46,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 125 column 123 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...us 225x^2 + 4400x - 400', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0108,llama3.1:8b,question_only,33,False,54,True,question_only: Changed '51' to '93' in question,True,665,78.1,
+math,math_0099,llama3.1:8b,question_only,{'step_id': 5 'reasoning': 'the projection of $\x08old{v}$ onto $\x08old{w}$ is $\x08egin{pmatrix} \x0crac{2}{5} \\ -\x0crac{1}{5} \\ 0 \\\text{end{pmatrix}}$.' 'conclusion': 'the projection of $\x08old{v}$ onto $\x08old{w}$ is $\x08egin{pmatrix} \x0crac{2}{5} \\ -\x0crac{1}{5} \\ 0 \\\text{end{pmatrix}}$.'},False,{'step_id': 8 'reasoning': 'the projection of $\x08old{v}$ onto $\x08old{w}$ is given by the simplified expression.' 'conclusion': 'the projection of $\x08old{v}$ onto $\x08old{w}$ is $\x08oxed{\x08egin{pmatrix} -\x0crac{4}{15} \\ \x0crac{2}{15} \\ -\x0crac{2}{3} \\\text{end{pmatrix}}}$.'},True,question_only: Changed '0' to '5' in question,True,1228,44.62,
+math,math_0109,llama3.1:8b,question_only,{'numerator': 11 'denominator': 15},False,{'numerator': 5 'denominator': 9},True,question_only: Changed '5' to '9' in question,True,438,38.1,
+math,math_0100,llama3.1:8b,question_only,16,False,8,True,question_only: Changed '20' to '8' in question,True,2016,63.06,
+math,math_0110,llama3.1:8b,question_only,33/100,False,{'numerator': 11 'denominator': 33},True,question_only: Changed '1' to '2' in question,True,1143,84.31,
+math,math_0101,llama3.1:8b,question_only,-2 - 7i 15 - 8i,False,4-10i -4-7i,True,question_only: Changed '1' to '0' in question,True,841,47.29,
+math,math_0103,llama3.1:8b,question_only,104,False,247,True,question_only: Changed '20' to '5' in question,True,848,81.63,
+math,math_0105,llama3.1:8b,question_only,7,True,8,True,question_only: Changed '5' to '3' in question,True,1050,88.8,
+math,math_0106,llama3.1:8b,question_only,6,True,8/3,True,question_only: Changed '4' to '6' in question,True,484,71.5,
+math,math_0111,llama3.1:8b,question_only,,False,,False,,False,9140,322.55,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 76 column 104 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...12\\text{⋆}2}{9\\text', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0107,llama3.1:8b,question_only,30,False,\frac{1}{2}(a+2)^2,True,question_only: Changed '7' to '11' in question,True,1290,88.6,
+math,math_0112,llama3.1:8b,question_only,44,True,44,False,question_only: Changed '16' to '27' in question,False,1139,55.16,
+math,math_0108,llama3.1:8b,question_only,33,False,42,True,question_only: Changed '51' to '69' in question,True,696,44.08,
+math,math_0113,llama3.1:8b,question_only,26\pi,True,26\pi,False,question_only: Changed '-15' to '-4' in question,False,908,33.85,
+math,math_0109,llama3.1:8b,question_only,{'numerator': 11 'denominator': 15},False,7/12,True,question_only: Changed '5' to '8' in question,True,555,29.96,
+math,math_0114,llama3.1:8b,question_only,35,False,35,False,question_only: Changed '0' to '2' in question,False,821,20.09,
+math,math_0110,llama3.1:8b,question_only,33/100,False,61/183,True,question_only: Changed '100' to '183' in question,True,470,17.25,
+math,math_0115,llama3.1:8b,question_only,1012.5/3600,False,1125/3600,True,question_only: Changed '00' to '5' in question,True,1382,43.48,
+math,math_0116,llama3.1:8b,question_only,72,True,126,True,question_only: Changed '8' to '14' in question,True,932,84.72,
+math,math_0118,llama3.1:8b,question_only,-u + 14,True,-u^2 + 3u + 2,True,question_only: Changed '-3' to '-1' in question,True,664,77.12,
+math,math_0119,llama3.1:8b,question_only,7620_8,False,1020,True,question_only: Changed '8' to '4' in question,True,1015,87.73,
+math,math_0111,llama3.1:8b,question_only,,False,,False,,False,9140,347.17,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 91 column 46 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...have $36\\text{⋆}9=12', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0112,llama3.1:8b,question_only,44,True,5.94,True,question_only: Changed '20' to '3' in question,True,611,76.32,
+math,math_0113,llama3.1:8b,question_only,26\pi,True,26\pi,False,question_only: Changed '150' to '104' in question,False,908,81.93,
+math,math_0114,llama3.1:8b,question_only,35,False,15,True,question_only: Changed '0' to '2' in question,True,1057,79.55,
+math,math_0120,llama3.1:8b,question_only,,False,,False,,False,9220,363.68,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 132 column 3 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...a valid solution.""\n   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0115,llama3.1:8b,question_only,1012.5/3600,False,841/7200,True,question_only: Changed '45' to '29' in question,True,746,78.93,
+math,math_0122,llama3.1:8b,question_only,9,False,4,True,question_only: Changed '6' to '1' in question,True,783,33.3,
+math,math_0123,llama3.1:8b,question_only,400,False,4025.25,True,question_only: Changed '000' to '5' in question,True,432,69.72,
+math,math_0124,llama3.1:8b,question_only,21,True,6,True,question_only: Changed '14' to '4' in question,True,450,70.52,
+math,math_0126,llama3.1:8b,question_only,2s^2,False,s^2 + 2s^1,True,question_only: Changed '3' to '4' in question,True,814,82.3,
+math,math_0116,llama3.1:8b,question_only,,False,,False,,False,9036,303.45,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 65 column 167 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... are positive integers.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0127,llama3.1:8b,question_only,128,True,180,True,question_only: Changed '248' to '347' in question,True,723,78.87,
+math,math_0128,llama3.1:8b,question_only,372,False,1621.92,True,question_only: Changed '1000' to '436' in question,True,407,70.15,
+math,math_0118,llama3.1:8b,question_only,,False,,False,,False,8940,400.5,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 56 column 167 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...4 - u^2 + 3u - 2u + 6 =', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0119,llama3.1:8b,question_only,7620_8,False,1151,True,question_only: Changed '8' to '5' in question,True,796,81.2,
+math,math_0129,llama3.1:8b,question_only,,False,,False,,False,9056,458.3,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 120 column 71 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...equation by isolating a', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0120,llama3.1:8b,question_only,103,True,102,True,question_only: Changed '3' to '1' in question,True,911,82.68,
+math,math_0122,llama3.1:8b,question_only,9,False,4,True,question_only: Changed '3' to '1' in question,True,708,78.41,
+math,math_0123,llama3.1:8b,question_only,4000,False,oxed{16.5},True,question_only: Changed '160' to '79' in question,True,612,75.45,
+math,math_0124,llama3.1:8b,question_only,21,True,{'num': 9 'den': 2},True,question_only: Changed '14' to '3' in question,True,611,75.47,
+math,math_0131,llama3.1:8b,question_only,,False,,False,,False,9000,312.66,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 135 column 85 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...t would be $15$, not $1', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0126,llama3.1:8b,question_only,2s^2,False,2 + s^2,True,question_only: Changed '5' to '3' in question,True,542,73.64,
+math,math_0132,llama3.1:8b,question_only,12,True,4192260,True,question_only: Changed '2' to '1' in question,True,1271,42.97,
+math,math_0127,llama3.1:8b,question_only,128,True,80,True,question_only: Changed '248' to '95' in question,True,777,49.71,
+math,math_0133,llama3.1:8b,question_only,22,False,3,True,question_only: Changed '11' to '4' in question,True,450,25.65,
+math,math_0128,llama3.1:8b,question_only,372,False,1811.44,True,question_only: Changed '1000' to '487' in question,True,407,15.42,
+math,math_0134,llama3.1:8b,question_only,29/100,False,3/5,True,question_only: Changed '1' to '2' in question,True,927,28.35,
+math,math_0135,llama3.1:8b,question_only,10\sqrt{2},True,10\sqrt{3},True,question_only: Changed '3' to '1' in question,True,894,79.82,
+math,math_0136,llama3.1:8b,question_only,1/2,False,1/2,False,question_only: Changed '14' to '7' in question,False,1011,87.07,
+math,math_0137,llama3.1:8b,question_only,d,True,d,False,question_only: Changed '0' to '1' in question,False,1595,81.14,
+math,math_0129,llama3.1:8b,question_only,,False,,False,,False,9056,331.29,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 106 column 90 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...u221A9/(2\\u221A + 1) +', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0138,llama3.1:8b,question_only,169,True,169,False,question_only: Changed '1' to '0' in question,False,748,75.99,
+math,math_0131,llama3.1:8b,question_only,13,False,12,True,question_only: Changed '1' to '2' in question,True,504,23.28,
+math,math_0140,llama3.1:8b,question_only,2 + 2k,False,-1 + 2k,True,question_only: Changed '4' to '1' in question,True,583,21.55,
+math,math_0132,llama3.1:8b,question_only,13,False,175111,True,question_only: Changed '1' to '0' in question,True,1309,45.59,
+math,math_0141,llama3.1:8b,question_only,- rac{3}{103^2},False,309/20600,True,question_only: Changed '2' to '3' in question,True,1322,67.41,
+math,math_0133,llama3.1:8b,question_only,22,False,2,True,question_only: Changed '2003' to '3225' in question,True,768,52.11,
+math,math_0142,llama3.1:8b,question_only,33,False,0,True,question_only: Changed '2' to '3' in question,True,534,28.24,
+math,math_0143,llama3.1:8b,question_only,{'step_id': 8 'reasoning': '' 'conclusion': 'the final answer is $\x08oxed{\x08egin{pmatrix} -6 \\ 9 \\\text{end{pmatrix}}$.'},False,{'num': '\\begin{pmatrix} \\frac{27}{2} \\\\ \\frac{154}{11} \\end{pmatrix}' 'denom': '11'},True,question_only: Changed '0' to '2' in question,True,2221,123.56,
+math,math_0144,llama3.1:8b,question_only,2400,False,124416000,True,question_only: Changed '6' to '8' in question,True,969,85.98,
+math,math_0134,llama3.1:8b,question_only,,False,,False,,False,9128,410.05,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 145 column 23 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...      ""reasoning"": ""The', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0135,llama3.1:8b,question_only,10\sqrt{2},True,37 * (2 - √3) / 4,True,question_only: Changed '20' to '37' in question,True,1096,87.28,
+math,math_0136,llama3.1:8b,question_only,1/2,False,2,True,question_only: Changed '5' to '2' in question,True,1077,90.43,
+math,math_0145,llama3.1:8b,question_only,,False,,False,,False,8976,431.49,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 120 column 75 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ne more time, we get $-', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0137,llama3.1:8b,question_only,d,True,d,False,question_only: Changed '5' to '8' in question,False,1595,82.35,
+math,math_0146,llama3.1:8b,question_only,650,True,650,False,question_only: Changed '26' to '41' in question,False,633,30.44,
+math,math_0138,llama3.1:8b,question_only,169,True,169,False,question_only: Changed '1' to '2' in question,False,814,27.51,
+math,math_0147,llama3.1:8b,question_only,8,True,25,True,question_only: Changed '3' to '1' in question,True,495,25.5,
+math,math_0140,llama3.1:8b,question_only,2 + 2k,False,3 + 2k,True,question_only: Changed '-2' to '-1' in question,True,538,20.44,
+math,math_0148,llama3.1:8b,question_only,0,True,0,False,question_only: Changed '1' to '0' in question,False,387,16.95,
+math,math_0141,llama3.1:8b,question_only,- rac{3}{103^2},False,0.00065,True,question_only: Changed '206' to '46' in question,True,836,25.21,
+math,math_0149,llama3.1:8b,question_only,4,True,{'x': 1.5},True,question_only: Changed '8' to '3' in question,True,455,27.44,
+math,math_0142,llama3.1:8b,question_only,33,False,26,True,question_only: Changed '4' to '6' in question,True,1716,54.69,
+math,math_0151,llama3.1:8b,question_only,0,True,2,True,question_only: Changed '3' to '4' in question,True,912,68.14,
+math,math_0143,llama3.1:8b,question_only,{'step_id': 8 'reasoning': '' 'conclusion': 'the final answer is $\x08oxed{\x08egin{pmatrix} -6 \\ 9 \\\text{end{pmatrix}}$.'},False,{'num': '\\begin{pmatrix} -1 \\\\ 14 \\\text{end{pmatrix}' 'denom': ''},True,question_only: Changed '13' to '18' in question,True,1664,64.64,
+math,math_0152,llama3.1:8b,question_only,1,True,1,False,question_only: Changed '-4' to '-7' in question,False,808,61.36,
+math,math_0144,llama3.1:8b,question_only,2400,False,25/6,True,question_only: Changed '3' to '1' in question,True,1048,43.19,
+math,math_0153,llama3.1:8b,question_only,20,True,20,False,question_only: Changed '15' to '23' in question,False,708,39.89,
+math,math_0145,llama3.1:8b,question_only,,False,,False,,False,8976,452.18,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 5 column 5484 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...text{ }\\text{ }\\text{', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0154,llama3.1:8b,question_only,,False,,False,,False,9032,500.48,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 125 column 187 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...hich gives us: x + (4 -', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0146,llama3.1:8b,question_only,650,True,650,False,question_only: Changed '26' to '41' in question,False,633,75.06,
+math,math_0147,llama3.1:8b,question_only,8,True,16,True,question_only: Changed '4' to '2' in question,True,546,74.06,
+math,math_0148,llama3.1:8b,question_only,0,True,0,False,question_only: Changed '1' to '0' in question,False,387,69.09,
+math,math_0149,llama3.1:8b,question_only,4,True,0,True,question_only: Changed '4' to '1' in question,True,617,76.25,
+math,math_0156,llama3.1:8b,question_only,,False,,False,,False,9064,294.35,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 55 column 69 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...r of possible values of', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0151,llama3.1:8b,question_only,0,True,1,True,question_only: Changed '0' to '2' in question,True,648,76.95,
+math,math_0152,llama3.1:8b,question_only,1,True,1,False,question_only: Changed '-345' to '-223' in question,False,946,86.04,
+math,math_0153,llama3.1:8b,question_only,20,True,215,True,question_only: Changed '10' to '16' in question,True,794,81.11,
+math,math_0157,llama3.1:8b,question_only,,False,,False,,False,9108,371.32,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 146 column 22 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...n      ""conclusion"": ""h', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0158,llama3.1:8b,question_only,108,True,-8,True,question_only: Changed '2' to '3' in question,True,1312,97.41,
+math,math_0159,llama3.1:8b,question_only,{'num': '13*sqrt(13)/2' 'den': '2'},False,15,True,question_only: Changed '0' to '5' in question,True,812,78.83,
+math,math_0154,llama3.1:8b,question_only,,False,,False,,False,9032,430.08,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 121 column 17 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...2."",\n      ""conclusion', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0160,llama3.1:8b,question_only,- rac{33}{65},False,{'numerator': 37 'denominator': 38},True,question_only: Changed '5' to '7' in question,True,1099,90.38,
+math,math_0161,llama3.1:8b,question_only,4,True,4,False,question_only: Changed '4' to '6' in question,False,988,87.36,
+math,math_0162,llama3.1:8b,question_only,32.5,False,12,True,question_only: Changed '48' to '86' in question,True,793,74.76,
+math,math_0163,llama3.1:8b,question_only,x = 0 or x = -20,False,-10,True,question_only: Changed '10' to '4' in question,True,517,73.14,
+math,math_0156,llama3.1:8b,question_only,,False,,False,,False,9064,325.32,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 82 column 3 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...e floor function.""\n   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0165,llama3.1:8b,question_only,1,True,1,False,question_only: Changed '3' to '4' in question,False,430,70.1,
+math,math_0157,llama3.1:8b,question_only,4.5,True,20.8,True,question_only: Changed '3' to '5' in question,True,874,26.99,
+math,math_0166,llama3.1:8b,question_only,-4,True,-5,True,question_only: Changed '23' to '33' in question,True,401,26.52,
+math,math_0167,llama3.1:8b,question_only,24,False,36,True,question_only: Changed '6' to '3' in question,True,986,82.18,
+math,math_0168,llama3.1:8b,question_only,0,False,0,False,question_only: Changed '12' to '20' in question,False,1426,100.61,
+math,math_0169,llama3.1:8b,question_only,4,True,3,True,question_only: Changed '1' to '2' in question,True,782,80.26,
+math,math_0158,llama3.1:8b,question_only,,False,,False,,False,8960,332.76,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 70 column 98 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... square root: $(24 - x^', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0171,llama3.1:8b,question_only,8,True,12,True,question_only: Changed '100' to '155' in question,True,537,73.86,
+math,math_0159,llama3.1:8b,question_only,{'num': '13*sqrt(13)/2' 'den': '2'},False,9,True,question_only: Changed '0' to '2' in question,True,769,25.15,
+math,math_0173,llama3.1:8b,question_only,,False,,False,,False,8916,454.98,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 25 column 4240 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...s not distinct, (2, 3, ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0160,llama3.1:8b,question_only,,False,,False,,False,9040,503.24,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 104 column 19 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... {\n      ""step_id"": 21', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0174,llama3.1:8b,question_only,9\pi/2,False,\frac{27\pi}{25},True,question_only: Changed '13.5' to '3.25' in question,True,719,76.97,
+math,math_0161,llama3.1:8b,question_only,4,True,4,False,question_only: Changed '10' to '16' in question,False,1050,40.58,
+math,math_0175,llama3.1:8b,question_only,84,True,74,True,question_only: Changed '5' to '7' in question,True,507,35.87,
+math,math_0162,llama3.1:8b,question_only,32.5,False,28.65,True,question_only: Changed '26' to '46' in question,True,863,23.72,
+math,math_0176,llama3.1:8b,question_only,180,False,720,True,question_only: Prepended counterfactual framing,True,405,20.77,
+math,math_0163,llama3.1:8b,question_only,x = 0 or x = -20,False,x = -25 or x = -4,True,question_only: Changed '10' to '16' in question,True,686,22.11,
+math,math_0177,llama3.1:8b,question_only,(1008 * 2015) / 2016,False,1749,True,question_only: Changed '2015' to '3548' in question,True,1045,40.99,
+math,math_0165,llama3.1:8b,question_only,1,True,4,True,question_only: Changed '1' to '2' in question,True,440,33.1,
+math,math_0178,llama3.1:8b,question_only,12,False,5,True,question_only: Changed '13' to '2' in question,True,472,15.89,
+math,math_0166,llama3.1:8b,question_only,-4,True,-5,True,question_only: Changed '23' to '33' in question,True,401,15.1,
+math,math_0179,llama3.1:8b,question_only,0,False,4,True,question_only: Changed '10' to '17' in question,True,813,25.65,
+math,math_0180,llama3.1:8b,question_only,{'numerator': 1 'denominator': 2},False,1,True,question_only: Changed '4' to '1' in question,True,402,70.11,
+math,math_0181,llama3.1:8b,question_only,13,True,9,True,question_only: Changed '3' to '6' in question,True,337,68.85,
+math,math_0182,llama3.1:8b,question_only,243,False,10,True,question_only: Swapped 'no' → 'every' in premises,True,661,75.75,
+math,math_0167,llama3.1:8b,question_only,,False,,False,,False,9672,297.64,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 170 column 75 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...Area of PTRS = 24 - 0.5', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0183,llama3.1:8b,question_only,81,True,13,True,question_only: Changed '3' to '1' in question,True,1076,91.29,
+math,math_0185,llama3.1:8b,question_only,8918,True,3302,True,question_only: Changed '343' to '127' in question,True,909,84.16,
+math,math_0186,llama3.1:8b,question_only,1,False,-a,True,question_only: Changed '1' to '0' in question,True,1344,97.04,
+math,math_0188,llama3.1:8b,question_only,13,True,9,True,question_only: Changed '3' to '5' in question,True,846,82.74,
+math,math_0168,llama3.1:8b,question_only,,False,,False,,False,8940,354.01,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 65 column 419 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...c{1 - e^{i\\frac{1.0472', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0190,llama3.1:8b,question_only,{'a': -3 'c': 2},False,{'a': '-9/5' 'c': '7/5'},True,question_only: Changed '2' to '3' in question,True,1420,98.96,
+math,math_0169,llama3.1:8b,question_only,4,True,infinite,True,question_only: Changed '1' to '2' in question,True,854,55.62,
+math,math_0191,llama3.1:8b,question_only,3/5,False,sqrt(91)/10,True,question_only: Changed '6' to '3' in question,True,1005,44.09,
+math,math_0171,llama3.1:8b,question_only,8,True,5,True,question_only: Changed '100' to '68' in question,True,570,36.42,
+math,math_0193,llama3.1:8b,question_only,14,False,12,True,question_only: Changed '2' to '1' in question,True,740,26.03,
+math,math_0173,llama3.1:8b,question_only,3,False,1,True,question_only: Changed '20' to '10' in question,True,714,30.55,
+math,math_0194,llama3.1:8b,question_only,7,True,7,False,question_only: Changed '2' to '1' in question,False,593,27.54,
+math,math_0174,llama3.1:8b,question_only,9\pi/2,False,(662/100)\pi,True,question_only: Changed '13.5' to '19.86' in question,True,1000,34.26,
+math,math_0195,llama3.1:8b,question_only,- rac{2}{3},False,- rac{26}{3},True,question_only: Changed '2' to '1' in question,True,878,43.61,
+math,math_0175,llama3.1:8b,question_only,84,True,74,True,question_only: Changed '3' to '5' in question,True,692,35.84,
+math,math_0196,llama3.1:8b,question_only,90,True,95,True,question_only: Changed '0' to '5' in question,True,464,22.4,
+math,math_0176,llama3.1:8b,question_only,180,False,720,True,question_only: Prepended counterfactual framing,True,405,13.89,
+math,math_0199,llama3.1:8b,question_only,22,True,7,True,question_only: Changed '2' to '3' in question,True,2249,69.45,
+math,math_0177,llama3.1:8b,question_only,(1008 * 2015) / 2016,False,1011,True,question_only: Changed '0' to '5' in question,True,730,78.8,
+folio,folio_0000,llama3.1:8b,question_only,false,False,unknown,True,question_only: Changed '8' to '3' in question,True,1111,42.23,
+math,math_0178,llama3.1:8b,question_only,12,False,12,False,question_only: Changed '5' to '3' in question,False,400,32.41,
+folio,folio_0002,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,791,22.64,
+math,math_0179,llama3.1:8b,question_only,0,False,12,True,question_only: Changed '10' to '15' in question,True,770,34.19,
+folio,folio_0003,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,597,28.58,
+math,math_0180,llama3.1:8b,question_only,{'numerator': 1 'denominator': 2},False,11/45,True,question_only: Changed '0' to '2' in question,True,1251,42.75,
+folio,folio_0005,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,662,45.4,
+math,math_0181,llama3.1:8b,question_only,13,True,11,True,question_only: Changed '3' to '4' in question,True,337,18.32,
+folio,folio_0007,llama3.1:8b,question_only,false,True,false,False,question_only: Prepended counterfactual framing,False,570,14.92,
+math,math_0182,llama3.1:8b,question_only,243,False,10,True,question_only: Swapped 'no' → 'every' in premises,True,661,21.99,
+folio,folio_0008,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,755,27.5,
+math,math_0183,llama3.1:8b,question_only,81,True,546,True,question_only: Changed '27' to '8' in question,True,1599,59.07,
+folio,folio_0009,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '2008' to '1371' in question,False,456,48.99,
+math,math_0185,llama3.1:8b,question_only,8918,True,12324,True,question_only: Changed '343' to '474' in question,True,913,26.71,
+folio,folio_0010,llama3.1:8b,question_only,true,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,1264,50.88,
+math,math_0186,llama3.1:8b,question_only,1,False,0,True,question_only: Changed '1' to '0' in question,True,894,50.2,
+folio,folio_0011,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '1995' to '1103' in question,False,841,38.57,
+math,math_0188,llama3.1:8b,question_only,13,True,17,True,question_only: Changed '-4' to '-7' in question,True,562,29.27,
+math,math_0190,llama3.1:8b,question_only,{'a': -3 'c': 2},False,(\frac{11}{3} -\frac{4}{3}),True,question_only: Changed '4' to '2' in question,True,1439,100.21,
+math,math_0191,llama3.1:8b,question_only,3/5,False,0.976,True,question_only: Changed '90' to '42' in question,True,1322,97.92,
+math,math_0193,llama3.1:8b,question_only,14,False,6 + 2√2,True,question_only: Changed '4' to '2' in question,True,798,79.69,
+folio,folio_0012,llama3.1:8b,question_only,,False,,False,,False,9460,352.58,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 118 column 3 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...Audience.""\n    },\n   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0194,llama3.1:8b,question_only,7,True,4,True,question_only: Changed '-1' to '0' in question,True,744,79.46,
+folio,folio_0013,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,1752,61.96,
+math,math_0195,llama3.1:8b,question_only,- rac{2}{3},False,{'steps': [{'step_id': 6 'reasoning': 'simplifying the expression we get $4+(-\x0crac{14}{5})=\x0crac{20}{5}-\x0crac{14}{5}=\x0crac{6}{5}$' 'conclusion': 'the value of $m+n$ is $\x0crac{6}{5}$'}] 'final_answer': '\x0crac{6}{5}'},True,question_only: Changed '3' to '5' in question,True,966,69.2,
+folio,folio_0014,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,612,34.15,
+math,math_0196,llama3.1:8b,question_only,90,True,-11/4,True,question_only: Changed '18' to '5' in question,True,563,21.13,
+folio,folio_0016,llama3.1:8b,question_only,false,False,false,False,question_only: Prepended counterfactual framing,False,570,19.76,
+math,math_0199,llama3.1:8b,question_only,22,True,4489/64,True,question_only: Changed '2' to '0' in question,True,2035,65.56,
+folio,folio_0017,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'no' → 'every' in premises,False,586,66.21,
+folio,folio_0000,llama3.1:8b,question_only,false,False,unknown,True,question_only: Changed '8' to '14' in question,True,1311,42.45,
+folio,folio_0018,llama3.1:8b,question_only,false,False,true,True,question_only: Swapped 'no' → 'every' in premises,True,618,43.15,
+folio,folio_0002,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,791,27.43,
+folio,folio_0019,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,483,24.33,
+folio,folio_0003,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,597,18.63,
+folio,folio_0005,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,662,76.93,
+folio,folio_0007,llama3.1:8b,question_only,false,True,false,False,question_only: Prepended counterfactual framing,False,570,73.81,
+folio,folio_0008,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,755,79.18,
+folio,folio_0020,llama3.1:8b,question_only,,False,,False,,False,9384,304.37,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 170 column 97 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ena, and Missoula. This', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0009,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '2008' to '2937' in question,False,372,66.6,
+folio,folio_0010,llama3.1:8b,question_only,true,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,1264,93.36,
+folio,folio_0011,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '1995' to '3695' in question,False,808,80.5,
+folio,folio_0021,llama3.1:8b,question_only,,False,,False,,False,9328,368.0,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 151 column 5 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...s not engaged."",\n     ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0023,llama3.1:8b,question_only,unknown,False,true,True,question_only: Changed '1995' to '3092' in question,True,527,72.21,
+folio,folio_0024,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '1920' to '3330' in question,False,648,75.93,
+folio,folio_0012,llama3.1:8b,question_only,,False,,False,,False,9460,403.14,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 118 column 3 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...Audience.""\n    },\n   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0025,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '1984' to '532' in question,False,940,85.26,
+folio,folio_0013,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,1752,67.42,
+folio,folio_0026,llama3.1:8b,question_only,unknown,False,true,True,question_only: Prepended counterfactual framing,True,561,56.23,
+folio,folio_0014,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,612,21.23,
+folio,folio_0027,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,994,33.5,
+folio,folio_0016,llama3.1:8b,question_only,false,False,false,False,question_only: Prepended counterfactual framing,False,570,32.05,
+folio,folio_0029,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'no' → 'every' in premises,False,463,16.8,
+folio,folio_0017,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'no' → 'every' in premises,False,586,17.51,
+folio,folio_0030,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,648,21.07,
+folio,folio_0018,llama3.1:8b,question_only,false,False,true,True,question_only: Swapped 'no' → 'every' in premises,True,618,21.71,
+folio,folio_0031,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,680,23.88,
+folio,folio_0019,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,483,20.86,
+folio,folio_0032,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,543,16.95,
+folio,folio_0033,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1269,90.41,
+folio,folio_0034,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1233,92.38,
+folio,folio_0035,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,833,81.87,
+folio,folio_0020,llama3.1:8b,question_only,,False,,False,,False,9384,337.36,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 170 column 97 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ena, and Missoula. This', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0036,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,614,75.37,
+folio,folio_0038,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,1045,86.54,
+folio,folio_0039,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,1416,99.57,
+folio,folio_0040,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,953,83.82,
+folio,folio_0021,llama3.1:8b,question_only,,False,,False,,False,9328,345.13,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 151 column 5 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...s not engaged."",\n     ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0041,llama3.1:8b,question_only,true,False,unknown,True,question_only: Changed '1992' to '2861' in question,True,531,70.89,
+folio,folio_0023,llama3.1:8b,question_only,unknown,False,true,True,question_only: Changed '1995' to '2724' in question,True,527,15.77,
+folio,folio_0042,llama3.1:8b,question_only,true,True,false,True,question_only: Changed '2003' to '3112' in question,True,643,19.77,
+folio,folio_0024,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '1920' to '634' in question,False,650,23.95,
+folio,folio_0043,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,984,34.81,
+folio,folio_0025,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '1984' to '1243' in question,False,869,41.54,
+folio,folio_0044,llama3.1:8b,question_only,unknown,False,unknown,False,question_only: Changed '2008' to '313' in question,False,594,28.78,
+folio,folio_0026,llama3.1:8b,question_only,unknown,False,true,True,question_only: Prepended counterfactual framing,True,561,19.91,
+folio,folio_0045,llama3.1:8b,question_only,false,True,unknown,True,question_only: Prepended counterfactual framing,True,711,24.34,
+folio,folio_0027,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,994,36.64,
+folio,folio_0046,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,533,31.85,
+folio,folio_0029,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'no' → 'every' in premises,False,463,16.55,
+folio,folio_0047,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,645,20.5,
+folio,folio_0030,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,648,23.98,
+folio,folio_0048,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '42.3' to '20.45' in question,False,478,16.61,
+folio,folio_0031,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,680,18.82,
+folio,folio_0049,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,613,23.29,
+folio,folio_0032,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,543,19.35,
+folio,folio_0051,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,821,25.81,
+folio,folio_0033,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1269,43.57,
+folio,folio_0052,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1071,50.43,
+folio,folio_0034,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1233,52.14,
+folio,folio_0035,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,833,81.34,
+folio,folio_0036,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,614,75.17,
+folio,folio_0038,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,1045,86.28,
+folio,folio_0053,llama3.1:8b,question_only,,False,,False,,False,9200,334.68,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 136 column 27 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...  ""conclusion"": ""If the', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0039,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,1416,99.31,
+folio,folio_0040,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,953,83.94,
+folio,folio_0041,llama3.1:8b,question_only,true,False,false,True,question_only: Changed '1992' to '995' in question,True,446,68.81,
+folio,folio_0042,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '2003' to '3308' in question,False,685,76.46,
+folio,folio_0055,llama3.1:8b,question_only,,False,,False,,False,9592,328.81,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 110 column 201 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... rated General Audience', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0043,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,984,85.85,
+folio,folio_0056,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,696,32.55,
+folio,folio_0044,llama3.1:8b,question_only,unknown,False,true,True,question_only: Changed '2008' to '3231' in question,True,1241,39.69,
+folio,folio_0057,llama3.1:8b,question_only,unknown,False,true,True,question_only: Changed '2000' to '829' in question,True,1036,51.57,
+folio,folio_0045,llama3.1:8b,question_only,false,True,unknown,True,question_only: Prepended counterfactual framing,True,711,36.23,
+folio,folio_0058,llama3.1:8b,question_only,false,True,true,True,question_only: Changed '1984' to '2920' in question,True,1051,38.83,
+folio,folio_0046,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,533,34.0,
+folio,folio_0059,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,712,22.93,
+folio,folio_0047,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,645,26.86,
+folio,folio_0060,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,821,30.89,
+folio,folio_0048,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '1716' to '2775' in question,False,472,23.35,
+folio,folio_0049,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,613,73.99,
+folio,folio_0051,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,821,80.65,
+folio,folio_0052,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1071,87.2,
+folio,folio_0061,llama3.1:8b,question_only,,False,,False,,False,9388,311.16,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 164 column 19 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... {\n      ""step_id"": 33', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0062,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '34' to '19' in question,False,696,76.88,
+folio,folio_0064,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,808,80.99,
+folio,folio_0065,llama3.1:8b,question_only,unknown,True,false,True,question_only: Changed '2008' to '2678' in question,True,451,68.92,
+folio,folio_0066,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,606,9.6,
+folio,folio_0053,llama3.1:8b,question_only,,False,,False,,False,9200,363.39,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 136 column 27 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...  ""conclusion"": ""If the', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0067,llama3.1:8b,question_only,unknown,False,false,True,question_only: Changed '8' to '11' in question,True,1332,96.03,
+folio,folio_0068,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,901,82.46,
+folio,folio_0069,llama3.1:8b,question_only,true,False,true,False,question_only: Changed '2000' to '1198' in question,False,989,84.07,
+folio,folio_0070,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,1101,88.16,
+folio,folio_0055,llama3.1:8b,question_only,,False,,False,,False,9592,351.16,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 110 column 201 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... rated General Audience', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0071,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '2000' to '644' in question,False,598,72.37,
+folio,folio_0056,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,696,18.91,
+folio,folio_0072,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,730,24.94,
+folio,folio_0057,llama3.1:8b,question_only,unknown,False,true,True,question_only: Changed '1500' to '673' in question,True,957,34.3,
+folio,folio_0073,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,549,29.17,
+folio,folio_0058,llama3.1:8b,question_only,false,True,unknown,True,question_only: Changed '1984' to '1259' in question,True,894,29.45,
+folio,folio_0075,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,872,38.51,
+folio,folio_0059,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,712,32.19,
+folio,folio_0077,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,490,21.15,
+folio,folio_0060,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,821,25.17,
+folio,folio_0078,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,759,32.77,
+folio,folio_0061,llama3.1:8b,question_only,,False,,False,,False,9388,460.89,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 164 column 19 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... {\n      ""step_id"": 33', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0079,llama3.1:8b,question_only,,False,,False,,False,9344,509.45,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 161 column 48 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ohn has a larger family', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0062,llama3.1:8b,question_only,false,True,unknown,True,question_only: Changed '34' to '49' in question,True,808,80.51,
+folio,folio_0080,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,483,25.19,
+folio,folio_0064,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,808,26.05,
+folio,folio_0082,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Prepended counterfactual framing,False,366,22.09,
+folio,folio_0065,llama3.1:8b,question_only,unknown,True,false,True,question_only: Changed '2008' to '2741' in question,True,451,9.81,
+folio,folio_0083,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,791,21.21,
+folio,folio_0066,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,606,25.42,
+folio,folio_0084,llama3.1:8b,question_only,true,False,unknown,True,question_only: Changed '1984' to '473' in question,True,926,30.59,
+folio,folio_0067,llama3.1:8b,question_only,unknown,False,unknown,False,question_only: Changed '8' to '4' in question,False,1266,51.6,
+folio,folio_0085,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Prepended counterfactual framing,False,700,44.9,
+folio,folio_0068,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,901,32.96,
+folio,folio_0069,llama3.1:8b,question_only,true,False,false,True,question_only: Changed '2000' to '533' in question,True,1463,98.65,
+folio,folio_0070,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,1101,88.18,
+folio,folio_0071,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '2000' to '2677' in question,False,598,72.13,
+folio,folio_0086,llama3.1:8b,question_only,,False,,False,,False,9256,341.07,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 110 column 13 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...id"": 22,\n      ""reason', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0072,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,730,78.15,
+folio,folio_0087,llama3.1:8b,question_only,true,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,841,31.3,
+folio,folio_0073,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,549,26.19,
+folio,folio_0088,llama3.1:8b,question_only,false,False,unknown,True,question_only: Prepended counterfactual framing,True,846,28.78,
+folio,folio_0075,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,872,37.71,
+folio,folio_0089,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '1995' to '756' in question,False,526,26.85,
+folio,folio_0077,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,490,15.83,
+folio,folio_0090,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,511,16.33,
+folio,folio_0078,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,759,24.01,
+folio,folio_0091,llama3.1:8b,question_only,false,False,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,551,25.53,
+folio,folio_0092,llama3.1:8b,question_only,true,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,1744,107.91,
+folio,folio_0079,llama3.1:8b,question_only,,False,,False,,False,9344,436.78,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 161 column 48 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ohn has a larger family', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0080,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,483,72.03,
+folio,folio_0093,llama3.1:8b,question_only,,False,,False,,False,9172,454.17,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 150 column 106 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ncluded that Harry is a', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0082,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Prepended counterfactual framing,False,366,68.04,
+folio,folio_0094,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,951,26.04,
+folio,folio_0083,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,791,37.5,
+folio,folio_0095,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '2003' to '2773' in question,False,944,36.61,
+folio,folio_0084,llama3.1:8b,question_only,true,False,unknown,True,question_only: Changed '1984' to '2650' in question,True,729,35.79,
+folio,folio_0096,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,986,37.05,
+folio,folio_0085,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Prepended counterfactual framing,False,700,36.22,
+folio,folio_0097,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '205' to '125' in question,False,655,25.98,
+folio,folio_0098,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,963,84.21,
+folio,folio_0100,llama3.1:8b,question_only,false,True,false,False,question_only: Swapped 'no' → 'every' in premises,False,529,72.8,
+folio,folio_0101,llama3.1:8b,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,538,72.91,
+folio,folio_0086,llama3.1:8b,question_only,,False,,False,,False,9256,305.08,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 110 column 13 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...id"": 22,\n      ""reason', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0102,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,739,78.75,
+folio,folio_0087,llama3.1:8b,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,841,31.99,
+folio,folio_0088,llama3.1:8b,question_only,false,False,unknown,True,question_only: Prepended counterfactual framing,True,846,82.55,
+folio,folio_0089,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '1995' to '3408' in question,False,527,72.12,
+folio,folio_0090,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,511,72.3,
+folio,folio_0103,llama3.1:8b,question_only,,False,,False,,False,9288,307.0,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 125 column 142 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...can City, the person is', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0091,llama3.1:8b,question_only,false,False,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,551,73.73,
+folio,folio_0105,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,969,31.85,
+folio,folio_0092,llama3.1:8b,question_only,true,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,1744,65.85,
+folio,folio_0106,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,929,63.6,
+folio,folio_0107,llama3.1:8b,question_only,unknown,False,false,True,question_only: Swapped 'no' → 'every' in premises,True,852,80.01,
+folio,folio_0108,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1295,92.54,
+folio,folio_0109,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '4' to '1' in question,False,936,83.21,
+folio,folio_0093,llama3.1:8b,question_only,,False,,False,,False,9172,338.42,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 150 column 106 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ncluded that Harry is a', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0110,llama3.1:8b,question_only,unknown,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,629,75.81,
+folio,folio_0094,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,951,34.07,
+folio,folio_0111,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,680,35.43,
+folio,folio_0095,llama3.1:8b,question_only,true,False,false,True,question_only: Changed '2003' to '667' in question,True,751,28.63,
+folio,folio_0112,llama3.1:8b,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,668,27.81,
+folio,folio_0096,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,986,34.94,
+folio,folio_0097,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '300' to '529' in question,False,932,84.05,
+folio,folio_0098,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,963,84.38,
+folio,folio_0100,llama3.1:8b,question_only,false,True,false,False,question_only: Swapped 'no' → 'every' in premises,False,529,72.96,
+folio,folio_0113,llama3.1:8b,question_only,,False,,False,,False,9408,327.09,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 125 column 122 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...citizenship. This means', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0101,llama3.1:8b,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,538,72.97,
+folio,folio_0114,llama3.1:8b,question_only,unknown,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,952,29.84,
+folio,folio_0102,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,739,35.86,
+folio,folio_0115,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,373,19.59,
+folio,folio_0103,llama3.1:8b,question_only,true,False,true,False,question_only: Changed '2003' to '904' in question,False,1013,27.26,
+folio,folio_0116,llama3.1:8b,question_only,unknown,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,483,31.7,
+folio,folio_0105,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,969,30.37,
+folio,folio_0117,llama3.1:8b,question_only,unknown,True,false,True,question_only: Changed '3' to '5' in question,True,992,43.88,
+folio,folio_0106,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,929,41.51,
+folio,folio_0119,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '3' to '1' in question,False,1265,49.97,
+folio,folio_0107,llama3.1:8b,question_only,false,True,false,False,question_only: Swapped 'no' → 'every' in premises,False,852,47.28,
+folio,folio_0120,llama3.1:8b,question_only,false,False,true,True,question_only: Swapped 'no' → 'every' in premises,True,677,29.68,
+folio,folio_0108,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1295,42.06,
+folio,folio_0109,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '4' to '1' in question,False,936,83.43,
+folio,folio_0110,llama3.1:8b,question_only,unknown,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,629,76.16,
+folio,folio_0111,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,680,77.67,
+folio,folio_0121,llama3.1:8b,question_only,,False,,False,,False,9508,329.73,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 120 column 169 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...t guidance from parents', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0112,llama3.1:8b,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,668,76.57,
+folio,folio_0122,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,445,19.77,
+folio,folio_0113,llama3.1:8b,question_only,true,True,unknown,True,question_only: Changed '2024' to '3043' in question,True,1324,38.22,
+folio,folio_0123,llama3.1:8b,question_only,true,True,unknown,True,question_only: Prepended counterfactual framing,True,578,42.41,
+folio,folio_0114,llama3.1:8b,question_only,unknown,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,952,31.45,
+folio,folio_0125,llama3.1:8b,question_only,unknown,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,554,29.89,
+folio,folio_0115,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,373,13.67,
+folio,folio_0126,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,681,17.36,
+folio,folio_0116,llama3.1:8b,question_only,unknown,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,483,21.8,
+folio,folio_0127,llama3.1:8b,question_only,unknown,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,445,16.32,
+folio,folio_0117,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '3' to '6' in question,False,817,24.57,
+folio,folio_0128,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '42.3' to '63.79' in question,False,656,28.19,
+folio,folio_0119,llama3.1:8b,question_only,true,True,unknown,True,question_only: Changed '3' to '4' in question,True,841,28.89,
+folio,folio_0130,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '1920' to '942' in question,False,508,25.81,
+folio,folio_0120,llama3.1:8b,question_only,false,False,true,True,question_only: Swapped 'no' → 'every' in premises,True,677,21.28,
+folio,folio_0131,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,862,32.95,
+folio,folio_0132,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '10' to '2' in question,False,594,74.21,
+folio,folio_0121,llama3.1:8b,question_only,,False,,False,,False,9508,412.3,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 120 column 169 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...t guidance from parents', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0122,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,445,70.53,
+folio,folio_0123,llama3.1:8b,question_only,true,True,unknown,True,question_only: Prepended counterfactual framing,True,578,10.94,
+folio,folio_0133,llama3.1:8b,question_only,,False,,False,,False,9344,463.31,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 150 column 146 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ampus are skittish, but', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0125,llama3.1:8b,question_only,unknown,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,554,72.92,
+folio,folio_0134,llama3.1:8b,question_only,true,False,unknown,True,question_only: Prepended counterfactual framing,True,694,24.43,
+folio,folio_0126,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,681,28.13,
+folio,folio_0135,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,798,30.12,
+folio,folio_0127,llama3.1:8b,question_only,unknown,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,445,24.63,
+folio,folio_0136,llama3.1:8b,question_only,true,True,unknown,True,question_only: Prepended counterfactual framing,True,597,18.73,
+folio,folio_0128,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '1716' to '2919' in question,False,641,21.8,
+folio,folio_0137,llama3.1:8b,question_only,true,False,unknown,True,question_only: Changed '2024' to '377' in question,True,817,26.93,
+folio,folio_0130,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '1920' to '258' in question,False,508,24.35,
+folio,folio_0138,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,824,24.61,
+folio,folio_0131,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,862,36.25,
+folio,folio_0139,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,713,33.09,
+folio,folio_0132,llama3.1:8b,question_only,false,True,true,True,question_only: Changed '10' to '15' in question,True,641,25.35,
+folio,folio_0140,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,957,32.45,
+folio,folio_0141,llama3.1:8b,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,1008,86.39,
+folio,folio_0143,llama3.1:8b,question_only,true,False,true,False,question_only: Changed '1995' to '3727' in question,False,522,71.52,
+folio,folio_0144,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,962,82.64,
+folio,folio_0133,llama3.1:8b,question_only,,False,,False,,False,9344,324.76,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 150 column 146 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ampus are skittish, but', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0145,llama3.1:8b,question_only,unknown,True,true,True,question_only: Changed '2022' to '1072' in question,True,1355,94.95,
+folio,folio_0134,llama3.1:8b,question_only,true,False,unknown,True,question_only: Prepended counterfactual framing,True,694,46.24,
+folio,folio_0135,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,798,80.71,
+folio,folio_0136,llama3.1:8b,question_only,true,True,unknown,True,question_only: Prepended counterfactual framing,True,597,74.53,
+folio,folio_0146,llama3.1:8b,question_only,,False,,False,,False,9264,361.16,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 130 column 18 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...26,\n      ""reasoning"":', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0147,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,490,72.19,
+folio,folio_0149,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,1022,86.36,
+folio,folio_0137,llama3.1:8b,question_only,,False,,False,,False,9352,413.09,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 134 column 5 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...""\n    },\n    {\n     ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0150,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,896,84.07,
+folio,folio_0138,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,824,37.05,
+folio,folio_0139,llama3.1:8b,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,713,77.0,
+folio,folio_0140,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,957,84.01,
+folio,folio_0141,llama3.1:8b,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,1008,86.4,
+folio,folio_0151,llama3.1:8b,question_only,,False,,False,,False,9404,327.74,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 115 column 333 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ian federation official', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0143,llama3.1:8b,question_only,true,False,true,False,question_only: Changed '1995' to '3566' in question,False,522,71.85,
+folio,folio_0152,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,748,23.62,
+folio,folio_0144,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,962,34.7,
+folio,folio_0153,llama3.1:8b,question_only,true,True,false,True,question_only: Swapped 'no' → 'every' in premises,True,654,31.63,
+folio,folio_0145,llama3.1:8b,question_only,unknown,True,false,True,question_only: Changed '2022' to '3650' in question,True,884,29.17,
+folio,folio_0155,llama3.1:8b,question_only,true,True,unknown,True,question_only: Changed '34' to '16' in question,True,737,31.34,
+folio,folio_0156,llama3.1:8b,question_only,unknown,False,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,875,81.54,
+folio,folio_0157,llama3.1:8b,question_only,true,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,662,77.18,
+folio,folio_0158,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,649,74.92,
+folio,folio_0146,llama3.1:8b,question_only,,False,,False,,False,9264,312.02,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 130 column 18 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...26,\n      ""reasoning"":', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0159,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '205' to '53' in question,False,804,80.04,
+folio,folio_0147,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,490,24.98,
+folio,folio_0160,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'no' → 'every' in premises,False,500,16.95,
+folio,folio_0149,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,1022,31.08,
+folio,folio_0161,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '1' to '2' in question,False,595,33.35,
+folio,folio_0150,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,896,30.87,
+folio,folio_0162,llama3.1:8b,question_only,,False,,False,,False,9452,466.47,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 161 column 52 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... is a famous athlete if', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0151,llama3.1:8b,question_only,,False,,False,,False,9404,510.0,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 120 column 29 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...""reasoning"": ""From step', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0163,llama3.1:8b,question_only,false,True,false,False,question_only: Prepended counterfactual framing,False,422,69.92,
+folio,folio_0152,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,748,21.52,
+folio,folio_0166,llama3.1:8b,question_only,unknown,False,unknown,False,question_only: Changed '2013' to '3778' in question,False,538,24.27,
+folio,folio_0153,llama3.1:8b,question_only,true,True,false,True,question_only: Swapped 'no' → 'every' in premises,True,654,21.18,
+folio,folio_0167,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '9' to '12' in question,False,458,18.83,
+folio,folio_0155,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '35' to '59' in question,False,670,18.99,
+folio,folio_0168,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '10' to '15' in question,False,562,22.11,
+folio,folio_0156,llama3.1:8b,question_only,unknown,False,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,875,27.45,
+folio,folio_0169,llama3.1:8b,question_only,true,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,702,30.88,
+folio,folio_0157,llama3.1:8b,question_only,true,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,662,26.68,
+folio,folio_0170,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,746,29.33,
+folio,folio_0158,llama3.1:8b,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,649,26.99,
+folio,folio_0171,llama3.1:8b,question_only,true,False,false,True,question_only: Changed '2022' to '3008' in question,True,1700,52.59,
+folio,folio_0159,llama3.1:8b,question_only,false,True,false,False,question_only: Changed '300' to '118' in question,False,857,59.09,
+folio,folio_0160,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'no' → 'every' in premises,False,500,71.56,
+folio,folio_0161,llama3.1:8b,question_only,unknown,True,false,True,question_only: Changed '1' to '2' in question,True,527,71.7,
+folio,folio_0172,llama3.1:8b,question_only,,False,,False,,False,9172,352.07,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 90 column 93 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...picy or mala hotpots or', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0174,llama3.1:8b,question_only,true,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,538,72.63,
+folio,folio_0162,llama3.1:8b,question_only,,False,,False,,False,9452,454.95,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 161 column 52 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... is a famous athlete if', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0163,llama3.1:8b,question_only,false,True,false,False,question_only: Prepended counterfactual framing,False,422,69.79,
+folio,folio_0166,llama3.1:8b,question_only,unknown,False,unknown,False,question_only: Changed '2013' to '456' in question,False,546,72.97,
+folio,folio_0175,llama3.1:8b,question_only,,False,,False,,False,9600,397.82,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 140 column 101 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...r male tennis player at', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0176,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '9' to '14' in question,False,322,66.03,
+folio,folio_0177,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,1166,90.94,
+folio,folio_0178,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,797,81.82,
+folio,folio_0167,llama3.1:8b,question_only,,False,,False,,False,9204,366.05,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 180 column 125 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...tion about Symphony No.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0179,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,520,73.48,
+folio,folio_0168,llama3.1:8b,question_only,true,True,unknown,True,question_only: Changed '10' to '6' in question,True,638,21.72,
+folio,folio_0181,llama3.1:8b,question_only,unknown,False,false,True,question_only: Changed '8' to '5' in question,True,929,32.05,
+folio,folio_0169,llama3.1:8b,question_only,true,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,702,33.15,
+folio,folio_0182,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1260,43.53,
+folio,folio_0170,llama3.1:8b,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,746,46.28,
+folio,folio_0187,llama3.1:8b,question_only,true,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,1164,39.8,
+folio,folio_0188,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,476,71.2,
+folio,folio_0190,llama3.1:8b,question_only,unknown,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,562,74.9,
+folio,folio_0191,llama3.1:8b,question_only,false,False,unknown,True,question_only: Changed '1716' to '2244' in question,True,446,68.54,
+folio,folio_0192,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,577,11.73,
+folio,folio_0171,llama3.1:8b,question_only,,False,,False,,False,9684,314.28,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 105 column 174 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...k at Roland Garros 2022', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0193,llama3.1:8b,question_only,true,False,unknown,True,question_only: Changed '1992' to '2857' in question,True,820,79.97,
+folio,folio_0194,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '10' to '2' in question,False,660,75.88,
+folio,folio_0195,llama3.1:8b,question_only,unknown,False,unknown,False,question_only: Changed '3' to '4' in question,False,949,84.51,
+folio,folio_0196,llama3.1:8b,question_only,false,True,unknown,True,question_only: Changed '1995' to '485' in question,True,714,77.42,
+folio,folio_0172,llama3.1:8b,question_only,,False,,False,,False,9172,317.71,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 90 column 93 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...picy or mala hotpots or', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0197,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '300' to '99' in question,False,726,77.75,
+folio,folio_0174,llama3.1:8b,question_only,true,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,538,22.83,
+folio,folio_0175,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '2022' to '556' in question,False,996,83.86,
+folio,folio_0176,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '9' to '2' in question,False,322,65.93,
+folio,folio_0177,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,1166,27.53,
+folio,folio_0178,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,797,82.04,
+folio,folio_0198,llama3.1:8b,question_only,,False,,False,,False,9560,332.01,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 135 column 7 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...""step_id"": 27,\n      ""', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0179,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,520,73.83,
+folio,folio_0199,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,949,31.18,
+folio,folio_0181,llama3.1:8b,question_only,unknown,False,unknown,False,question_only: Changed '8' to '14' in question,False,818,38.1,
+folio,folio_0182,llama3.1:8b,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,1260,33.39,
+folio,folio_0187,llama3.1:8b,question_only,true,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,1164,32.62,
+folio,folio_0188,llama3.1:8b,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,476,9.73,
+folio,folio_0190,llama3.1:8b,question_only,unknown,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,562,20.08,
+folio,folio_0191,llama3.1:8b,question_only,false,False,unknown,True,question_only: Changed '1716' to '763' in question,True,478,7.7,
+folio,folio_0192,llama3.1:8b,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,577,21.93,
+folio,folio_0193,llama3.1:8b,question_only,true,False,unknown,True,question_only: Changed '1992' to '2626' in question,True,974,23.22,
+folio,folio_0194,llama3.1:8b,question_only,unknown,True,unknown,False,question_only: Changed '10' to '2' in question,False,748,24.88,
+folio,folio_0195,llama3.1:8b,question_only,unknown,False,false,True,question_only: Changed '3' to '5' in question,True,1265,32.89,
+folio,folio_0196,llama3.1:8b,question_only,false,True,unknown,True,question_only: Changed '1995' to '1123' in question,True,757,25.88,
+folio,folio_0197,llama3.1:8b,question_only,true,True,true,False,question_only: Changed '205' to '111' in question,False,726,17.1,
+folio,folio_0198,llama3.1:8b,question_only,,False,,False,,False,9560,306.19,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 135 column 7 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...""step_id"": 27,\n      ""', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0199,llama3.1:8b,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,949,23.88,

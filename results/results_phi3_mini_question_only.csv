@@ -1,0 +1,719 @@
+benchmark,problem_id,model,probe,original_answer,original_correct,perturbed_answer,answer_changed,perturbation_detail,faithful,tokens_used,latency_s,error
+gsm8k,gsm8k_0000,phi3:mini,question_only,1880,False,1769,True,question_only: Changed '300' to '189' in question,True,573,4.65,
+gsm8k,gsm8k_0001,phi3:mini,question_only,1 hour,False,it will take kalinda and her mom approximately 0.263889 hours to complete the puzzle,True,question_only: Changed '360' to '97' in question,True,600,4.96,
+gsm8k,gsm8k_0002,phi3:mini,question_only,it takes tom 5 hours to get back,False,the time it takes for tom to return is d/6 hours,True,question_only: Changed '4' to '7' in question,True,613,5.21,
+gsm8k,gsm8k_0004,phi3:mini,question_only,273,True,they used 212.33 yards of yarn altogether,True,question_only: Changed '2' to '3' in question,True,596,4.76,
+gsm8k,gsm8k_0005,phi3:mini,question_only,45,True,21,True,question_only: Changed '50' to '34' in question,True,585,4.4,
+gsm8k,gsm8k_0006,phi3:mini,question_only,her brother will be 21 years old in 3 years,True,her brother will be 19 years old in 1 year,True,question_only: Changed '3' to '1' in question,True,434,3.01,
+gsm8k,gsm8k_0007,phi3:mini,question_only,,False,,False,,False,0,34.06,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 21 column 97 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...66666666666666666666666', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+gsm8k,gsm8k_0008,phi3:mini,question_only,60,True,38,True,question_only: Changed '50' to '31' in question,True,535,4.18,
+gsm8k,gsm8k_0009,phi3:mini,question_only,116,False,74,True,question_only: Changed '4' to '6' in question,True,528,4.07,
+gsm8k,gsm8k_0010,phi3:mini,question_only,29 liters,True,25 liters,True,question_only: Changed '3' to '1' in question,True,757,5.75,
+gsm8k,gsm8k_0011,phi3:mini,question_only,80,True,30,True,question_only: Changed '50' to '69' in question,True,680,5.87,
+gsm8k,gsm8k_0012,phi3:mini,question_only,jim spends 24 hours watching tv and 36 hours reading in 4 weeks,True,jim spends 42 hours on tv and 21 hours reading in 7 weeks,True,question_only: Changed '4' to '7' in question,True,558,4.45,
+gsm8k,gsm8k_0013,phi3:mini,question_only,1430,True,892.10,True,question_only: Changed '500' to '131' in question,True,533,3.93,
+gsm8k,gsm8k_0014,phi3:mini,question_only,0.5 pounds of insects per day,False,0.64 pounds,True,question_only: Changed '3.5' to '0.48' in question,True,531,4.14,
+gsm8k,gsm8k_0015,phi3:mini,question_only,joey is winning by 15 points,False,joey is winning by 6 points,True,question_only: Changed '10' to '3' in question,True,460,3.09,
+gsm8k,gsm8k_0016,phi3:mini,question_only,each child received 5 books,False,each child received 3 books,True,question_only: Changed '300' to '192' in question,True,399,2.23,
+gsm8k,gsm8k_0017,phi3:mini,question_only,66,True,66,False,question_only: Changed '200' to '286' in question,False,492,3.66,
+gsm8k,gsm8k_0018,phi3:mini,question_only,eve gave away 15 pomelos,True,eve gave away 10 pomelos,True,question_only: Changed '1' to '2' in question,True,465,3.15,
+gsm8k,gsm8k_0019,phi3:mini,question_only,the doubtfire family has 55 kittens,False,the doubtfire family now has 48 kittens,True,question_only: Changed '7' to '1' in question,True,576,4.2,
+gsm8k,gsm8k_0020,phi3:mini,question_only,93,True,155,True,question_only: Changed '3' to '5' in question,True,501,3.89,
+gsm8k,gsm8k_0021,phi3:mini,question_only,elliott took 2000 steps during his jog,True,elliott took 3999 steps during his jog,True,question_only: Changed '000' to '1' in question,True,693,5.86,
+gsm8k,gsm8k_0022,phi3:mini,question_only,880,False,1320,True,question_only: Changed '20' to '30' in question,True,605,5.02,
+gsm8k,gsm8k_0023,phi3:mini,question_only,,False,,False,,False,3464,48.92,"1 validation error for CoTResponse
+steps.4.conclusion
+  Field required [type=missing, input_value={'step_id': 5, 'reasoning...oon is x + 20 dollars.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0024,phi3:mini,question_only,90,True,229,True,question_only: Changed '0.5' to '0.07' in question,True,591,4.5,
+gsm8k,gsm8k_0025,phi3:mini,question_only,40000,True,40058,True,question_only: Changed '000' to '3' in question,True,556,4.17,
+gsm8k,gsm8k_0026,phi3:mini,question_only,23,False,18,True,question_only: Changed '4' to '6' in question,True,589,4.53,
+gsm8k,gsm8k_0027,phi3:mini,question_only,,False,,False,,False,2380,33.36,"1 validation error for CoTResponse
+final_answer
+  Field required [type=missing, input_value={'steps': [{'step_id': 1,...nal_answer': 'x = 12'}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0028,phi3:mini,question_only,14,True,9,True,question_only: Changed '8' to '13' in question,True,778,7.36,
+gsm8k,gsm8k_0029,phi3:mini,question_only,33,False,29,True,question_only: Changed '2' to '1' in question,True,625,5.16,
+gsm8k,gsm8k_0030,phi3:mini,question_only,the class is missing 200 points,False,the class is missing 101 points to go on the trip,True,question_only: Changed '30' to '19' in question,True,931,9.04,
+gsm8k,gsm8k_0031,phi3:mini,question_only,33,False,103,True,question_only: Changed '10' to '17' in question,True,560,4.46,
+gsm8k,gsm8k_0032,phi3:mini,question_only,98 feet,True,54 feet,True,question_only: Changed '360' to '483' in question,True,657,6.0,
+gsm8k,gsm8k_0033,phi3:mini,question_only,7.00,True,9.10,True,question_only: Changed '10' to '17' in question,True,753,7.23,
+gsm8k,gsm8k_0034,phi3:mini,question_only,27,False,52.60,True,question_only: Changed '2' to '4' in question,True,609,4.92,
+gsm8k,gsm8k_0035,phi3:mini,question_only,38.00,True,26.00,True,question_only: Changed '6' to '4' in question,True,586,4.36,
+gsm8k,gsm8k_0036,phi3:mini,question_only,elaine has a total of 260 pokemon cards,False,elaine has a total of 344 pokemon cards,True,question_only: Changed '20' to '3' in question,True,759,6.98,
+gsm8k,gsm8k_0037,phi3:mini,question_only,candidate c received 50 votes,True,candidate c received 14 votes,True,question_only: Changed '100' to '30' in question,True,530,3.95,
+gsm8k,gsm8k_0038,phi3:mini,question_only,50,True,40,True,question_only: Changed '3' to '2' in question,True,408,2.53,
+gsm8k,gsm8k_0040,phi3:mini,question_only,37.50 per day,True,103.4 per day,True,question_only: Changed '1125' to '1551' in question,True,682,6.09,
+gsm8k,gsm8k_0042,phi3:mini,question_only,280,True,392,True,question_only: Changed '5' to '7' in question,True,509,3.66,
+gsm8k,gsm8k_0043,phi3:mini,question_only,jeff is 30 years old,True,jeff is 25 years old,True,question_only: Changed '10' to '5' in question,True,468,3.22,
+gsm8k,gsm8k_0044,phi3:mini,question_only,96,False,160,True,question_only: Changed '40' to '8' in question,True,692,6.27,
+gsm8k,gsm8k_0045,phi3:mini,question_only,276,True,336,True,question_only: Changed '73' to '44' in question,True,576,4.45,
+gsm8k,gsm8k_0046,phi3:mini,question_only,,False,,False,,False,3632,50.87,"2 validation errors for CoTResponse
+steps.5.conclusion
+  Field required [type=missing, input_value={'step_id': 6, 'reasoning... 6 + 3 = 9 sea horses.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.6.conclusion
+  Field required [type=missing, input_value={'step_id': 7, 'reasoning... 3 + 7 = 10 clownfish.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0047,phi3:mini,question_only,25 pounds,True,6.25 pounds,False,question_only: Changed '200' to '51' in question,False,716,6.19,
+gsm8k,gsm8k_0048,phi3:mini,question_only,10 pounds,True,5.92 pounds,True,question_only: Changed '50' to '24' in question,True,507,3.56,
+gsm8k,gsm8k_0049,phi3:mini,question_only,84 years,True,52,True,question_only: Changed '3' to '1' in question,True,570,4.54,
+gsm8k,gsm8k_0050,phi3:mini,question_only,147 kilograms,True,77 kilograms,True,question_only: Changed '3' to '1' in question,True,546,4.09,
+gsm8k,gsm8k_0051,phi3:mini,question_only,25,True,35,True,question_only: Changed '10' to '5' in question,True,574,4.52,
+gsm8k,gsm8k_0052,phi3:mini,question_only,,False,,False,,False,2524,36.83,"3 validation errors for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning... the cost of one book.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.2
+  Input should be an object [type=model_type, input_value='conclusion_1_per_school_...be_900_books_per_school', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+final_answer
+  Field required [type=missing, input_value={'steps': [{'step_id': 1,... each school is $9000.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0053,phi3:mini,question_only,carol spent 20% of her total time editing the song,True,carol spent approximately 4.26% of her total time editing,True,question_only: Changed '90' to '16' in question,True,631,5.65,
+gsm8k,gsm8k_0054,phi3:mini,question_only,140,True,210,True,question_only: Changed '2' to '3' in question,True,506,3.7,
+gsm8k,gsm8k_0055,phi3:mini,question_only,gerald can run the 400-meter hurdles in 36 seconds,True,32.4 seconds,True,question_only: Changed '400' to '49' in question,True,682,5.58,
+gsm8k,gsm8k_0056,phi3:mini,question_only,,False,,False,,False,3320,47.52,"1 validation error for CoTResponse
+steps.6.conclusion
+  Field required [type=missing, input_value={'step_id': 7, 'reasoning... than Becky, not more.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0057,phi3:mini,question_only,1,True,6,True,question_only: Changed '16' to '23' in question,True,577,4.36,
+gsm8k,gsm8k_0058,phi3:mini,question_only,135,False,120,True,question_only: Changed '4' to '7' in question,True,613,5.12,
+gsm8k,gsm8k_0059,phi3:mini,question_only,micheal rode a total of 860 kilometers,True,micheal rode a total of 1100 kilometers,True,question_only: Changed '3' to '5' in question,True,612,4.78,
+gsm8k,gsm8k_0060,phi3:mini,question_only,42.8 junebugs/day,False,47.6 junebugs per day,True,question_only: Changed '48' to '72' in question,True,597,4.54,
+gsm8k,gsm8k_0061,phi3:mini,question_only,randy has 8 oatmeal cookies 5 chocolate chip cookies and 4 sugar cookies,False,randy has 6 oatmeal cookies 5 chocolate chip cookies and 4 sugar cookies,True,question_only: Changed '2' to '4' in question,True,791,7.29,
+gsm8k,gsm8k_0062,phi3:mini,question_only,350,True,1050,True,question_only: Changed '5' to '7' in question,True,522,3.79,
+gsm8k,gsm8k_0063,phi3:mini,question_only,300,False,50,True,question_only: Changed '6' to '11' in question,True,541,3.72,
+gsm8k,gsm8k_0064,phi3:mini,question_only,133,True,135.80,True,question_only: Changed '5' to '3' in question,True,446,3.18,
+gsm8k,gsm8k_0065,phi3:mini,question_only,hannah smashes 112 windows,True,hannah smashes 78 windows,True,question_only: Changed '64' to '118' in question,True,782,7.19,
+gsm8k,gsm8k_0066,phi3:mini,question_only,indras has 6 letters and her sister has 7 letters,False,indras has 6 letters and her sister has 5 letters,True,question_only: Changed '4' to '2' in question,True,418,2.56,
+gsm8k,gsm8k_0067,phi3:mini,question_only,elise has written 65 letters in total,False,elise has written 65 letters in total,False,question_only: Swapped 'every' → 'no' in premises,False,596,4.93,
+gsm8k,gsm8k_0068,phi3:mini,question_only,johnny picks up 2125 pieces,True,johnny needs to pick up 1625 pieces in total,True,question_only: Changed '1' to '0' in question,True,542,3.73,
+gsm8k,gsm8k_0069,phi3:mini,question_only,brendan ends up with 2 marbles,False,brendan ended up with 4 marbles,True,question_only: Changed '3' to '6' in question,True,575,4.1,
+gsm8k,gsm8k_0070,phi3:mini,question_only,,False,,False,,False,2608,37.64,"1 validation error for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning...g days in a week is 7.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0071,phi3:mini,question_only,8 hours,False,6.5 hours,True,question_only: Swapped 'all' → 'none' in premises,True,713,6.07,
+gsm8k,gsm8k_0072,phi3:mini,question_only,144,True,24,True,question_only: Changed '8' to '12' in question,True,828,8.18,
+gsm8k,gsm8k_0073,phi3:mini,question_only,,False,,False,,False,3227,46.17,"2 validation errors for CoTResponse
+steps.4.conclusion
+  Field required [type=missing, input_value={'step_id': 5, 'reasoning...y to share it equally.""}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.6.conclusion
+  Field required [type=missing, input_value={'step_id': 7, 'reasoning...remaining gun equally.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0074,phi3:mini,question_only,450,True,490,True,question_only: Changed '40' to '5' in question,True,474,3.3,
+gsm8k,gsm8k_0075,phi3:mini,question_only,4600,False,787,True,question_only: Changed '600' to '199' in question,True,809,7.47,
+gsm8k,gsm8k_0076,phi3:mini,question_only,450,True,101.40,True,question_only: Changed '2500' to '338' in question,True,561,4.22,
+gsm8k,gsm8k_0079,phi3:mini,question_only,,False,,False,,False,0,31.62,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 31 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+gsm8k,gsm8k_0080,phi3:mini,question_only,john learns 32 recipes,True,john can learn 26 recipes,True,question_only: Changed '6' to '10' in question,True,618,5.23,
+gsm8k,gsm8k_0081,phi3:mini,question_only,6,True,8,True,question_only: Changed '50' to '34' in question,True,649,5.12,
+gsm8k,gsm8k_0083,phi3:mini,question_only,79 miles,True,99 miles,True,question_only: Changed '10' to '18' in question,True,475,3.3,
+gsm8k,gsm8k_0084,phi3:mini,question_only,35 cars,True,hunter counted 22 cars during the lunch break,True,question_only: Changed '50' to '24' in question,True,664,5.53,
+gsm8k,gsm8k_0085,phi3:mini,question_only,100 pounds,True,74 pounds,True,question_only: Changed '70' to '44' in question,True,412,2.6,
+gsm8k,gsm8k_0087,phi3:mini,question_only,prince bruce slew 30 dragons,True,prince bruce slew 46.8 dragons,True,question_only: Changed '100' to '156' in question,True,640,4.89,
+gsm8k,gsm8k_0088,phi3:mini,question_only,,False,,False,,False,2504,34.65,"3 validation errors for CoTResponse
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning...uare meters remaining.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.3
+  Input should be an object [type=model_type, input_value='conclusion', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+final_answer
+  Field required [type=missing, input_value={'steps': [{'step_id': 1,...he second transaction.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0089,phi3:mini,question_only,steve's son's wife is 29 years old,True,steve's son's wife is 30.5 years old,True,question_only: Changed '4' to '7' in question,True,554,4.32,
+gsm8k,gsm8k_0090,phi3:mini,question_only,each friend received 5 lollipops,False,each friend received 5.75 lollipops,True,question_only: Changed '5' to '2' in question,True,585,4.96,
+gsm8k,gsm8k_0091,phi3:mini,question_only,,False,,False,,False,3636,51.89,"1 validation error for CoTResponse
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning...d as: xL + 2xS = $120.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0092,phi3:mini,question_only,150,False,1071,True,question_only: Changed '10' to '17' in question,True,623,5.24,
+gsm8k,gsm8k_0093,phi3:mini,question_only,470,False,482,True,question_only: Changed '80' to '117' in question,True,868,8.53,
+gsm8k,gsm8k_0094,phi3:mini,question_only,650,True,679,True,question_only: Changed '50' to '79' in question,True,583,4.33,
+gsm8k,gsm8k_0096,phi3:mini,question_only,7.00,True,25.00,True,question_only: Changed '20' to '38' in question,True,677,6.08,
+gsm8k,gsm8k_0097,phi3:mini,question_only,frederick can make 1600 popsicle sticks,True,frederick can make 1600 popsicle sticks,False,question_only: Changed '2' to '1' in question,False,788,6.92,
+gsm8k,gsm8k_0098,phi3:mini,question_only,there are 90 jellyfish in the tank,True,there are 30 jellyfish in the tank,True,question_only: Changed '6' to '2' in question,True,896,8.95,
+gsm8k,gsm8k_0099,phi3:mini,question_only,emma needs to make 18 more vlogs to complete her monthly goal,True,emma needs to make 45 more vlogs in the remaining weeks of the month,True,question_only: Changed '72' to '99' in question,True,555,4.17,
+gsm8k,gsm8k_0100,phi3:mini,question_only,2400,True,2532.98,True,question_only: Changed '10' to '13' in question,True,808,7.98,
+gsm8k,gsm8k_0101,phi3:mini,question_only,7000,True,3180,True,question_only: Changed '50' to '19' in question,True,614,4.79,
+gsm8k,gsm8k_0102,phi3:mini,question_only,270 people,False,285,True,question_only: Changed '10' to '6' in question,True,887,8.28,
+gsm8k,gsm8k_0103,phi3:mini,question_only,paul needs to buy 15 more cupcakes,True,paul needs to buy 12 more cupcakes,True,question_only: Changed '8' to '11' in question,True,433,2.7,
+gsm8k,gsm8k_0104,phi3:mini,question_only,28,True,20,True,question_only: Changed '20' to '12' in question,True,516,3.79,
+gsm8k,gsm8k_0106,phi3:mini,question_only,130000 people,True,70000 people,True,question_only: Changed '26' to '14' in question,True,453,2.97,
+gsm8k,gsm8k_0107,phi3:mini,question_only,bethany can run 5 more laps than quinn in one hour,False,bethany can run 9.5 more laps than quinn in one hour,True,question_only: Changed '10' to '19' in question,True,681,5.88,
+gsm8k,gsm8k_0108,phi3:mini,question_only,,False,,False,,False,9488,141.43,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 105 column 155 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...r of groups of cages."",', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+gsm8k,gsm8k_0109,phi3:mini,question_only,harry slept 3 hours more than james,False,harry slept 3 hours more than james,False,question_only: Changed '2' to '4' in question,False,389,2.28,
+gsm8k,gsm8k_0110,phi3:mini,question_only,180,True,144,True,question_only: Changed '5' to '3' in question,True,499,3.35,
+gsm8k,gsm8k_0112,phi3:mini,question_only,1218 meals,True,1237 meals,True,question_only: Changed '48' to '29' in question,True,467,2.77,
+gsm8k,gsm8k_0113,phi3:mini,question_only,oscar has 31 lollipops,True,oscar has 22 lollipops left,True,question_only: Changed '14' to '5' in question,True,752,6.85,
+gsm8k,gsm8k_0115,phi3:mini,question_only,30 elves are left,True,51,True,question_only: Changed '60' to '106' in question,True,582,4.66,
+gsm8k,gsm8k_0116,phi3:mini,question_only,100,True,132,True,question_only: Changed '300' to '91' in question,True,464,3.15,
+gsm8k,gsm8k_0117,phi3:mini,question_only,each of the other two pizzas costs 2 dollars,False,each of the other two pizzas costs 20 dollars,True,question_only: Changed '30' to '12' in question,True,513,3.83,
+gsm8k,gsm8k_0118,phi3:mini,question_only,the longer piece is 32 feet long,True,20 feet,True,question_only: Changed '4' to '1' in question,True,452,3.0,
+gsm8k,gsm8k_0119,phi3:mini,question_only,40,True,approximately 35.71 people attended the concert,True,question_only: Changed '20' to '36' in question,True,698,6.31,
+gsm8k,gsm8k_0120,phi3:mini,question_only,22.00,False,27.175,True,question_only: Changed '0.80' to '1.13' in question,True,599,4.86,
+gsm8k,gsm8k_0121,phi3:mini,question_only,,False,,False,,False,0,25.34,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 26 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+gsm8k,gsm8k_0122,phi3:mini,question_only,,False,,False,,False,9344,140.82,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 95 column 73 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...correct. We need to re-', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+gsm8k,gsm8k_0123,phi3:mini,question_only,the candle will be 8 centimeters shorter after burning from 1:00 pm to 5:00 pm,False,the candle will be 6 centimeters shorter after burning from 2:00 pm to 5:00 pm,True,question_only: Changed '1' to '2' in question,True,494,3.61,
+gsm8k,gsm8k_0124,phi3:mini,question_only,21,True,16,True,question_only: Changed '3' to '4' in question,True,550,4.17,
+gsm8k,gsm8k_0125,phi3:mini,question_only,it takes 2 minutes longer to ride the biggest slide compared to the second biggest slide,False,it takes approximately 2.74 minutes longer to ride the biggest slide compared to the second biggest slide,True,question_only: Changed '80' to '106' in question,True,536,3.79,
+gsm8k,gsm8k_0126,phi3:mini,question_only,200,False,the final answer cannot be determined without the selling price of the meals and wine,True,question_only: Changed '2' to '3' in question,True,494,3.51,
+gsm8k,gsm8k_0127,phi3:mini,question_only,steve has 99 games after 3 years,False,steve has 54 games after 3 years,True,question_only: Changed '1' to '0' in question,True,807,7.29,
+gsm8k,gsm8k_0128,phi3:mini,question_only,25,True,28.57,True,question_only: Changed '100' to '176' in question,True,587,4.8,
+gsm8k,gsm8k_0129,phi3:mini,question_only,shannon’s iced coffee is 75 milliliters weaker,True,iced coffee is 60 milliliters weaker,True,question_only: Changed '15' to '10' in question,True,839,7.99,
+gsm8k,gsm8k_0130,phi3:mini,question_only,,False,,False,,False,2820,41.03,"3 validation errors for CoTResponse
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning...orrect our conclusion.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.3
+  Input should be an object [type=model_type, input_value='conclusion_correction_ne...egative_distance_result', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+steps.4
+  Input should be an object [type=model_type, input_value='conclusion_correction_ne...raveled_by_car_than_bus', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type"
+gsm8k,gsm8k_0131,phi3:mini,question_only,260,True,380,True,question_only: Changed '4' to '6' in question,True,587,4.88,
+gsm8k,gsm8k_0132,phi3:mini,question_only,30,False,33,True,question_only: Changed '20' to '32' in question,True,440,2.96,
+gsm8k,gsm8k_0133,phi3:mini,question_only,the friends found 40 eggs,False,86,True,question_only: Changed '30' to '52' in question,True,530,4.11,
+gsm8k,gsm8k_0134,phi3:mini,question_only,there are 18 kids in the park,True,there are 30 kids in the park,True,question_only: Changed '6' to '10' in question,True,502,3.93,
+gsm8k,gsm8k_0135,phi3:mini,question_only,jim needs to buy 1.5 yards of fabric,False,jim needs to buy 168 square feet of fabric,True,question_only: Changed '6' to '10' in question,True,469,3.07,
+gsm8k,gsm8k_0136,phi3:mini,question_only,there are 14 flowers in the vase,False,there are 19 flowers in the vase,True,question_only: Changed '7' to '11' in question,True,620,5.5,
+gsm8k,gsm8k_0137,phi3:mini,question_only,anna took 7 hours to finish the puzzle,False,anna took 10.5 hours to complete the puzzle,True,question_only: Changed '10' to '17' in question,True,615,5.26,
+gsm8k,gsm8k_0139,phi3:mini,question_only,30,True,39,True,question_only: Changed '10' to '13' in question,True,444,3.06,
+gsm8k,gsm8k_0140,phi3:mini,question_only,george has 500 fruits,False,george has 723 fruits,True,question_only: Changed '200' to '299' in question,True,530,4.3,
+gsm8k,gsm8k_0141,phi3:mini,question_only,,False,,False,,False,2448,33.38,"1 validation error for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning...nd the total discount.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0142,phi3:mini,question_only,caroline is 24 years old,True,caroline is approximately 5 years old,True,question_only: Changed '4' to '7' in question,True,498,3.91,
+gsm8k,gsm8k_0143,phi3:mini,question_only,131250,True,175250,True,question_only: Changed '15' to '23' in question,True,899,8.25,
+gsm8k,gsm8k_0144,phi3:mini,question_only,3 bolts,False,4.5 bolts,True,question_only: Changed '2' to '3' in question,True,525,4.25,
+gsm8k,gsm8k_0145,phi3:mini,question_only,,False,,False,,False,2784,38.9,"1 validation error for CoTResponse
+steps.3.conclusion
+  Field required [type=missing, input_value={'step_id': 4, 'reasoning...the total cost by 36%.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0146,phi3:mini,question_only,193,True,107,True,question_only: Changed '198' to '284' in question,True,456,2.99,
+gsm8k,gsm8k_0147,phi3:mini,question_only,,False,,False,,False,2916,39.72,"2 validation errors for CoTResponse
+steps.4.step_id
+  Field required [type=missing, input_value={'step_id end_of_steps': ...to update his records.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.4.reasoning
+  Field required [type=missing, input_value={'step_id end_of_steps': ...to update his records.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0148,phi3:mini,question_only,dana can travel 16 miles in six hours,False,dana' can travel 30 miles in six hours,True,question_only: Changed '3' to '5' in question,True,907,9.14,
+gsm8k,gsm8k_0149,phi3:mini,question_only,22.5 watermelons were not ready for harvest after the two weeks,False,27,True,question_only: Changed '30' to '12' in question,True,860,8.24,
+gsm8k,gsm8k_0150,phi3:mini,question_only,8,True,5,True,question_only: Changed '3' to '2' in question,True,738,6.65,
+gsm8k,gsm8k_0151,phi3:mini,question_only,,False,,False,,False,2368,33.53,"2 validation errors for CoTResponse
+steps.3.conclusion
+  Field required [type=missing, input_value={'step_id': 4, 'reasoning...ply the profit by 10%.""}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.4
+  Input should be an object [type=model_type, input_value='conclusion', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type"
+gsm8k,gsm8k_0152,phi3:mini,question_only,,False,,False,,False,2040,29.36,"1 validation error for CoTResponse
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning...o save any more money.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0153,phi3:mini,question_only,4 containers were imported on the second day,False,10 containers,True,question_only: Changed '5' to '2' in question,True,657,5.56,
+gsm8k,gsm8k_0154,phi3:mini,question_only,75 cents,False,each individual razor will cost 10.375 cents after the discount,True,question_only: Changed '2.00' to '3.17' in question,True,748,6.84,
+gsm8k,gsm8k_0156,phi3:mini,question_only,12,True,24,True,question_only: Changed '6' to '2' in question,True,462,3.16,
+gsm8k,gsm8k_0157,phi3:mini,question_only,,False,,False,,False,3424,49.51,"4 validation errors for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning...ion: w + b + q = 1133.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning...2b + b + (b/2) = 1133.""}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.3.conclusion
+  Field required [type=missing, input_value={'step_id': 4, 'reasoning...plify it: 3.5b = 1133.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.5.conclusion
+  Field required [type=missing, input_value={'step_id': 6, 'reasoning... from step 5: b = 322.""}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0158,phi3:mini,question_only,the fourth child is 72 inches tall,True,the fourth child is 74 inches tall,True,question_only: Changed '5' to '3' in question,True,584,4.57,
+gsm8k,gsm8k_0159,phi3:mini,question_only,8000 pounds,False,280 pounds,True,question_only: Changed '200' to '31' in question,True,602,5.0,
+gsm8k,gsm8k_0160,phi3:mini,question_only,maddison has 270 marbles,True,maddison has 170 marbles,True,question_only: Changed '5' to '3' in question,True,477,3.48,
+gsm8k,gsm8k_0162,phi3:mini,question_only,john can make 9 small bags,False,30,True,question_only: Changed '3' to '1' in question,True,436,2.51,
+gsm8k,gsm8k_0164,phi3:mini,question_only,1200 jellyfish,False,18000 jellyfish,True,question_only: Changed '4' to '1' in question,True,599,5.21,
+gsm8k,gsm8k_0165,phi3:mini,question_only,skyler has 20 white hats,True,skyler has 31 white hats,True,question_only: Changed '5' to '8' in question,True,685,6.18,
+gsm8k,gsm8k_0166,phi3:mini,question_only,fawn has 28 books,True,fawn has 32 books,True,question_only: Changed '12' to '18' in question,True,1042,11.49,
+gsm8k,gsm8k_0167,phi3:mini,question_only,josey needed 6 pints of gasoline,False,josey needed 4.285714 pints of gasoline,True,question_only: Changed '5' to '7' in question,True,591,4.99,
+gsm8k,gsm8k_0168,phi3:mini,question_only,1110,True,990,True,question_only: Changed '150' to '30' in question,True,608,4.89,
+gsm8k,gsm8k_0169,phi3:mini,question_only,12.00,True,14.20,True,question_only: Changed '5' to '7' in question,True,677,6.2,
+gsm8k,gsm8k_0170,phi3:mini,question_only,,False,,False,,False,2268,30.61,"2 validation errors for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning...any money on tomatoes.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.4.conclusion
+  Field required [type=missing, input_value={'step_id': 5, 'reasoning...t for the salad is $9.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+gsm8k,gsm8k_0171,phi3:mini,question_only,martha has 1 more notebook than joseph,False,martha has 1 more notebook than joseph,False,question_only: Changed '5' to '1' in question,False,683,6.25,
+gsm8k,gsm8k_0172,phi3:mini,question_only,4,False,720 grams of cat food will last for approximately 2.96 days,True,question_only: Changed '60' to '84' in question,True,543,4.35,
+gsm8k,gsm8k_0173,phi3:mini,question_only,8,False,the sloth can pick up a maximum of 8 berries per trip,True,question_only: Changed '24' to '42' in question,True,799,7.16,
+gsm8k,gsm8k_0174,phi3:mini,question_only,30.67,False,30.67,False,question_only: Changed '4' to '7' in question,False,538,3.72,
+gsm8k,gsm8k_0175,phi3:mini,question_only,9,False,janet would save $1.80 per week by buying a bus pass,True,question_only: Changed '2.20' to '0.29' in question,True,558,4.57,
+gsm8k,gsm8k_0176,phi3:mini,question_only,grayson earns 84 cents in a month from recycling,True,grayson earns 84 cents in a month from recycling,False,question_only: Prepended counterfactual framing,False,681,5.75,
+gsm8k,gsm8k_0177,phi3:mini,question_only,940,True,1626,True,question_only: Changed '500' to '843' in question,True,535,4.27,
+gsm8k,gsm8k_0178,phi3:mini,question_only,22,False,35,True,question_only: Changed '12' to '20' in question,True,628,4.79,
+gsm8k,gsm8k_0179,phi3:mini,question_only,125 grams,False,3.7 grams,True,question_only: Changed '1800' to '3227' in question,True,575,4.45,
+gsm8k,gsm8k_0180,phi3:mini,question_only,team gogetters found 168 shells,True,team gogetters found 367 shells,True,question_only: Changed '60' to '15' in question,True,654,5.32,
+gsm8k,gsm8k_0182,phi3:mini,question_only,180,False,80,True,question_only: Changed '5' to '2' in question,True,584,4.55,
+gsm8k,gsm8k_0183,phi3:mini,question_only,the last dog needs to walk 2 miles,False,the last dog does not need to walk any miles,True,question_only: Changed '3' to '2' in question,True,608,4.96,
+gsm8k,gsm8k_0184,phi3:mini,question_only,60,True,approximately 59.7% of the entire students are enrolled in hip-hop dance,True,question_only: Changed '20' to '33' in question,True,659,5.79,
+gsm8k,gsm8k_0185,phi3:mini,question_only,john can harvest 4000 pineapples in a year,True,john can harvest 1600 pineapples in a year,True,question_only: Changed '10' to '4' in question,True,619,5.25,
+gsm8k,gsm8k_0186,phi3:mini,question_only,jackie was 73 inches tall before the summer,False,jackie was 66 inches tall before the summer,True,question_only: Changed '2' to '3' in question,True,499,3.67,
+gsm8k,gsm8k_0187,phi3:mini,question_only,miguel uses 240 sheets of paper per month,True,miguel uses 56 sheets of paper per month,True,question_only: Changed '30' to '7' in question,True,535,4.26,
+gsm8k,gsm8k_0188,phi3:mini,question_only,560,False,-60,True,question_only: Changed '200' to '40' in question,True,715,6.56,
+gsm8k,gsm8k_0190,phi3:mini,question_only,sophia's car can travel 300 miles on a full tank of gas,True,sophia's car can travel 550 miles on a full tank of gas,True,question_only: Changed '12' to '22' in question,True,603,4.48,
+gsm8k,gsm8k_0191,phi3:mini,question_only,240,True,160,True,question_only: Changed '2' to '3' in question,True,647,5.47,
+gsm8k,gsm8k_0192,phi3:mini,question_only,20,False,283,True,question_only: Changed '120' to '193' in question,True,719,6.42,
+gsm8k,gsm8k_0193,phi3:mini,question_only,4,True,5,True,question_only: Changed '50' to '32' in question,True,572,4.53,
+gsm8k,gsm8k_0194,phi3:mini,question_only,29,False,21,True,question_only: Changed '5' to '9' in question,True,697,6.16,
+gsm8k,gsm8k_0195,phi3:mini,question_only,2 minutes,False,0.8 minutes,True,question_only: Changed '20' to '8' in question,True,730,6.25,
+gsm8k,gsm8k_0196,phi3:mini,question_only,2.00,True,2,False,question_only: Changed '2' to '3' in question,False,636,5.03,
+gsm8k,gsm8k_0197,phi3:mini,question_only,mary got a total of 462 m&ms,False,mary got 339 m&ms in total,True,question_only: Changed '300' to '163' in question,True,690,5.9,
+gsm8k,gsm8k_0199,phi3:mini,question_only,5600,True,0,True,question_only: Changed '2' to '0' in question,True,623,4.86,
+math,math_0000,phi3:mini,question_only,22.65,False,\frac{7}{9} + \frac{\sqrt{28}}{3},True,question_only: Changed '32' to '21' in question,True,779,7.6,
+math,math_0001,phi3:mini,question_only,8,True,10,True,question_only: Changed '3' to '5' in question,True,449,3.07,
+math,math_0002,phi3:mini,question_only,,False,,False,,False,8177,123.26,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 63 column 299 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... = 256 \\\\cdot 4 = 102', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0005,phi3:mini,question_only,1,False,7/(64b^3),True,question_only: Changed '2' to '1' in question,True,878,9.32,
+math,math_0006,phi3:mini,question_only,,False,,False,,False,9272,140.8,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 112 column 157 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...et O = 31 - 3(15.5) = 3', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0007,phi3:mini,question_only,(1 3 -10),False,(2 4 1),True,question_only: Changed '5' to '3' in question,True,1172,13.4,
+math,math_0008,phi3:mini,question_only,,False,,False,,False,9212,140.75,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 149 column 42 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... ""The lines are not the', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0009,phi3:mini,question_only,($\sqrt{56}$ \frac{\pi}{4} \arccos\left(\frac{4\sqrt{6}}{\sqrt{56}\right)),False,the spherical coordinates are $(6\sqrt{14} \frac{\pi}{4} \arccos\left(\frac{2\sqrt{3}}{\sqrt{7}\right)),True,question_only: Changed '0' to '5' in question,True,1109,12.26,
+math,math_0013,phi3:mini,question_only,-13,False,6.375,True,question_only: Changed '8' to '14' in question,True,547,4.63,
+math,math_0015,phi3:mini,question_only,216 cubic inches,True,64 cubic inches,True,question_only: Changed '3' to '2' in question,True,531,4.17,
+math,math_0016,phi3:mini,question_only,1/36,False,the probability that the red die shows a 3 and the green die shows a 5 is 1/36,False,question_only: Changed '2' to '3' in question,False,615,5.42,
+math,math_0017,phi3:mini,question_only,the volume of the parallelepiped is $\frac{39}{8},False,0,True,question_only: Changed '2' to '3' in question,True,1118,11.91,
+math,math_0018,phi3:mini,question_only,n = 12,True,the value of $n$ is 4,True,question_only: Changed '3' to '1' in question,True,524,4.34,
+math,math_0022,phi3:mini,question_only,thursday,False,monday,True,question_only: Prepended counterfactual framing,True,613,5.56,
+math,math_0026,phi3:mini,question_only,the value of $a + b + c + d + e$ is $5 - 38 - 56 + 16 + 109 = -37,False,the sum of $a$ $b$ $c$ $d$ and $e$ is 7,True,question_only: Changed '2' to '1' in question,True,971,9.26,
+math,math_0027,phi3:mini,question_only,1/2,False,0,True,question_only: Changed '2' to '1' in question,True,543,4.73,
+math,math_0029,phi3:mini,question_only,4,False,6,True,question_only: Changed '13' to '22' in question,True,976,10.86,
+math,math_0032,phi3:mini,question_only,7/12,False,13/20,True,question_only: Changed '5' to '9' in question,True,640,5.45,
+math,math_0035,phi3:mini,question_only,-8,False,11444,True,question_only: Changed '2' to '4' in question,True,811,7.97,
+math,math_0037,phi3:mini,question_only,5654,False,5555,True,question_only: Changed '4' to '1' in question,True,638,5.71,
+math,math_0038,phi3:mini,question_only,-2,True,-4.48,True,question_only: Changed '2' to '3' in question,True,989,6.71,
+math,math_0041,phi3:mini,question_only,,False,,False,,False,9008,139.51,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 75 column 61 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...f-angle formula to find', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0043,phi3:mini,question_only,-2,False,-2,False,question_only: Changed '4' to '7' in question,False,678,5.98,
+math,math_0044,phi3:mini,question_only,22.50,False,31.50,True,question_only: Changed '4' to '6' in question,True,456,2.68,
+math,math_0045,phi3:mini,question_only,12 inches,False,the side length of the larger square is approximately 1.5874 inches,True,question_only: Changed '49' to '33' in question,True,908,9.27,
+math,math_0046,phi3:mini,question_only,,False,,False,,False,9160,140.21,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 31 column 2392 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...(2) + 4 \\\\cdot \\\\ln', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0048,phi3:mini,question_only,the slopes of the lines containing the midpoints are -1/2 and -1 respectively,False,the slopes of the lines containing the midpoints are different so they are not parallel,True,question_only: Changed '4' to '2' in question,True,1065,11.73,
+math,math_0049,phi3:mini,question_only,,False,,False,,False,6729,99.84,"5 validation errors for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning...the sine of the angle.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.3.conclusion
+  Field required [type=missing, input_value={'step_id': 4, 'reasoning...lue for all '\\theta'.""}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.4.conclusion
+  Field required [type=missing, input_value={'step_id': 5, 'reasoning...lue for all '\\theta'.""}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.5.conclusion
+  Field required [type=missing, input_value={'step_id': 6, 'reasoning...'r' values for others.""}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.6.conclusion
+  Field required [type=missing, input_value={'step_id': 7, 'reasoning...exhibit that behavior.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0051,phi3:mini,question_only,the distance between $5+6i$ and $-2+2i$ is $\sqrt{65},True,the distance between the points $5+6i$ and $-2+1i$ in the complex plane is approximately 8.6023,True,question_only: Changed '2' to '1' in question,True,916,9.99,
+math,math_0053,phi3:mini,question_only,,False,,False,,False,6516,97.72,"3 validation errors for CoTResponse
+steps.6.conclusion
+  Field required [type=missing, input_value={'step_id': 7, 'reasoning...* 2 * 1) / (13! * 15!)'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.11
+  Input should be an object [type=model_type, input_value='final_answer', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+final_answer
+  Field required [type=missing, input_value={'steps': [{'step_id': 1,...1440'}, 'final_answer']}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0054,phi3:mini,question_only,the possible values of $x$ are $4$ and $-4,False,the possible values for $x$ are $-\frac{1}{2}+\sqrt[3]{2}i$ and $2\sqrt[3]{2},True,question_only: Changed '2' to '3' in question,True,1667,21.45,
+math,math_0055,phi3:mini,question_only,the product $f(g(1)) imes g(f(1))$ cannot be evaluated,False,the product $f(g(1)) imes g(f(1))$ cannot be evaluated,False,question_only: Changed '1.25' to '2.11' in question,False,1621,8.13,
+math,math_0060,phi3:mini,question_only,1,True,8,True,question_only: Changed '8.8' to '15.66' in question,True,542,4.53,
+math,math_0063,phi3:mini,question_only,9,False,9,False,question_only: Changed '5' to '1' in question,False,1266,13.78,
+math,math_0064,phi3:mini,question_only,,False,,False,,False,3172,46.37,"2 validation errors for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning... value for $y$ is $2$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.5.conclusion
+  Field required [type=missing, input_value={'step_id': 6, 'reasoning... $x = -1$ and $y = 2$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0066,phi3:mini,question_only,,False,,False,,False,9208,140.17,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 50 column 62 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...3} - \\\\sqrt{3}\\\\cos', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0068,phi3:mini,question_only,180 degrees,False,each angle at the vertices of the star-polygon is 180 degrees,False,question_only: Changed '5' to '9' in question,False,944,9.56,
+math,math_0069,phi3:mini,question_only,,False,,False,,False,3528,51.26,"3 validation errors for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning... to $m(n - 1) \neq n$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning...s gives us $m \neq 1$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.4.conclusion
+  Field required [type=missing, input_value={'step_id': 5, 'reasoning... true is $2 \to 1000$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0070,phi3:mini,question_only,,False,,False,,False,2088,32.42,"1 validation error for CoTResponse
+steps.1.conclusion
+  Field required [type=missing, input_value={'step_id': 2, 'reasoning... value of $\\log_139$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0073,phi3:mini,question_only,1,False,4,True,question_only: Changed '315' to '104' in question,True,715,7.11,
+math,math_0075,phi3:mini,question_only,there are 126 different 9-step paths from $e$ to $g,True,126,False,question_only: Changed '0' to '1' in question,False,1135,11.88,
+math,math_0076,phi3:mini,question_only,,False,,False,,False,0,28.06,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 26 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0080,phi3:mini,question_only,1/4,False,1/4,False,question_only: Changed '4' to '1' in question,False,863,5.65,
+math,math_0082,phi3:mini,question_only,1/2,False,2.64,True,question_only: Changed '100' to '130' in question,True,915,9.63,
+math,math_0084,phi3:mini,question_only,5,True,1,True,question_only: Changed '4' to '7' in question,True,1027,11.3,
+math,math_0086,phi3:mini,question_only,,False,,False,,False,0,24.16,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 26 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0087,phi3:mini,question_only,[1 ∞),False,(-infinity 0] u (1 infinity),True,question_only: Changed '2' to '3' in question,True,943,10.23,
+math,math_0089,phi3:mini,question_only,,False,,False,,False,9324,141.1,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 137 column 3 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...r spheres is $2$.""\n   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0091,phi3:mini,question_only,32,False,2,True,question_only: Changed '2' to '1' in question,True,842,8.67,
+math,math_0092,phi3:mini,question_only,-81.87 degrees,False,90,True,question_only: Changed '-4' to '-1' in question,True,1185,12.4,
+math,math_0093,phi3:mini,question_only,the simplest form of the given expression is $\frac{27}{20},False,1,True,question_only: Changed '9' to '4' in question,True,454,3.24,
+math,math_0095,phi3:mini,question_only,14.08,False,the length of the altitude $ad$ is 18,True,question_only: Changed '14' to '2' in question,True,935,6.25,
+math,math_0097,phi3:mini,question_only,,False,,False,,False,0,28.89,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 26 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0099,phi3:mini,question_only,,False,,False,,False,0,30.65,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 26 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0101,phi3:mini,question_only,,False,,False,,False,8240,122.85,"2 validation errors for CoTResponse
+steps.9.conclusion
+  Field required [type=missing, input_value={'step_id': 10, 'reasonin...- 5i)/2 = 3/2 - 3.5i$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.12.conclusion
+  Field required [type=missing, input_value={'step_id': 13, 'reasonin... + (c - a) = 4 - 10i$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0102,phi3:mini,question_only,,False,,False,,False,5928,84.89,"1 validation error for CoTResponse
+steps.6.conclusion
+  Field required [type=missing, input_value={'step_id': 7, 'reasoning...nd $d = -5.285714286$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0105,phi3:mini,question_only,,False,,False,,False,9096,140.07,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 104 column 58 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n..._4$ by $13_4$ in base 4', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0106,phi3:mini,question_only,x = 6,False,x = 10,True,question_only: Changed '-1' to '-2' in question,True,547,4.69,
+math,math_0108,phi3:mini,question_only,the groom was 27 years old,True,the groom was approximately 16.67 years old,True,question_only: Changed '51' to '20' in question,True,981,10.68,
+math,math_0109,phi3:mini,question_only,,False,,False,,False,1656,25.91,"1 validation error for CoTResponse
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning...ons is $\\frac{3}{5}$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0110,phi3:mini,question_only,the probability of selecting a multiple of 3 is 33/100 or 0.33,False,1/2,True,question_only: Changed '3' to '2' in question,True,714,6.91,
+math,math_0112,phi3:mini,question_only,the area of the tv screen is increased by 44.88,False,the area is increased by approximately 43.15,True,question_only: Changed '20' to '27' in question,True,606,5.37,
+math,math_0114,phi3:mini,question_only,the pentagonal prism has 35 diagonals,False,the pentagonal prism has 35 diagonals,False,question_only: Changed '0' to '5' in question,False,1677,15.67,
+math,math_0116,phi3:mini,question_only,56,False,104,True,question_only: Changed '112' to '170' in question,True,1217,14.16,
+math,math_0117,phi3:mini,question_only,0.071089099,False,0.00333,True,question_only: Changed '0.4' to '0.25' in question,True,1040,11.48,
+math,math_0118,phi3:mini,question_only,u^2 + u - 22,False,-u^2 + 4u - 25,True,question_only: Changed '4' to '7' in question,True,393,2.49,
+math,math_0119,phi3:mini,question_only,3622,False,936_8,True,question_only: Changed '2' to '3' in question,True,563,4.76,
+math,math_0123,phi3:mini,question_only,,False,,False,,False,9224,140.22,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 11 column 1945 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...17647058823529411764705', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0124,phi3:mini,question_only,21,True,42,True,question_only: Changed '4' to '2' in question,True,753,7.19,
+math,math_0127,phi3:mini,question_only,lara read 123.4375 pages on the first day,False,32,True,question_only: Changed '248' to '121' in question,True,857,8.76,
+math,math_0128,phi3:mini,question_only,3720,True,760.0,True,question_only: Changed '3.72' to '0.76' in question,True,474,3.74,
+math,math_0129,phi3:mini,question_only,there are no real solutions to the equation,False,there are no real solutions to the equation,False,question_only: Changed '2' to '4' in question,False,1256,14.61,
+math,math_0130,phi3:mini,question_only,1/6,False,the value of $d$ is undefined,True,question_only: Changed '3' to '1' in question,True,705,5.86,
+math,math_0131,phi3:mini,question_only,2,False,47,True,question_only: Changed '144' to '47' in question,True,1232,14.5,
+math,math_0132,phi3:mini,question_only,-3273,False,the remainder is the sum of the values of the terms when $x = -2,True,question_only: Changed '9' to '2' in question,True,853,8.65,
+math,math_0133,phi3:mini,question_only,9,False,3,True,question_only: Changed '11' to '16' in question,True,592,5.36,
+math,math_0134,phi3:mini,question_only,the probability that sergio's number is larger than the sum of tina's numbers is 7/9,False,77/176,True,question_only: Changed '10' to '18' in question,True,910,9.32,
+math,math_0135,phi3:mini,question_only,10\sqrt{3},False,20 \sqrt{2},True,question_only: Changed '45' to '12' in question,True,2008,24.99,
+math,math_0136,phi3:mini,question_only,3,False,-3/2,True,question_only: Changed '5' to '9' in question,True,668,6.35,
+math,math_0137,phi3:mini,question_only,d,True,d,False,question_only: Changed '-3' to '-1' in question,False,2005,13.17,
+math,math_0138,phi3:mini,question_only,302.7778 square inches,False,676 square inches,True,question_only: Changed '1' to '0' in question,True,704,5.24,
+math,math_0145,phi3:mini,question_only,28,False,100,True,question_only: Changed '-314159' to '-145551' in question,True,726,7.02,
+math,math_0146,phi3:mini,question_only,,False,,False,,False,9368,141.03,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 74 column 59 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...3 / 11 * 20 * 18 * 17 *', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0147,phi3:mini,question_only,,False,,False,,False,2868,42.75,"1 validation error for CoTResponse
+steps.5.conclusion
+  Field required [type=missing, input_value={'step_id': 6, 'reasoning...500 positive integers.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0149,phi3:mini,question_only,4,True,0,True,question_only: Changed '2' to '1' in question,True,656,6.25,
+math,math_0150,phi3:mini,question_only,2\pi,True,the period of the function $y = \csc x - \cos 4x$ is $2\pi,False,question_only: Changed '3' to '4' in question,False,649,6.14,
+math,math_0151,phi3:mini,question_only,there are no real values of $a$ for which $a@1=0,False,there are two real values of $a$ that satisfy the equation,True,question_only: Changed '3' to '4' in question,True,876,9.22,
+math,math_0152,phi3:mini,question_only,1,True,1,False,question_only: Changed '-345' to '-85' in question,False,546,4.47,
+math,math_0153,phi3:mini,question_only,12,False,12,False,question_only: Changed '15' to '2' in question,False,553,4.39,
+math,math_0154,phi3:mini,question_only,,False,,False,,False,0,24.31,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 26 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0157,phi3:mini,question_only,0.375 inches,False,0.2,True,question_only: Changed '3' to '1' in question,True,882,8.9,
+math,math_0158,phi3:mini,question_only,62,False,16806,True,question_only: Changed '3' to '5' in question,True,916,9.89,
+math,math_0159,phi3:mini,question_only,10,False,the area of trapezoid $obcd$ is $18\sqrt{5},True,question_only: Changed '3' to '4' in question,True,1076,10.56,
+math,math_0162,phi3:mini,question_only,q contributed 82.8125% of the total,False,57.6875,True,question_only: Changed '22' to '34' in question,True,1048,8.22,
+math,math_0163,phi3:mini,question_only,the solutions to the equation are $x = -98$ $x = 99$ and $x = 101,False,the solutions are $x = -10 + \sqrt{86}$ and $x = -10 - \sqrt{86},True,question_only: Changed '-10' to '-17' in question,True,899,9.73,
+math,math_0165,phi3:mini,question_only,1,True,2,True,question_only: Changed '1' to '2' in question,True,472,3.41,
+math,math_0166,phi3:mini,question_only,-4,True,-2,True,question_only: Changed '23' to '4' in question,True,539,4.57,
+math,math_0167,phi3:mini,question_only,,False,,False,,False,0,25.9,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing an object at line 26 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0171,phi3:mini,question_only,6,False,4,True,question_only: Changed '4' to '7' in question,True,741,7.42,
+math,math_0174,phi3:mini,question_only,4.5π cm,False,1.29 pi cm,True,question_only: Changed '13.5' to '3.87' in question,True,590,4.29,
+math,math_0175,phi3:mini,question_only,84 degrees,True,the degree measure of the largest angle is approximately 104.13 degrees,True,question_only: Changed '7' to '11' in question,True,785,7.97,
+math,math_0176,phi3:mini,question_only,60,False,there are 5!/2! = 60 ways to arrange the letters of the word circle,False,question_only: Prepended counterfactual framing,False,594,5.27,
+math,math_0179,phi3:mini,question_only,4,False,4,False,question_only: Changed '10' to '7' in question,False,466,3.42,
+math,math_0180,phi3:mini,question_only,,False,,False,,False,9124,139.87,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 10 column 2004 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...912, 212, 312, 412, 512', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0181,phi3:mini,question_only,r=13,True,29,True,question_only: Changed '3' to '1' in question,True,587,5.32,
+math,math_0182,phi3:mini,question_only,720,False,237,True,question_only: Swapped 'no' → 'every' in premises,True,1018,10.13,
+math,math_0183,phi3:mini,question_only,,False,,False,,False,9044,139.84,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 69 column 742 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...14285714285714285714285', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+math,math_0184,phi3:mini,question_only,,False,,False,,False,6072,85.41,"2 validation errors for CoTResponse
+steps.7.conclusion
+  Field required [type=missing, input_value={'step_id': 8, 'reasoning...bed polyhedra is $24$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.8.conclusion
+  Field required [type=missing, input_value={'step_id': 9, 'reasoning...bed polyhedra is $24$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0185,phi3:mini,question_only,8918,True,10385.7 cm^3,True,question_only: Changed '343' to '604' in question,True,634,5.43,
+math,math_0186,phi3:mini,question_only,the product $f^{-1}(a) imes a imes f(a)$ is $ rac{1}{a},True,the product $f^{-1}(a) imes a imes f(a)$ simplifies to $ rac{1}{1 - a},True,question_only: Changed '1' to '0' in question,True,1334,15.86,
+math,math_0188,phi3:mini,question_only,11,False,13,True,question_only: Changed '16' to '26' in question,True,797,8.13,
+math,math_0191,phi3:mini,question_only,,False,,False,,False,5585,82.56,"2 validation errors for CoTResponse
+steps.7.conclusion
+  Field required [type=missing, input_value={'step_id': 8, 'reasoning...rac{251}{105} = 2.38$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.8.conclusion
+  Field required [type=missing, input_value={'step_id': 9, 'reasoning...rac{251}{105} = 2.38$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0193,phi3:mini,question_only,7,False,16,True,question_only: Changed '0' to '2' in question,True,876,8.15,
+math,math_0195,phi3:mini,question_only,2,False,42,True,question_only: Changed '18' to '7' in question,True,736,7.13,
+math,math_0196,phi3:mini,question_only,63,False,81,True,question_only: Changed '2' to '1' in question,True,1216,13.85,
+math,math_0198,phi3:mini,question_only,,False,,False,,False,4764,67.03,"1 validation error for CoTResponse
+steps.11.conclusion
+  Field required [type=missing, input_value={'step_id': 12, 'reasonin...solution is $x = 8/3$.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+math,math_0199,phi3:mini,question_only,64,False,16,True,question_only: Changed '7' to '1' in question,True,996,10.7,
+folio,folio_0001,phi3:mini,question_only,false,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,974,9.51,
+folio,folio_0002,phi3:mini,question_only,unknown,False,unknown,False,question_only: Prepended counterfactual framing,False,785,6.84,
+folio,folio_0003,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,778,6.91,
+folio,folio_0005,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,837,8.12,
+folio,folio_0006,phi3:mini,question_only,false,True,true,True,question_only: Swapped 'no' → 'every' in premises,True,948,8.75,
+folio,folio_0007,phi3:mini,question_only,false,True,false,False,question_only: Prepended counterfactual framing,False,801,7.26,
+folio,folio_0008,phi3:mini,question_only,true,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,898,8.66,
+folio,folio_0009,phi3:mini,question_only,unknown,True,unknown,False,question_only: Changed '2008' to '840' in question,False,774,6.24,
+folio,folio_0011,phi3:mini,question_only,,False,,False,,False,3232,42.97,"1 validation error for CoTResponse
+final_answer
+  Field required [type=missing, input_value={'steps': [{'step_id': 1,...inal_answer': 'False'}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+folio,folio_0012,phi3:mini,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,712,4.85,
+folio,folio_0014,phi3:mini,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,1046,10.76,
+folio,folio_0016,phi3:mini,question_only,false,False,false,False,question_only: Prepended counterfactual framing,False,741,6.06,
+folio,folio_0017,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'no' → 'every' in premises,False,1330,15.0,
+folio,folio_0018,phi3:mini,question_only,false,False,true,True,question_only: Swapped 'no' → 'every' in premises,True,730,5.78,
+folio,folio_0019,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'no' → 'every' in premises,False,618,4.9,
+folio,folio_0020,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,837,7.1,
+folio,folio_0021,phi3:mini,question_only,true,False,john is not engaged,True,question_only: Swapped 'all' → 'none' in premises,True,1034,10.14,
+folio,folio_0022,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,1108,11.57,
+folio,folio_0023,phi3:mini,question_only,,False,,False,,False,2904,38.06,"1 validation error for CoTResponse
+final_answer
+  Field required [type=missing, input_value={'steps': [{'step_id': 1,...inal_answer': 'False'}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+folio,folio_0024,phi3:mini,question_only,unknown,True,unknown,False,question_only: Changed '1920' to '391' in question,False,795,7.13,
+folio,folio_0025,phi3:mini,question_only,true,True,unknown,True,question_only: Changed '1984' to '2621' in question,True,700,5.89,
+folio,folio_0026,phi3:mini,question_only,,False,,False,,False,9272,141.03,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 185 column 7 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...""step_id"": 37,\n      ""', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0029,phi3:mini,question_only,unknown,True,unknown,False,question_only: Swapped 'no' → 'every' in premises,False,624,5.01,
+folio,folio_0030,phi3:mini,question_only,,False,,False,,False,1744,19.35,"3 validation errors for CoTResponse
+steps.0.conclusion
+  Field required [type=missing, input_value={'step_id': 1, 'reasoning...an block another man' ""}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.1
+  Input should be an object [type=model_type, input_value='conclusion', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+final_answer
+  Field required [type=missing, input_value={'steps': [{'step_id': 1,...r man if he is taller.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+folio,folio_0031,phi3:mini,question_only,unknown,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,1069,11.05,
+folio,folio_0032,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,768,6.64,
+folio,folio_0035,phi3:mini,question_only,false,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,928,9.13,
+folio,folio_0036,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,679,5.7,
+folio,folio_0040,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,819,6.6,
+folio,folio_0041,phi3:mini,question_only,false,True,unknown,True,question_only: Changed '1992' to '1008' in question,True,1990,24.95,
+folio,folio_0043,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,947,9.28,
+folio,folio_0044,phi3:mini,question_only,true,True,false,True,question_only: Changed '91' to '55' in question,True,803,6.57,
+folio,folio_0045,phi3:mini,question_only,false,True,false,False,question_only: Prepended counterfactual framing,False,751,6.52,
+folio,folio_0046,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,620,4.87,
+folio,folio_0047,phi3:mini,question_only,unknown,False,unknown,False,question_only: Swapped 'no' → 'every' in premises,False,738,6.77,
+folio,folio_0048,phi3:mini,question_only,true,True,true,False,question_only: Changed '1716' to '1102' in question,False,734,5.5,
+folio,folio_0049,phi3:mini,question_only,unknown,True,unknown,False,question_only: Swapped 'no' → 'every' in premises,False,726,5.57,
+folio,folio_0050,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,695,5.23,
+folio,folio_0051,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,723,5.63,
+folio,folio_0052,phi3:mini,question_only,true,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,1011,9.24,
+folio,folio_0053,phi3:mini,question_only,unknown,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,898,8.69,
+folio,folio_0054,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,1079,10.78,
+folio,folio_0055,phi3:mini,question_only,,False,,False,,False,9892,143.0,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 110 column 20 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...,\n      ""reasoning"": ""', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0056,phi3:mini,question_only,unknown,True,true,True,question_only: Swapped 'all' → 'none' in premises,True,1289,12.63,
+folio,folio_0057,phi3:mini,question_only,false,True,false,False,question_only: Changed '1500' to '2094' in question,False,845,6.67,
+folio,folio_0059,phi3:mini,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,689,5.22,
+folio,folio_0060,phi3:mini,question_only,false,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,858,8.06,
+folio,folio_0061,phi3:mini,question_only,false,False,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,835,7.07,
+folio,folio_0062,phi3:mini,question_only,false,True,false,False,question_only: Changed '34' to '11' in question,False,864,7.84,
+folio,folio_0065,phi3:mini,question_only,false,False,false,False,question_only: Changed '91' to '14' in question,False,989,9.37,
+folio,folio_0066,phi3:mini,question_only,false,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,596,3.64,
+folio,folio_0067,phi3:mini,question_only,false,False,false,False,question_only: Changed '8' to '12' in question,False,937,8.86,
+folio,folio_0068,phi3:mini,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,746,5.77,
+folio,folio_0069,phi3:mini,question_only,false,False,true,True,question_only: Changed '1500' to '2078' in question,True,1147,11.07,
+folio,folio_0071,phi3:mini,question_only,true,True,true,False,question_only: Changed '2000' to '2908' in question,False,1427,15.24,
+folio,folio_0072,phi3:mini,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,935,9.2,
+folio,folio_0073,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,981,9.94,
+folio,folio_0074,phi3:mini,question_only,,False,,False,,False,9428,141.48,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 156 column 17 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...s."",\n      ""conclusion', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0075,phi3:mini,question_only,rockie is cute,False,rockie is cute,False,question_only: Swapped 'all' → 'none' in premises,False,742,5.96,
+folio,folio_0076,phi3:mini,question_only,true,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,1402,13.98,
+folio,folio_0077,phi3:mini,question_only,,False,,False,,False,9440,141.45,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 139 column 17 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...   {\n      ""step_id"": ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0081,phi3:mini,question_only,,False,,False,,False,9628,142.2,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 115 column 42 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...""The fifth premise also', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0082,phi3:mini,question_only,false,False,unknown,True,question_only: Prepended counterfactual framing,True,712,6.35,
+folio,folio_0083,phi3:mini,question_only,true,False,false,True,question_only: Swapped 'no' → 'every' in premises,True,852,7.48,
+folio,folio_0085,phi3:mini,question_only,unknown,True,unknown,False,question_only: Prepended counterfactual framing,False,823,7.68,
+folio,folio_0086,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,1473,17.01,
+folio,folio_0087,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,890,7.87,
+folio,folio_0088,phi3:mini,question_only,false,False,false,False,question_only: Prepended counterfactual framing,False,838,8.06,
+folio,folio_0089,phi3:mini,question_only,false,False,unknown,True,question_only: Changed '1995' to '1057' in question,True,834,7.56,
+folio,folio_0090,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'no' → 'every' in premises,False,584,4.56,
+folio,folio_0091,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'no' → 'every' in premises,False,864,8.63,
+folio,folio_0094,phi3:mini,question_only,false,False,true,True,question_only: Swapped 'all' → 'none' in premises,True,959,9.35,
+folio,folio_0095,phi3:mini,question_only,false,True,unknown,True,question_only: Changed '2003' to '2686' in question,True,978,9.42,
+folio,folio_0098,phi3:mini,question_only,,False,,False,,False,2488,30.23,"2 validation errors for CoTResponse
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning...ompany building today.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.3
+  Input should be an object [type=model_type, input_value='conclusion', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type"
+folio,folio_0100,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'no' → 'every' in premises,False,801,7.69,
+folio,folio_0101,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,880,8.47,
+folio,folio_0102,phi3:mini,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,806,7.34,
+folio,folio_0103,phi3:mini,question_only,unknown,True,unknown,False,question_only: Changed '2003' to '724' in question,False,925,8.62,
+folio,folio_0104,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,949,9.15,
+folio,folio_0105,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,949,8.99,
+folio,folio_0106,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,780,6.21,
+folio,folio_0107,phi3:mini,question_only,,False,,False,,False,2496,28.62,"2 validation errors for CoTResponse
+steps.2.conclusion
+  Field required [type=missing, input_value={'step_id': 3, 'reasoning... to the first premise.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.3
+  Input should be an object [type=model_type, input_value='conclusion', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type"
+folio,folio_0110,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,730,6.49,
+folio,folio_0111,phi3:mini,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,513,3.42,
+folio,folio_0113,phi3:mini,question_only,true,True,the conclusion is false,True,question_only: Changed '2024' to '1215' in question,True,1367,14.9,
+folio,folio_0114,phi3:mini,question_only,,False,,False,,False,9568,141.83,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a value at line 105 column 5 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...  ""step_id"": 21,\n     ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0115,phi3:mini,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,638,4.99,
+folio,folio_0116,phi3:mini,question_only,,False,,False,,False,0,27.28,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a list at line 33 column 0 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...\n     \n     \n     \n', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0117,phi3:mini,question_only,unknown,True,unknown,False,question_only: Changed '3' to '2' in question,False,1397,15.82,
+folio,folio_0118,phi3:mini,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,1234,12.76,
+folio,folio_0120,phi3:mini,question_only,true,False,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,717,6.02,
+folio,folio_0121,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,1157,11.24,
+folio,folio_0122,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,616,4.86,
+folio,folio_0123,phi3:mini,question_only,false,False,false,False,question_only: Prepended counterfactual framing,False,856,8.36,
+folio,folio_0125,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,612,4.51,
+folio,folio_0126,phi3:mini,question_only,false,True,unknown,True,question_only: Swapped 'no' → 'every' in premises,True,1034,10.61,
+folio,folio_0127,phi3:mini,question_only,false,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,545,4.3,
+folio,folio_0129,phi3:mini,question_only,true,False,true,False,question_only: Changed '2024' to '281' in question,False,753,5.93,
+folio,folio_0130,phi3:mini,question_only,true,True,true,False,question_only: Changed '1920' to '3640' in question,False,723,6.08,
+folio,folio_0131,phi3:mini,question_only,unknown,False,unknown,False,question_only: Swapped 'no' → 'every' in premises,False,599,4.75,
+folio,folio_0132,phi3:mini,question_only,false,True,unknown,True,question_only: Changed '10' to '4' in question,True,699,5.67,
+folio,folio_0134,phi3:mini,question_only,possible,False,true,True,question_only: Prepended counterfactual framing,True,516,3.88,
+folio,folio_0136,phi3:mini,question_only,true,True,true,False,question_only: Prepended counterfactual framing,False,673,5.65,
+folio,folio_0137,phi3:mini,question_only,unknown,True,true,True,question_only: Changed '2024' to '668' in question,True,859,7.47,
+folio,folio_0138,phi3:mini,question_only,true,True,false,True,question_only: Swapped 'no' → 'every' in premises,True,1011,9.78,
+folio,folio_0139,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'no' → 'every' in premises,False,663,4.68,
+folio,folio_0142,phi3:mini,question_only,,False,,False,,False,2496,31.79,"3 validation errors for CoTResponse
+steps.3.step_id
+  Field required [type=missing, input_value={'step_id end_of_reasonin...is terricolous or not.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.3.reasoning
+  Field required [type=missing, input_value={'step_id end_of_reasonin...is terricolous or not.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+steps.3.conclusion
+  Field required [type=missing, input_value={'step_id end_of_reasonin...is terricolous or not.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing"
+folio,folio_0143,phi3:mini,question_only,true,False,true,False,question_only: Changed '1995' to '3365' in question,False,949,9.24,
+folio,folio_0145,phi3:mini,question_only,unknown,True,true,True,question_only: Changed '2022' to '471' in question,True,1207,11.85,
+folio,folio_0147,phi3:mini,question_only,unknown,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,543,4.18,
+folio,folio_0148,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,1036,10.42,
+folio,folio_0149,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,1216,12.86,
+folio,folio_0150,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,1482,15.31,
+folio,folio_0151,phi3:mini,question_only,true,True,ekaterina can participate in the 2024 united states presidential election,True,question_only: Changed '2024' to '872' in question,True,1202,12.39,
+folio,folio_0153,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,864,8.15,
+folio,folio_0155,phi3:mini,question_only,true,True,false,True,question_only: Changed '34' to '10' in question,True,716,5.67,
+folio,folio_0156,phi3:mini,question_only,false,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,848,7.27,
+folio,folio_0158,phi3:mini,question_only,unknown,False,true,True,question_only: Swapped 'no' → 'every' in premises,True,663,4.65,
+folio,folio_0159,phi3:mini,question_only,false,True,false,False,question_only: Changed '300' to '482' in question,False,847,7.37,
+folio,folio_0160,phi3:mini,question_only,true,False,true,False,question_only: Swapped 'no' → 'every' in premises,False,739,6.54,
+folio,folio_0161,phi3:mini,question_only,false,False,unknown,True,question_only: Changed '1' to '2' in question,True,1479,14.59,
+folio,folio_0162,phi3:mini,question_only,unknown,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,988,8.87,
+folio,folio_0163,phi3:mini,question_only,false,True,false,False,question_only: Prepended counterfactual framing,False,858,8.28,
+folio,folio_0164,phi3:mini,question_only,true,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,826,7.71,
+folio,folio_0165,phi3:mini,question_only,,False,,False,,False,9568,141.87,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 115 column 118 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...ubway store\'s take-out', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0166,phi3:mini,question_only,unknown,False,unknown,False,question_only: Changed '2013' to '3605' in question,False,729,6.07,
+folio,folio_0167,phi3:mini,question_only,false,True,false,False,question_only: Changed '9' to '16' in question,False,750,6.38,
+folio,folio_0168,phi3:mini,question_only,true,True,unknown,True,question_only: Changed '10' to '15' in question,True,795,7.06,
+folio,folio_0169,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'no' → 'every' in premises,False,743,5.79,
+folio,folio_0171,phi3:mini,question_only,,False,,False,,False,9940,143.34,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 126 column 27 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...  ""conclusion"": ""Coco G', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0174,phi3:mini,question_only,true,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,1317,14.86,
+folio,folio_0175,phi3:mini,question_only,true,True,true,False,question_only: Changed '2022' to '2828' in question,False,1187,11.5,
+folio,folio_0176,phi3:mini,question_only,,False,,False,,False,9420,141.37,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 130 column 97 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n...oser and a conductor of', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0178,phi3:mini,question_only,true,True,true,False,question_only: Swapped 'all' → 'none' in premises,False,550,4.32,
+folio,folio_0179,phi3:mini,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,655,5.81,
+folio,folio_0180,phi3:mini,question_only,false,False,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,930,8.52,
+folio,folio_0181,phi3:mini,question_only,false,True,false,False,question_only: Changed '8' to '12' in question,False,848,7.54,
+folio,folio_0182,phi3:mini,question_only,unknown,False,false,True,question_only: Swapped 'all' → 'none' in premises,True,1323,14.73,
+folio,folio_0183,phi3:mini,question_only,unknown,True,unknown,False,question_only: Swapped 'all' → 'none' in premises,False,724,6.09,
+folio,folio_0184,phi3:mini,question_only,unknown,True,false,True,question_only: Swapped 'all' → 'none' in premises,True,873,7.95,
+folio,folio_0187,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,1273,12.11,
+folio,folio_0188,phi3:mini,question_only,false,False,false,False,question_only: Swapped 'all' → 'none' in premises,False,999,10.26,
+folio,folio_0189,phi3:mini,question_only,,False,,False,,False,9744,142.62,"1 validation error for CoTResponse
+  Invalid JSON: EOF while parsing a string at line 144 column 11 [type=json_invalid, input_value='{\n  ""steps"": [\n    {\n... },\n    {\n      ""step', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid"
+folio,folio_0190,phi3:mini,question_only,false,True,unknown,True,question_only: Swapped 'all' → 'none' in premises,True,552,4.4,
+folio,folio_0191,phi3:mini,question_only,false,False,unknown,True,question_only: Changed '42.3' to '22.96' in question,True,738,5.5,
+folio,folio_0192,phi3:mini,question_only,true,False,true,False,question_only: Swapped 'all' → 'none' in premises,False,560,4.52,
+folio,folio_0194,phi3:mini,question_only,false,False,unknown,True,question_only: Changed '10' to '13' in question,True,736,6.24,
+folio,folio_0196,phi3:mini,question_only,false,True,false,False,question_only: Changed '1995' to '3156' in question,False,907,8.64,
+folio,folio_0197,phi3:mini,question_only,true,True,true,False,question_only: Changed '300' to '561' in question,False,682,5.09,
+folio,folio_0199,phi3:mini,question_only,false,True,false,False,question_only: Swapped 'all' → 'none' in premises,False,876,8.19,
