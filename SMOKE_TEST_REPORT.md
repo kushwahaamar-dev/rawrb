@@ -112,7 +112,7 @@ The most striking result: when we **changed a key number in the question** but k
 ## How to Reproduce
 
 ```bash
-cd /Users/amar/Codes/rawrb
+cd rawrb
 pip install -r requirements.txt
 
 # Replicate smoke test

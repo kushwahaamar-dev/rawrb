@@ -86,8 +86,8 @@ The three-benchmark design enables contamination-sensitivity analysis. All sampl
 ### Installation
 
 ```bash
-git clone https://github.com/kushwahaamar-dev/rarwb.git
-cd rarwb
+git clone https://github.com/<your-username>/rawrb.git
+cd rawrb
 pip install -r requirements.txt
 ```
 
@@ -135,13 +135,6 @@ rawrb/
 │   ├── perturbations.py       # Knockout, corruption, counterfactual logic
 │   ├── probes.py              # 7 probe implementations
 │   └── metrics.py             # Answer matching, bootstrap CI, McNemar, Cohen's h
-│
-├── paper/
-│   ├── acl2026_srw.tex        # 8-page ACL-SRW LaTeX source
-│   ├── acl2026_srw.bib        # Bibliography (17 entries)
-│   ├── acl2026_srw.pdf        # Compiled PDF
-│   ├── acl.sty                # ACL style file
-│   └── acl_natbib.bst         # ACL bibliography style
 │
 ├── results/                   # Experiment outputs
 │   ├── results_{model}_{probe}.csv   # Per-problem results (36 files)
@@ -219,38 +212,9 @@ KO=knockout, COR=corruption, CF=counterfactual (with hint), CF_U=unbiased, QO=qu
 
 ---
 
-## Paper
-
-**"Right Answer, Wrong Reason: Diagnosing Chain-of-Thought Faithfulness in Small Language Models"**
-
-8-page long paper for ACL 2026 Student Research Workshop.
-
-Contents:
-- 9 tables (accuracy, faithfulness, per-benchmark, conditional, prompt sensitivity, contamination, Qwen family, error rates)
-- 4 figures (heatmap, scatter, gap bar chart, paraphrase boxplot)
-- 3 qualitative examples (knockout, corruption, anchoring)
-- 17 bibliography entries
-
-The paper PDF is at `paper/acl2026_srw.pdf`. To recompile:
-
-```bash
-cd paper
-tectonic acl2026_srw.tex    # or pdflatex + bibtex
-```
-
----
-
 ## Citation
 
-```bibtex
-@inproceedings{kushwaha2026rawrb,
-  title={Right Answer, Wrong Reason: Diagnosing Chain-of-Thought
-         Faithfulness in Small Language Models},
-  author={Kushwaha, Amar},
-  booktitle={Proceedings of the ACL 2026 Student Research Workshop},
-  year={2026}
-}
-```
+If you use RAWRB in your work, please cite the associated paper (details to follow upon publication).
 
 ---
 
